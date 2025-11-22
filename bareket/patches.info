@@ -1,0 +1,11 @@
+{
+  "file": "patches/Pokemon_BAREKET_v0.1.ups"
+  "patches": [
+    {
+      "file": "Pokemon_BAREKET_v0.1.ups",
+      "name": "POKéMON BAREKET (v0.1)",
+      "description": "Pokemon Emerald in Hebrew",
+      "outputName": "pokemon_bareket_v0.1"
+    }
+  ]
+}
