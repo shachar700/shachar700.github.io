@@ -403,7 +403,7 @@
                         <div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM
                                 file:</label></div>
                         <div class="rom-patcher-container-input">
-                            <input type="file" id="rom-patcher-input-file-rom" class="empty"/>
+							<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
                         </div>
                     </div>
                     <div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
@@ -569,8 +569,8 @@
                         // This part assumes config.js is loaded correctly, or window.TARP_CONFIG is set.
                         // Since I cannot load external JS/config, I'll use placeholders.
                         const config = window.TARP_CONFIG || {
-                            title: "פוקימון ברקת בעברית (Patcher)",
-                            base: "Pokémon Emerald (U) (Squirrels)",
+                            title: "פוקימון ברקת בעברית (טלאי)",
+                            base: "Pokémon Emerald (USA, Europe)",
                             externalLinks: {}
                         };
 
