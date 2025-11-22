@@ -1,11 +1,10 @@
 {
-  "file": "./patches.zip",
   "patches": [
     {
-      "file": "Pokemon_TWO v1.0.bps",
-      "name": "POKéMON TWO (v1.0)",
-      "description": "",
-      "outputName": "pokemon_two_v1.0"
+      "file": "Pokemon_BAREKET_v0.1.ups",
+      "name": "POKéMON BAREKET (v0.1)",
+      "description": "Pokemon Emerald in Hebrew",
+      "outputName": "pokemon_bareket_v0.1"
     }
   ]
 }
