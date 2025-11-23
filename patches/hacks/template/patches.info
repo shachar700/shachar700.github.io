@@ -1,0 +1,11 @@
+{
+  "file": "./patches.zip",
+  "patches": [
+    {
+      "file": "patchfile.bps",
+      "name": "ROM Hack v1.0",
+      "description": "",
+      "outputName": "ROM Hack"
+    }
+  ]
+}
