@@ -2,10 +2,10 @@
   "file": "./patches.zip",
   "patches": [
     {
-      "file": "Pokemon_TWO v1.0.bps",
-      "name": "POKéMON TWO (v1.0)",
+      "file": "Pokemon_BAREKET_v0.1.bps",
+      "name": "POKéMON BAREKET (v0.1)",
       "description": "",
-      "outputName": "pokemon_two_v1.0"
+      "outputName": "pokemon_bareket_v0.1"
     }
   ]
 }

@@ -1,10 +1,10 @@
 window.TARP_CONFIG = {
-  title: "POKéMON TWO",
+  title: "POKéMON VALIANT",
   base: "Pokémon Emerald (USA, Europe)",
 
   externalLinks: {
     discord: "",
-    github: "https://github.com/shachar700/tarc2",
+    github: "",
     pokécommunity: "",
     reddit: ""
   }
