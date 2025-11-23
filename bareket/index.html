@@ -1,6 +1,8 @@
-<!DOCTYPE html>
 <html lang="he">
 <head>
+    <script>
+    const BASE = "/bareket/";
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>פוקימון ברקת בעברית</title>
@@ -10,10 +12,8 @@
     <meta property="og:description" content="🐲🐉 מדריך התקנה למשחקים פוקימון ברקת בעברית.🐲🐉">
     <meta property="og:image" content="og-image.png">
     <meta property="og:type" content="website">
-
-    <!-- W3.CSS -->
     <link rel="stylesheet" href="./styles/w3.css">
-
+    <link rel="stylesheet" href="./styles/font-awesome.min.css">
     <style>
         body,
         h1,
@@ -36,89 +36,256 @@
             font-size: 200px;
         }
     </style>
-
     <style id="__web-inspector-hide-shortcut-style__">
-        .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *,
-        .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after {
+        .__web-inspector-hide-shortcut__,
+        .__web-inspector-hide-shortcut__ *,
+        .__web-inspector-hidebefore-shortcut__::before,
+        .__web-inspector-hideafter-shortcut__::after {
             visibility: hidden !important;
         }
     </style>
+    <style id="a3c92a26">
+        .c817a537 .ssh-close {
+            position: absolute;
+            left: -9px;
+            top: -9px;
+            width: 18px;
+            height: 18px;
+            z-index: 999;
+            border: 0px;
+            background: url("chrome-extension://hhlhjgianpocpoppaiihmlpgcoehlhio/static/images/material_icons/cancel_18dp.svg") 0% 0% / contain no-repeat border-box transparent;
+            outline: none;
+            box-shadow: none;
+            animation-duration: 275ms;
+            animation-timing-function: ease-out;
+            animation-name: c12ff248;
+        }
 
-    <!-- Rom Patcher JS needed CSS -->
-    <link type="text/css" rel="stylesheet" href="./rom-patcher-js/style.css" media="all" />
-    <link type="text/css" rel="stylesheet" href="./color.css" media="all" />
+        .c817a537 .ssh-close:hover,
+        .c817a537 .ssh-close:focus {
+            background-image: url("chrome-extension://hhlhjgianpocpoppaiihmlpgcoehlhio/static/images/material_icons/cancel_hover_18dp.svg");
+        }
 
-    <!-- Ensure ROM_PATCHER_JS_PATH is defined without redeclaring it -->
-    <script>
-        // Set worker path only if not already set
-        window.ROM_PATCHER_JS_PATH = window.ROM_PATCHER_JS_PATH || './rom-patcher-js/';
-    </script>
-
-    <!-- Load RomPatcher webapp (this script will spawn workers using the path above) -->
-    <script type="text/javascript" src="./rom-patcher-js/RomPatcher.webapp.js"></script>
-
-    <!-- Rom Patcher JS initialization (keeps your previous logic) -->
-    <script type="text/javascript">
-        window.addEventListener('load', function (evt) {
-            try {
-                fetch("./patches.info")
-                    .then(res => {
-                        if (!res.ok) throw new Error('patches.info not found');
-                        return res.json();
-                    })
-                    .then(patchInfo => {
-                        // RomPatcherWeb should be provided by RomPatcher.webapp.js
-                        RomPatcherWeb.initialize(
-                            {
-                                language: 'en',
-                                requireValidation: true,
-                                allowDropFiles: true
-                            },
-                            patchInfo
-                        );
-
-                        const downloadBtn = document.getElementById('rom-patcher-button-download');
-                        const patchSelect = document.getElementById('rom-patcher-select-patch');
-
-                        downloadBtn.onclick = () => {
-                            const selectedIndex = patchSelect.selectedIndex;
-                            if (selectedIndex < 0) return;
-
-                            const patch = patchInfo.patches[selectedIndex];
-                            const link = document.createElement('a');
-                            link.href = `./patches/${patch.file}`;
-                            link.download = patch.file.split('/').pop();
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        };
-                    })
-                    .catch(err => {
-                        console.error(err);
-                        // Display a friendly message inside the rom-patcher root
-                        const root = document.getElementById('rom-patcher-root');
-                        if (root) {
-                            root.innerHTML = '<p style="color: red;">Rom Patcher initialization error: ' + (err.message || 'unknown') + '</p>';
-                        }
-                    });
-            } catch (err) {
-                var message = err.message;
-                if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
-                    message = 'Your browser is outdated and it is not compatible with this app.';
-
-                const root = document.getElementById('rom-patcher-root');
-                if (root) {
-                    root.innerHTML = message;
-                    root.style.color = 'red';
-                } else {
-                    console.error(message);
-                }
+        @media print {
+            .c817a537 {
+                print-color-adjust: exact !important;
+                box-shadow: unset !important;
             }
-        });
-    </script>
+        }
 
-    <!-- Marked for markdown rendering -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        @keyframes c12ff248 {
+            0% {
+                opacity: 0.7;
+                transform: scale(0.6);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes d292a18d {
+            100% {
+                opacity: 0;
+                filter: blur(4px);
+            }
+        }
+
+        @keyframes ef3faa66 {
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .c817a537 {
+            color: inherit;
+            background-color: inherit;
+            font: inherit;
+            filter: inherit;
+            position: relative !important;
+            border-radius: 0.2em !important;
+            text-shadow: none !important;
+            transition-property: background-color, color, filter, box-shadow !important;
+            transition-duration: 600ms !important;
+        }
+
+        .c817a537:focus:not(:focus-visible) {
+            outline: -webkit-focus-ring-color auto thin !important;
+        }
+
+        .default-red-aa94e3d5-ab2f-4205-b74e-18ce31c7c0ce {
+            --highlight-bg-color: 254, 202, 202;
+            --highlight-color: 127, 29, 29;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(127, 29, 29) !important;
+        }
+
+        .default-orange-da01945e-1964-4d27-8a6c-3331e1fe7f14 {
+            --highlight-bg-color: 254, 215, 170;
+            --highlight-color: 124, 45, 18;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(124, 45, 18) !important;
+        }
+
+        .default-yellow-aaddcf5c-0e41-4f83-8a64-58c91f7c6250 {
+            --highlight-bg-color: 254, 240, 138;
+            --highlight-color: 113, 63, 18;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(113, 63, 18) !important;
+        }
+
+        .default-green-c4d41e0a-e40f-4c3f-91ad-2d66481614c2 {
+            --highlight-bg-color: 187, 247, 208;
+            --highlight-color: 20, 83, 45;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(20, 83, 45) !important;
+        }
+
+        .default-cyan-f88e8827-e652-4d79-a9d9-f6c8b8ec9e2b {
+            --highlight-bg-color: 165, 243, 252;
+            --highlight-color: 22, 78, 99;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(22, 78, 99) !important;
+        }
+
+        .default-purple-c472dcdb-f2b8-41ab-bb1e-2fb293df172a {
+            --highlight-bg-color: 233, 213, 255;
+            --highlight-color: 88, 28, 135;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(88, 28, 135) !important;
+        }
+
+        .default-grey-da7cb902-89c6-46fe-b0e7-d3b35aaf237a {
+            --highlight-bg-color: 229, 231, 235;
+            --highlight-color: 17, 24, 39;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(17, 24, 39) !important;
+        }
+
+        .c0df1986-e8fb-4981-8924-ba8c207c8041 {
+            --highlight-bg-color: 64, 64, 64;
+            --highlight-color: 0, 0, 0;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(var(--highlight-bg-color)) !important;
+            user-select: none !important;
+        }
+
+        .a60a98d6-946d-46a9-9044-9a97db57c7d1 {
+            --highlight-color: 220, 38, 38;
+            background-color: inherit !important;
+            color: rgb(220, 38, 38) !important;
+        }
+
+        .ad1b8cd8-ab73-47dd-97a7-8344bf6db723 {
+            background-color: inherit !important;
+            color: inherit !important;
+            font-weight: bold !important;
+        }
+
+        .df4a0c7b-c9e2-4583-b09e-8eb4c71382a1 {
+            background-color: inherit !important;
+            color: inherit !important;
+            font-style: italic !important;
+        }
+
+        .c5b8582a-b9d7-421f-b027-1587b1f5367e {
+            background-color: inherit !important;
+            color: inherit !important;
+            text-decoration: underline 0.2em !important;
+        }
+
+        .def33222-aa74-4df1-894a-59a882dd26fb {
+            background-color: inherit !important;
+            color: inherit !important;
+            text-decoration: line-through !important;
+        }
+
+        .c6bab7ff-c90f-4f0f-8a44-51c32015d7bc {
+            background-color: inherit !important;
+            color: inherit !important;
+            font-family: monospace !important;
+        }
+
+        .a1b2b84c-1c56-44d3-aed1-b2137617587f {
+            background-color: inherit !important;
+            color: inherit !important;
+            filter: blur(0.25em) !important;
+        }
+
+        .a2fd0e9f-02a3-496e-9f87-cd8ec0bd1edb {
+            background-color: inherit !important;
+            color: inherit !important;
+            font-size: 200% !important;
+        }
+
+        .ab9cf480-775e-436a-ad0a-08f8ba0d2136 {
+            --highlight-bg-color: 245, 245, 244;
+            --highlight-color: 87, 83, 78;
+            background-color: rgb(var(--highlight-bg-color)) !important;
+            color: rgb(87, 83, 78) !important;
+            display: flow-root !important;
+            margin-block: 1em !important;
+            margin-inline: 40px !important;
+            padding: 1em !important;
+            border-left: 0.4em solid rgb(87, 83, 78) !important;
+        }
+    </style>
+
+    <!-- Rom Patcher JS needed CSS/JS files -->
+	<link type="text/css" rel="stylesheet" href="./rom-patcher-js/style.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="./color.css" media="all" />
+    <script src="./rom-patcher-js/RomPatcher.js"></script>
+    <script src="./rom-patcher-js/RomPatcher.webworker.apply.js"></script>
+    <script src="./rom-patcher-js/RomPatcher.webworker.create.js"></script>
+    <script src="./rom-patcher-js/RomPatcher.webapp.js"></script>
+
+	<!-- Rom Patcher JS initialization -->
+	<script type="text/javascript">
+		window.addEventListener('load', function (evt) {
+			try {
+				fetch(BASE + "patches.info")
+					.then(res => res.json())
+					.then(patchInfo => {
+						RomPatcherWeb.initialize(
+							{
+								language: 'en',
+								requireValidation: true,
+								allowDropFiles: true
+							},
+							patchInfo
+						);
+
+						const downloadBtn = document.getElementById('rom-patcher-button-download');
+						const patchSelect = document.getElementById('rom-patcher-select-patch');
+
+						downloadBtn.onclick = () => {
+							const selectedIndex = patchSelect.selectedIndex;
+							if (selectedIndex < 0) return;
+
+							const patch = patchInfo.patches[selectedIndex];
+							const link = document.createElement('a');
+							link.href = BASE + `patches/${patch.file}`;
+							link.download = patch.file.split('/').pop();
+							document.body.appendChild(link);
+							link.click();
+							document.body.removeChild(link);
+						};
+					})
+					.catch(err => console.error(err));
+			} catch (err) {
+				var message = err.message;
+				if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
+					message = 'Your browser is outdated and it is not compatible with this app.';
+
+				document.getElementById('rom-patcher-container').innerHTML = message;
+				document.getElementById('rom-patcher-container').style.color = 'red';
+			}
+		});
+	</script>
+
+	<!-- Marked Initialisation --->
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body dir="RTL">
@@ -126,9 +293,11 @@
     <div class="w3-top">
         <div class="w3-bar w3-light-grey w3-card w3-right-align w3-large">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
-                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
             <a href="#logo" class="w3-bar-item w3-button w3-padding-large w3-indigo">ראש הדף</a>
-            <a href="#installation-guide" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">מדריך התקנה</a>
+            <a href="#installation-guide"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">מדריך התקנה</a>
             <a href="#downloads" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">הורדות</a>
             <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">אודות</a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
@@ -145,8 +314,7 @@
 
     <!-- Header -->
     <header class="w3-container w3-light-grey w3-center" style="padding: 128px 16px">
-        <!-- changed id to logoImage to match the script that checks it -->
-        <img src="Logo.png" class="w3-image w3-center" id="logoImage" alt="Logo"><br>
+        <img src="Logo.png" class="w3-image w3-center" id="logo"><br>
         <h1 class="w3-center"><b>ברקת</b></h1>
     </header>
 
@@ -154,11 +322,12 @@
     <div class="w3-row-padding w3-padding-64 w3-container">
         <div class="w3-content">
             <h1 id="installation-guide"><u>מדריך התקנה</u></h1>
-            <h5 class="w3-padding-32 w3-text-grey">הסבר איך לשים את הטלאי</h5>
 
-        <div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;"></div>
+
+        <div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;">
+	</div>
 	<script>
-		fetch('./info.md')
+		fetch(BASE + "info.md")
 			.then(response => {
 				if (!response.ok) {
 					return "";
@@ -190,14 +359,14 @@
 	<div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;">
 		<span class="text-mono text-muted">
 			Base ROM:<br>
-			Pokémon Emerald (USA, Europe)
+			{base}
 		</span>
 	</div>
 	<div id="rom-patcher-container">
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-			<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="ROM file:">ROM file:</label></div>
+			<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM file:</label></div>
 			<div class="rom-patcher-container-input">
-				<input type="file" id="rom-patcher-input-file-rom" class="empty no-file-selector-button">
+				<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
 			</div>
 		</div>
 		<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
@@ -220,31 +389,61 @@
 		</div>
 
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-			<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="Patch file:">Patch file:</label>
+			<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">Patch file:</label>
 			</div>
 			<div class="rom-patcher-container-input">
-				<select id="rom-patcher-select-patch" disabled="" style="display: none;"></select>
-			<span id="rom-patcher-span-loading-embeded-patch" style="display: block;">Unzipping... <span class="rom-patcher-spinner" id="rom-patcher-spinner-patch"></span></span><div id="rom-patcher-container-optional-patches" style="display: none;"></div></div>
+				<select id="rom-patcher-select-patch"></select>
+			</div>
 		</div>
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-			<div class="text-right text-mono text-muted" data-localize="Description:">Description:</div>
+			<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
 			<div class="text-truncate" id="rom-patcher-patch-description"></div>
 		</div>
-		<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted" id="rom-patcher-row-patch-requirements">
+		<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+			id="rom-patcher-row-patch-requirements">
 			<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
 			<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
 		</div>
 
 		<div class="text-center" id="rom-patcher-row-apply">
-			<div id="rom-patcher-row-error-message" class="margin-bottom show"><span id="rom-patcher-error-message">Error unzipping file</span>
+			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
 			</div>
-			<button id="rom-patcher-button-apply" data-localize="Apply patch" disabled="">Apply patch</button>
-			<button id="rom-patcher-button-download" data-localize="Download patch">Download patch</button>
+			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
+			<button id="rom-patcher-button-download" data-localize="yes" disabled>Download patch</button>
 		</div>
+		<br />
+		<div id="external-hack-link">
+			<div class="smaller-external-button" id="discordButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/Discord-Symbol-Blurple.png" loading="lazy" />
+				</a>
+			</div>
+
+			<div class="smaller-external-button" id="githubButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/github-mark.png" loading="lazy" />
+				</a>
+			</div>
+
+			<div class="smaller-external-button" id="pokecommunityButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/PokéCommunity_Logo_2014.png" loading="lazy" />
+				</a>
+			</div>
+
+			<div class="smaller-external-button" id="redditButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/Reddit_Icon_FullColor.png" loading="lazy" />
+				</a>
+			</div>
+		</div>
+
 	</div>
 
 	<div id="rom-patcher-powered" class="text-center">
-		<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank" style="color: var(--page-rom-patcher-link-color, --rom-patcher-link-color);"><img src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy">Powered by Rom Patcher
+		<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"
+			style="color: var(--page-rom-patcher-link-color, --rom-patcher-link-color);"><img
+				src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher
 			JS</a>
 	</div>
 
@@ -256,9 +455,30 @@
 			const title = config.title || "Untitled Rom Hack";
 			const base = config.base || "Not Specified";
 
-			document.body.innerHTML = document.body.innerHTML.replaceAll("POKéMON BAREKET", title);
-			document.body.innerHTML = document.body.innerHTML.replaceAll("Pokémon Emerald (USA, Europe)", base);
+			document.body.innerHTML = document.body.innerHTML.replaceAll("{title}", title);
+			document.body.innerHTML = document.body.innerHTML.replaceAll("{base}", base);
 			document.title = title;
+
+			const links = config.externalLinks || {};
+			const map = {
+				discordButton: links.discord,
+				githubButton: links.github,
+				pokecommunityButton: links.pokécommunity,
+				redditButton: links.reddit
+			};
+
+			Object.entries(map).forEach(([id, href]) => {
+				const btn = document.getElementById(id);
+				if (btn) {
+					if (href) {
+						const a = btn.querySelector("a");
+						if (a) a.href = href;
+						btn.style.display = "inline-block";
+					} else {
+						btn.style.display = "none";
+					}
+				}
+			});
 
 			const logoImg = document.getElementById("logoImage");
 			if (logoImg) {
@@ -267,7 +487,10 @@
 				};
 			}
 		})();
-	</script></div>
+	</script>
+
+
+        </div>
     </div>
 
     <!-- Second Grid -->
@@ -275,7 +498,8 @@
         <div class="w3-content">
             <h1 id="downloads">הורדות</h1>
             <h5 class="w3-padding-32 w3-text-grey">
-                (אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
+                (אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
+                    href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
         </div>
     </div>
 
@@ -285,7 +509,8 @@
             <div>
                 <h1 class="w3-center" id="about">אודות</h1>
                 <h5 class="w3-padding-32">
-                    למידע נוסף או סתם כדי להעיף מבט על הקבצים, מוזמנים לבקר ב<a href="https://github.com/shachar700/pokeemerald-fork/">גיטהאב של הפרויקט</a> :)<br><br>
+                    למידע נוסף או סתם כדי להעיף מבט על הקבצים, מוזמנים לבקר ב<a
+                        href="https://github.com/shachar700/pokeemerald-fork/">גיטהאב של הפרויקט</a> :)<br><br>
 
                     הפרויקט הזה התאפשר אך ורק בזכות האנשים הנפלאים שלקחו בו חלק.<br>
                     לאלה שיסיימו את המשחק, תגלו שבסוף המשחק אנחנו אפילו נמצאים בקרדיטים… אבל לאלה שלא יגיעו כל כך רחוק,
@@ -293,7 +518,8 @@
                 </h5>
 
                 <p class="w3-center w3-xlarge"><b>
-                        <a href="https://www.linkedin.com/in/shahar-berenson/">שחר ברנסון</a><br>
+                        <a href="https://www.linkedin.com/in/shahar-berenson/
+            ">שחר ברנסון</a><br>
                         שגיא בלמש<br>
                         ליאור כלפון (LIJI) כלפון<br>
                         נגה שקד<br>
@@ -346,8 +572,56 @@
         }
     </script>
 
-    <!-- keep any browser-extension iframes removed in production; left here as you had them -->
-    <iframe id="dl-egmenneb" src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/downloading.html" style="display: none;"></iframe>
-    <iframe id="dl-rec-egmenneb" src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/recording.html" allow="camera *; microphone *; display-capture *" style="display: none;"></iframe>
-</body>
+
+    <div class="region-selector-container"
+        style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; z-index: 2147483645; display: none;">
+        <template shadowrootmode="open">
+            <div class="region-selector-overlay"
+                style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; background: transparent; z-index: 2147483646; display: none; cursor: default; user-select: none; pointer-events: auto;">
+            </div>
+            <div class="region-selector-box"
+                style="position: fixed; padding: 4px; top: 25%; left: 25%; width: 50%; height: 50%; border: 2px dashed rgb(255, 255, 255); background: transparent; z-index: 2147483647; display: none; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px 100vmax; cursor: move;">
+                <div style="width: 100%; height: 100%; background: transparent; pointer-events: none; cursor: none;">
+                </div>
+                <div class="handle top-left"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; left: -6px; cursor: nw-resize;">
+                </div>
+                <div class="handle top"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; left: 50%; margin-left: -6px; cursor: n-resize;">
+                </div>
+                <div class="handle top-right"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; right: -6px; cursor: ne-resize;">
+                </div>
+                <div class="handle right"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: 50%; right: -6px; margin-top: -6px; cursor: e-resize;">
+                </div>
+                <div class="handle bottom-right"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; right: -6px; cursor: se-resize;">
+                </div>
+                <div class="handle bottom"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; left: 50%; margin-left: -6px; cursor: s-resize;">
+                </div>
+                <div class="handle bottom-left"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; left: -6px; cursor: sw-resize;">
+                </div>
+                <div class="handle left"
+                    style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: 50%; left: -6px; margin-top: -6px; cursor: w-resize;">
+                </div>
+                <div
+                    style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.7); color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; white-space: nowrap;">
+                </div>
+                <div
+                    style="position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; bottom: -45px;">
+                    <button
+                        style="padding: 8px 16px; background: rgb(76, 175, 80); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Start
+                        Record</button><button
+                        style="padding: 8px 16px; background: rgb(244, 67, 54); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Cancel
+                        Record</button></div>
+            </div>
+        </template></div>
+</body><iframe id="dl-egmenneb" src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/downloading.html"
+    style="display: none;"></iframe><iframe id="dl-rec-egmenneb"
+    src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/recording.html"
+    allow="camera *; microphone *; display-capture *" style="display: none;"></iframe>
+
 </html>
