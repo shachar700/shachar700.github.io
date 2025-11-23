@@ -1,19 +1,27 @@
 <html lang="he">
-<head>
-    <script>
-    const BASE = "/bareket/";
-    </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>פוקימון ברקת בעברית</title>
 
+<head>
+       
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <title>פוקימון ברקת בעברית</title>
+
+       
     <meta property="viewport" content="width=device-width, initial-scale=1">
+       
     <meta property="og:title" content="פוקימון ברקת בעברית">
+       
     <meta property="og:description" content="🐲🐉 מדריך התקנה למשחקים פוקימון ברקת בעברית.🐲🐉">
+       
     <meta property="og:image" content="og-image.png">
+       
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="./styles/w3.css">
-    <style>
+       
+    <link rel="stylesheet" href="styles/w3.css">
+       
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+        <style>
         body,
         h1,
         h2,
@@ -35,7 +43,7 @@
             font-size: 200px;
         }
     </style>
-    <style id="__web-inspector-hide-shortcut-style__">
+        <style id="__web-inspector-hide-shortcut-style__">
         .__web-inspector-hide-shortcut__,
         .__web-inspector-hide-shortcut__ *,
         .__web-inspector-hidebefore-shortcut__::before,
@@ -43,7 +51,7 @@
             visibility: hidden !important;
         }
     </style>
-    <style id="a3c92a26">
+        <style id="a3c92a26">
         .c817a537 .ssh-close {
             position: absolute;
             left: -9px;
@@ -231,278 +239,343 @@
         }
     </style>
 
-    <!-- Rom Patcher JS needed CSS/JS files -->
-	<link type="text/css" rel="stylesheet" href="./rom-patcher-js/style.css" media="all" />
-	<link type="text/css" rel="stylesheet" href="./color.css" media="all" />
-    <script src="/rom-patcher-js/RomPatcher.js"></script>
-    <script src="/rom-patcher-js/RomPatcher.webapp.js"></script>
+           
+    <link type="text/css" rel="stylesheet" href="rom-patcher-js/style.css" media="all" />
+       
+    <link type="text/css" rel="stylesheet" href="color.css" media="all" />
+       
+    <script src="rom-patcher-js/RomPatcher.js"></script>
+       
+    <script src="rom-patcher-js/RomPatcher.webworker.apply.js"></script>
+       
+    <script src="rom-patcher-js/RomPatcher.webworker.create.js"></script>
+       
+    <script src="rom-patcher-js/RomPatcher.webapp.js"></script>
 
-	<!-- Rom Patcher JS initialization -->
-	<script type="text/javascript">
-		window.addEventListener('load', function (evt) {
-			try {
-				fetch(BASE + "patches.info")
-					.then(res => res.json())
-					.then(patchInfo => {
-						RomPatcherWeb.initialize(
-							{
-								language: 'en',
-								requireValidation: true,
-								allowDropFiles: true
-							},
-							patchInfo
-						);
+           
+    <script type="text/javascript">
+        window.addEventListener('load', function (evt) {
+            try {
+                fetch("patches.info")
+                    .then(res => res.json())
+                    .then(patchInfo => {
+                        RomPatcherWeb.initialize(
+                            {
+                                language: 'en',
+                                requireValidation: true,
+                                allowDropFiles: true
+                            },
+                            patchInfo
+                        );
 
-						const downloadBtn = document.getElementById('rom-patcher-button-download');
-						const patchSelect = document.getElementById('rom-patcher-select-patch');
+                        const downloadBtn = document.getElementById('rom-patcher-button-download');
+                        const patchSelect = document.getElementById('rom-patcher-select-patch');
 
-						downloadBtn.onclick = () => {
-							const selectedIndex = patchSelect.selectedIndex;
-							if (selectedIndex < 0) return;
+                        downloadBtn.onclick = () => {
+                            const selectedIndex = patchSelect.selectedIndex;
+                            if (selectedIndex < 0) return;
 
-							const patch = patchInfo.patches[selectedIndex];
-							const link = document.createElement('a');
-							link.href = BASE + `patches/${patch.file}`;
-							link.download = patch.file.split('/').pop();
-							document.body.appendChild(link);
-							link.click();
-							document.body.removeChild(link);
-						};
-					})
-					.catch(err => console.error(err));
-			} catch (err) {
-				var message = err.message;
-				if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
-					message = 'Your browser is outdated and it is not compatible with this app.';
+                            const patch = patchInfo.patches[selectedIndex];
+                            const link = document.createElement('a');
+                            link.href = `patches/${patch.file}`;
+                            link.download = patch.file.split('/').pop();
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        };
+                    })
+                    .catch(err => console.error(err));
+            } catch (err) {
+                var message = err.message;
+                if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
+                    message = 'Your browser is outdated and it is not compatible with this app.';
 
-				document.getElementById('rom-patcher-container').innerHTML = message;
-				document.getElementById('rom-patcher-container').style.color = 'red';
-			}
-		});
-	</script>
+                document.getElementById('rom-patcher-container').innerHTML = message;
+                document.getElementById('rom-patcher-container').style.color = 'red';
+            }
+        });
+    </script>
 
-	<!-- Marked Initialisation --->
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+           
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body dir="RTL">
-    <!-- Navbar -->
-    <div class="w3-top">
-        <div class="w3-bar w3-light-grey w3-card w3-right-align w3-large">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
-                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
-                    class="fa fa-bars"></i></a>
-            <a href="#logo" class="w3-bar-item w3-button w3-padding-large w3-indigo">ראש הדף</a>
-            <a href="#installation-guide"
+            <div class="w3-top">
+                <div class="w3-bar w3-light-grey w3-card w3-right-align w3-large">
+                        <a
+                class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
+                                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i    
+                                    class="fa fa-bars"></i></a>
+                        <a href="#logo" class="w3-bar-item w3-button w3-padding-large w3-indigo">ראש הדף</a>
+                        <a href="#installation-guide"                
                 class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">מדריך התקנה</a>
-            <a href="#downloads" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">הורדות</a>
-            <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">אודות</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+                        <a href="#downloads"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">הורדות</a>
+                        <a href="#about"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">אודות</a>
+                        <a href="#contact"
+                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+                    </div>
+
+                        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+                        <a href="#installation-guide" class="w3-bar-item w3-button w3-padding-large">מדריך התקנה</a>
+                        <a href="#downloads" class="w3-bar-item w3-button w3-padding-large">הורדות</a>
+                        <a href="#about" class="w3-bar-item w3-button w3-padding-large">אודות</a>
+                        <a href="#contact" class="w3-bar-item w3-button w3-padding-large">צור קשר</a>
+                    </div>
+            </div>
+
+            <header class="w3-container w3-light-grey w3-center" style="padding: 128px 16px">
+                <img src="Logo.png" class="w3-image w3-center" id="logo"><br>
+                <h1 class="w3-center"><b>ברקת</b></h1>
+            </header>
+
+            <div class="w3-row-padding w3-padding-64 w3-container">
+                <div class="w3-content">
+                        <h1 id="installation-guide"><u>מדריך התקנה</u></h1>
+
+
+                    <div id="rom-patcher-container"
+                style="justify-content:center;align-items:center;text-align:center;">
+                    </div>
+               
+            <script>
+                fetch('info.md')
+                    .then(response => {
+                        if (!response.ok) {
+                            return "";
+                        }
+                        return response.text();
+                    })
+                    .then(text => {
+                        const container = document.getElementById('rom-patcher-container');
+                        if (text.trim()) {
+                            container.innerHTML = marked.parse(text);
+                        } else {
+                            container.innerHTML = "";
+                        }
+                    })
+                    .catch(err => {
+                        document.getElementById('rom-patcher-container').innerHTML = "";
+                        console.error(err);
+                    });
+            </script>
+
+                        <div id="rom-patcher-container"
+                style="justify-content:center;align-items:center;text-align:center;">
+                        <span class="text-mono text-muted">
+                                Base ROM:<br>
+                                {base}
+                            </span>
+                    </div>
+                <div id="rom-patcher-container">
+                        <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+                                <div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM
+                            file:</label></div>
+                                <div class="rom-patcher-container-input">
+                                        <input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+                                    </div>
+                            </div>
+                        <div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+                                <div class="rom-patcher-row">
+                                        <div class="text-right">CRC32:</div>
+                                        <div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+                                    </div>
+                                <div class="rom-patcher-row">
+                                        <div class="text-right">MD5:</div>
+                                        <div class="text-truncate"><span id="rom-patcher-span-md5"></span></div>
+                                    </div>
+                                <div class="rom-patcher-row">
+                                        <div class="text-right">SHA-1:</div>
+                                        <div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+                                    </div>
+                                <div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+                                        <div class="text-right">ROM:</div>
+                                        <div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+                                    </div>
+                            </div>
+
+                        <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+                                <div class="text-right"><label for="rom-patcher-input-file-patch"
+                            data-localize="yes">Patch file:</label>
+                                    </div>
+                                <div class="rom-patcher-container-input">
+                                        <select id="rom-patcher-select-patch"></select>
+                                    </div>
+                            </div>
+                        <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+                                <div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+                                <div class="text-truncate" id="rom-patcher-patch-description"></div>
+                            </div>
+                        <div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"            
+                    id="rom-patcher-row-patch-requirements">
+                                <div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM
+                        requirements:</div>
+                                <div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+                            </div>
+
+                        <div class="text-center" id="rom-patcher-row-apply">
+                                <div id="rom-patcher-row-error-message" class="margin-bottom"><span
+                            id="rom-patcher-error-message"></span>
+                                    </div>
+                                <button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
+                                <button id="rom-patcher-button-download" data-localize="yes" disabled>Download
+                        patch</button>
+                            </div>
+                        <br />
+                        <div id="external-hack-link">
+                                <div class="smaller-external-button" id="discordButton">
+                                        <a href="" target="_blank">
+                                                <img src="assets/images/externals/Discord-Symbol-Blurple.png"
+                                loading="lazy" />
+                                            </a>
+                                    </div>
+
+                                <div class="smaller-external-button" id="githubButton">
+                                        <a href="" target="_blank">
+                                                <img src="assets/images/externals/github-mark.png" loading="lazy" />
+                                            </a>
+                                    </div>
+
+                                <div class="smaller-external-button" id="pokecommunityButton">
+                                        <a href="" target="_blank">
+                                                <img src="assets/images/externals/PokéCommunity_Logo_2014.png"
+                                loading="lazy" />
+                                            </a>
+                                    </div>
+
+                                <div class="smaller-external-button" id="redditButton">
+                                        <a href="" target="_blank">
+                                                <img src="assets/images/externals/Reddit_Icon_FullColor.png"
+                                loading="lazy" />
+                                            </a>
+                                    </div>
+                            </div>
+
+                    </div>
+
+                <div id="rom-patcher-powered" class="text-center">
+                        <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"            
+                    style="color: var(--page-rom-patcher-link-color, --rom-patcher-link-color);"><img                
+                        src="rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom
+                    Patcher
+                                JS</a>
+                    </div>
+
+                   
+            <script src="config.js"></script>
+               
+            <script>
+                (() => {
+                    const config = window.TARP_CONFIG || {};
+                    const title = config.title || "Untitled Rom Hack";
+                    const base = config.base || "Not Specified";
+
+                    document.body.innerHTML = document.body.innerHTML.replaceAll("{title}", title);
+                    document.body.innerHTML = document.body.innerHTML.replaceAll("{base}", base);
+                    document.title = title;
+
+                    const links = config.externalLinks || {};
+                    const map = {
+                        discordButton: links.discord,
+                        githubButton: links.github,
+                        pokecommunityButton: links.pokécommunity,
+                        redditButton: links.reddit
+                    };
+
+                    Object.entries(map).forEach(([id, href]) => {
+                        const btn = document.getElementById(id);
+                        if (btn) {
+                            if (href) {
+                                const a = btn.querySelector("a");
+                                if (a) a.href = href;
+                                btn.style.display = "inline-block";
+                            } else {
+                                btn.style.display = "none";
+                            }
+                        }
+                    });
+
+                    const logoImg = document.getElementById("logoImage");
+                    if (logoImg) {
+                        logoImg.onerror = () => {
+                            logoImg.style.display = "none";
+                        };
+                    }
+                })();
+            </script>
+
+
+                   
         </div>
+            </div>
 
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-            <a href="#installation-guide" class="w3-bar-item w3-button w3-padding-large">מדריך התקנה</a>
-            <a href="#downloads" class="w3-bar-item w3-button w3-padding-large">הורדות</a>
-            <a href="#about" class="w3-bar-item w3-button w3-padding-large">אודות</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large">צור קשר</a>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="w3-container w3-light-grey w3-center" style="padding: 128px 16px">
-        <img src="Logo.png" class="w3-image w3-center" id="logo"><br>
-        <h1 class="w3-center"><b>ברקת</b></h1>
-    </header>
-
-    <!-- First Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container">
-        <div class="w3-content">
-            <h1 id="installation-guide"><u>מדריך התקנה</u></h1>
-
-
-        <div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;">
-	</div>
-	<script>
-		fetch(BASE + "info.md")
-			.then(response => {
-				if (!response.ok) {
-					return "";
-				}
-				return response.text();
-			})
-			.then(text => {
-				const container = document.getElementById('rom-patcher-container');
-				if (text.trim()) {
-					container.innerHTML = marked.parse(text);
-				} else {
-					container.innerHTML = "";
-				}
-			})
-			.catch(err => {
-				document.getElementById('rom-patcher-container').innerHTML = "";
-				console.error(err);
-			});
-	</script>
-
-	<!-- Rom Patcher JS container -->
-	<!--
-		The following elements are required for Rom Patcher JS to work:
-			#rom-patcher-input-file-rom
-			#rom-patcher-select-patch
-			#rom-patcher-button-apply
-		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
-	-->
-	<div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;">
-		<span class="text-mono text-muted">
-			Base ROM:<br>
-			{base}
-		</span>
-	</div>
-	<div id="rom-patcher-container">
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-			<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM file:</label></div>
-			<div class="rom-patcher-container-input">
-				<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
-			</div>
-		</div>
-		<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
-			<div class="rom-patcher-row">
-				<div class="text-right">CRC32:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
-			</div>
-			<div class="rom-patcher-row">
-				<div class="text-right">MD5:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-md5"></span></div>
-			</div>
-			<div class="rom-patcher-row">
-				<div class="text-right">SHA-1:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
-			</div>
-			<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
-				<div class="text-right">ROM:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
-			</div>
-		</div>
-
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-			<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">Patch file:</label>
-			</div>
-			<div class="rom-patcher-container-input">
-				<select id="rom-patcher-select-patch"></select>
-			</div>
-		</div>
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-			<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
-			<div class="text-truncate" id="rom-patcher-patch-description"></div>
-		</div>
-		<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
-			id="rom-patcher-row-patch-requirements">
-			<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
-			<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
-		</div>
-
-		<div class="text-center" id="rom-patcher-row-apply">
-			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
-			</div>
-			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
-			<button id="rom-patcher-button-download" data-localize="yes" disabled>Download patch</button>
-		</div>
-		<br />
-	</div>
-
-	<div id="rom-patcher-powered" class="text-center">
-		<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"
-			style="color: var(--page-rom-patcher-link-color, --rom-patcher-link-color);"><img
-				src="/rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher
-			JS</a>
-	</div>
-
-	<!-- Load Other Rom Hack Page Elements -->
-	<script src="/config.js"></script>
-	<script>
-		(() => {
-			const config = window.TARP_CONFIG || {};
-			const title = config.title || "Untitled Rom Hack";
-			const base = config.base || "Not Specified";
-
-			document.body.innerHTML = document.body.innerHTML.replaceAll("{title}", title);
-			document.body.innerHTML = document.body.innerHTML.replaceAll("{base}", base);
-			document.title = title;
-		})();
-	</script>
-
-
-        </div>
-    </div>
-
-    <!-- Second Grid -->
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-        <div class="w3-content">
-            <h1 id="downloads">הורדות</h1>
-            <h5 class="w3-padding-32 w3-text-grey">
-                (אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
+            <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+                <div class="w3-content">
+                        <h1 id="downloads">הורדות</h1>
+                        <h5 class="w3-padding-32 w3-text-grey">
+                                (אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a                    
                     href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
-        </div>
-    </div>
+                    </div>
+            </div>
 
-    <!-- Third Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container">
-        <div class="w3-content">
-            <div>
-                <h1 class="w3-center" id="about">אודות</h1>
-                <h5 class="w3-padding-32">
-                    למידע נוסף או סתם כדי להעיף מבט על הקבצים, מוזמנים לבקר ב<a
-                        href="https://github.com/shachar700/pokeemerald-fork/">גיטהאב של הפרויקט</a> :)<br><br>
+            <div class="w3-row-padding w3-padding-64 w3-container">
+                <div class="w3-content">
+                        <div>
+                                <h1 class="w3-center" id="about">אודות</h1>
+                                <h5 class="w3-padding-32">
+                                        למידע נוסף או סתם כדי להעיף מבט על הקבצים, מוזמנים לבקר ב<a                    
+                            href="https://github.com/shachar700/pokeemerald-fork/">גיטהאב של הפרויקט</a> :)<br><br>
 
-                    הפרויקט הזה התאפשר אך ורק בזכות האנשים הנפלאים שלקחו בו חלק.<br>
-                    לאלה שיסיימו את המשחק, תגלו שבסוף המשחק אנחנו אפילו נמצאים בקרדיטים… אבל לאלה שלא יגיעו כל כך רחוק,
-                    אלה השמות של כל אלו שלקחו חלק בפרויקט הזה.
-                </h5>
+                                        הפרויקט הזה התאפשר אך ורק בזכות האנשים הנפלאים שלקחו בו חלק.<br>
+                                        לאלה שיסיימו את המשחק, תגלו שבסוף המשחק אנחנו אפילו נמצאים בקרדיטים… אבל לאלה
+                    שלא יגיעו כל כך רחוק,
+                                        אלה השמות של כל אלו שלקחו חלק בפרויקט הזה.
+                                    </h5>
 
-                <p class="w3-center w3-xlarge"><b>
-                        <a href="https://www.linkedin.com/in/shahar-berenson/
-            ">שחר ברנסון</a><br>
-                        שגיא בלמש<br>
-                        ליאור כלפון (LIJI) כלפון<br>
-                        נגה שקד<br>
-                        מ. ש. אלבוים<br>
-                    </b>
-                </p>
-            </div>
-        </div>
-    </div>
+                                <p class="w3-center w3-xlarge"><b>
+                                                <a href="https://www.linkedin.com/in/shahar-berenson/
+            ">שחר ברנסון</a><br>
+                                                שגיא בלמש<br>
+                                                ליאור כלפון (LIJI) כלפון<br>
+                                                נגה שקד<br>
+                                                מ. ש. אלבוים<br>
+                                            </b>
+                                    </p>
+                            </div>
+                    </div>
+            </div>
 
-    <!-- Fourth Grid -->
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-        <div class="w3-content">
-            <h1 id="contact">צור קשר</h1>
-            <h5 class="w3-padding-32">
-                שאלות? טענות? מענות?
-                צרו קשר!
-                מוזמנים לפנות לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
-            </h5>
-        </div>
-    </div>
+            <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+                <div class="w3-content">
+                        <h1 id="contact">צור קשר</h1>
+                        <h5 class="w3-padding-32">
+                                שאלות? טענות? מענות?
+                                צרו קשר!
+                                מוזמנים לפנות לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
+                            </h5>
+                    </div>
+            </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-        <div class="w3-xlarge w3-padding-32">
-            <a href="https://github.com/shachar700/pokeemerald-fork/ ">
-                <i class="fa fa-github w3-hover-opacity w3-xxlarge"></i>
-            </a>
-        </div>
-        <p dir="LTR">
-            Powered by GitHub &amp;
-            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>
-            © 2005 Pokémon. © 1995–2005 Nintendo/Creatures Inc./GAME FREAK inc.<br>
-            Pokémon are trademarks of Nintendo. Other trademarks are the property of
-            their respective owners. <br>
-            Any and all copyrighted material is the property of its respective
-            owners.
-        </p>
-    </footer>
+            <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+                <div class="w3-xlarge w3-padding-32">
+                        <a href="https://github.com/shachar700/pokeemerald-fork/ ">
+                                <i class="fa fa-github w3-hover-opacity w3-xxlarge"></i>
+                            </a>
+                    </div>
+                <p dir="LTR">
+                        Powered by GitHub &amp;
+                        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>
+                        © 2005 Pokémon. © 1995–2005 Nintendo/Creatures Inc./GAME FREAK inc.<br>
+                        Pokémon are trademarks of Nintendo. Other trademarks are the property of
+                        their respective owners. <br>
+                        Any and all copyrighted material is the property of its respective
+                        owners.
+                    </p>
+            </footer>
 
+       
     <script>
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
@@ -516,55 +589,56 @@
     </script>
 
 
-    <div class="region-selector-container"
+        <div class="region-selector-container"        
         style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; z-index: 2147483645; display: none;">
-        <template shadowrootmode="open">
-            <div class="region-selector-overlay"
+                <template shadowrootmode="open">
+                        <div class="region-selector-overlay"                
                 style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; background: transparent; z-index: 2147483646; display: none; cursor: default; user-select: none; pointer-events: auto;">
-            </div>
-            <div class="region-selector-box"
+                            </div>
+                        <div class="region-selector-box"                
                 style="position: fixed; padding: 4px; top: 25%; left: 25%; width: 50%; height: 50%; border: 2px dashed rgb(255, 255, 255); background: transparent; z-index: 2147483647; display: none; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px 100vmax; cursor: move;">
-                <div style="width: 100%; height: 100%; background: transparent; pointer-events: none; cursor: none;">
-                </div>
-                <div class="handle top-left"
+                                <div
+                    style="width: 100%; height: 100%; background: transparent; pointer-events: none; cursor: none;">
+                                    </div>
+                                <div class="handle top-left"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; left: -6px; cursor: nw-resize;">
-                </div>
-                <div class="handle top"
+                                    </div>
+                                <div class="handle top"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; left: 50%; margin-left: -6px; cursor: n-resize;">
-                </div>
-                <div class="handle top-right"
+                                    </div>
+                                <div class="handle top-right"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: -6px; right: -6px; cursor: ne-resize;">
-                </div>
-                <div class="handle right"
+                                    </div>
+                                <div class="handle right"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: 50%; right: -6px; margin-top: -6px; cursor: e-resize;">
-                </div>
-                <div class="handle bottom-right"
+                                    </div>
+                                <div class="handle bottom-right"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; right: -6px; cursor: se-resize;">
-                </div>
-                <div class="handle bottom"
+                                    </div>
+                                <div class="handle bottom"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; left: 50%; margin-left: -6px; cursor: s-resize;">
-                </div>
-                <div class="handle bottom-left"
+                                    </div>
+                                <div class="handle bottom-left"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; bottom: -6px; left: -6px; cursor: sw-resize;">
-                </div>
-                <div class="handle left"
+                                    </div>
+                                <div class="handle left"                    
                     style="position: absolute; width: 8px; height: 8px; background: white; border: 1px solid rgb(51, 51, 51); border-radius: 50%; top: 50%; left: -6px; margin-top: -6px; cursor: w-resize;">
-                </div>
-                <div
+                                    </div>
+                                <div                    
                     style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.7); color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; white-space: nowrap;">
-                </div>
-                <div
+                                    </div>
+                                <div                    
                     style="position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; bottom: -45px;">
-                    <button
+                                        <button                        
                         style="padding: 8px 16px; background: rgb(76, 175, 80); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Start
-                        Record</button><button
+                                                Record</button><button                        
                         style="padding: 8px 16px; background: rgb(244, 67, 54); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Cancel
-                        Record</button></div>
-            </div>
-        </template></div>
-</body><iframe id="dl-egmenneb" src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/downloading.html"
-    style="display: none;"></iframe><iframe id="dl-rec-egmenneb"
-    src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/recording.html"
+                                                Record</button></div>
+                            </div>
+                    </template></div>
+</body><iframe id="dl-egmenneb" src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/downloading.html"    
+    style="display: none;"></iframe><iframe id="dl-rec-egmenneb"    
+    src="chrome-extension://egmennebgadmncfjafcemlecimkepcle/html/recording.html"    
     allow="camera *; microphone *; display-capture *" style="display: none;"></iframe>
 
 </html>
