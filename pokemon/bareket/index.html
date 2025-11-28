@@ -8,7 +8,7 @@
 
     <title>פוקימון ברקת בעברית</title>
     <meta property="og:title" content="פוקימון ברקת בעברית">
-    <meta property="og:description" content="🐞🐟🌞 מדריך התקנה למשחקים פוקימון אדום, כחול, וצהוב בעברית. 🌞🐟🐞">
+    <meta property="og:description" content="🐉🐲 מדריך התקנה למשחקים פוקימון אדום, כחול, וצהוב בעברית. 🐉🐲">
     <meta property="og:image" content="og-image.png">
     <meta property="og:type" content="website">
 
@@ -35,11 +35,14 @@
         .fa-coffee {
             font-size: 200px;
         }
+		:target {
+			scroll-margin-top: 120px; /* adjust to match navbar height */
+		}
     </style>
 
-    <link type="text/css" rel="stylesheet" href="../../rom-patcher-js/style.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="../rom-patcher-js/style.css" media="all" />
     <link type="text/css" rel="stylesheet" href="./color.css" media="all" />
-    <script type="text/javascript" src="../../rom-patcher-js/RomPatcher.webapp.js"></script>
+    <script type="text/javascript" src="../rom-patcher-js/RomPatcher.webapp.js"></script>
 
     <script type="text/javascript">
         window.addEventListener('load', function (evt) {
@@ -112,7 +115,7 @@
 
     <header class="w3-container w3-light-grey w3-center" style="padding: 128px 16px">
         <img src="logo.png" class="w3-image w3-center" id="logo"><br>
-        <h1 class="w3-center"><b>{title}</b></h1>
+        <h1 class="w3-center"><b>ברקת</b></h1>
     </header>
 
     <div class="w3-row-padding w3-padding-64 w3-container">
@@ -205,25 +208,25 @@
                     <div id="external-hack-link">
                         <div class="smaller-external-button" id="discordButton">
                             <a href="" target="_blank">
-                                <img src="../../assets/images/externals/Discord-Symbol-Blurple.png" loading="lazy" />
+                                <img src="../assets/images/externals/Discord-Symbol-Blurple.png" loading="lazy" />
                             </a>
                         </div>
 
                         <div class="smaller-external-button" id="githubButton">
                             <a href="" target="_blank">
-                                <img src="../../assets/images/externals/github-mark.png" loading="lazy" />
+                                <img src="../assets/images/externals/github-mark.png" loading="lazy" />
                             </a>
                         </div>
 
                         <div class="smaller-external-button" id="pokecommunityButton">
                             <a href="" target="_blank">
-                                <img src="../../assets/images/externals/PokéCommunity_Logo_2014.png" loading="lazy" />
+                                <img src="../assets/images/externals/PokéCommunity_Logo_2014.png" loading="lazy" />
                             </a>
                         </div>
 
                         <div class="smaller-external-button" id="redditButton">
                             <a href="" target="_blank">
-                                <img src="../../assets/images/externals/Reddit_Icon_FullColor.png" loading="lazy" />
+                                <img src="../assets/images/externals/Reddit_Icon_FullColor.png" loading="lazy" />
                             </a>
                         </div>
                     </div>
@@ -233,7 +236,7 @@
                 <div id="rom-patcher-powered" class="text-center">
                     <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"
                         style="color: var(--page-rom-patcher-link-color, --rom-patcher-link-color);"><img
-                            src="../../rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher
+                            src="../rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher
                         JS</a>
                 </div>
             </div>
@@ -310,7 +313,6 @@
             // Replace all instances of placeholders
             document.body.innerHTML = document.body.innerHTML.replaceAll("{title}", title);
             document.body.innerHTML = document.body.innerHTML.replaceAll("{base}", base);
-            document.title = title;
 
             const links = config.externalLinks || {};
             const map = {
