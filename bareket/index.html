@@ -2,9 +2,13 @@
 <html translate="no">
 
 <head>
-	<title>Rom Patcher JS - Custom patcher template</title>
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<title>פוקימון ברקת בעברית</title>
 	<meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta property="og:description" content="🐉🐲 מדריך התקנה למשחק פוקימון ברקת בעברית. 🐉🐲">
+
+	<link rel="stylesheet" href="./styles/w3.css">
 
 	<!-- Rom Patcher JS needed CSS/JS files -->
 	<link type="text/css" rel="stylesheet" href="./rom-patcher-js/style.css" media="all" />
@@ -19,9 +23,9 @@
 					requireValidation: false,
 				}, {
 					file: './patches.zip', //zip containing patches
-					name: 'Game (English v1.0)',
-					description: 'English fan translation for Game',
-					outputName: 'Game (English v1.0)', //patched ROM name
+					name: 'Pokemon_BAREKET.bps',
+					//description: 'English fan translation for Game',
+					outputName: 'Pokemon Bareket', //patched ROM name
 				});
 			} catch (err) {
 				var message = err.message;
@@ -36,11 +40,76 @@
 </head>
 
 <body dir="RTL" style="font: 15px 'Open Sans', sans-serif;">
-	<header style="text-align: center">
-		<h1>פוקימון ברקת בעברית</h1>
+	<div class="w3-top">
+		<div class="w3-bar w3-light-grey w3-card w3-right-align w3-large">
+			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
+				href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+					class="fa fa-bars"></i></a>
+			<a href="#mytop" class="w3-bar-item w3-button w3-padding-large w3-hover-white">ראש הדף</a>
+			<a href="#installation"
+				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">התקנה</a>
+			<a href="#game" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">משחק</a>
+			<a href="#thanks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
+			<a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+		</div>
+
+		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+			<a href="#installation" class="w3-bar-item w3-button w3-padding-large">התקנה</a>
+			<a href="#game" class="w3-bar-item w3-button w3-padding-large">משחק</a>
+			<a href="#thanks" class="w3-bar-item w3-button w3-padding-large">תודות</a>
+			<a href="#contact" class="w3-bar-item w3-button w3-padding-large">צור קשר</a>
+		</div>
+	</div>
+
+	<header class="w3-container w3-center" style="padding: 128px 16px" id="mytop">
+		<img src="logo.png" class="w3-image w3-center"><br>
+		<h1 class="w3-center"><b>ברקת</b></h1>
+
+		<div class="w3-row-padding padding-64 w3-container">
+			<div class="w3-content" style="direction: rtl; text-align: right;">
+
+				<!-- אודות title -->
+				<h2 id="aboutToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
+					אודות &#9662;
+				</h2>
+
+				<div class="w3-clear"></div>
+
+				<!-- Hidden content -->
+				<div id="aboutContent" class="w3-animate-opacity" style="display: none; margin-top: 16px;">
+
+					<h5>
+						אזור הואן אינו יציב - רייקואזה התעורר! כישוריך כמאמנים יעמדו בפני אתגרים שלא היו מעולם, כשאתם
+						מנסים לשמור על האיזון בין קיוגר לגראודון. הוכחו את כישוריכם על ידי צבירת תגים וגישה לחזית הקרבות
+						- קו החזית של קרבות הפוקימונים המציע רמה חדשה לגמרי של תחרות. קרבות שלא חוויתם מעולם מחכים לכם!
+					</h5>
+
+					<!-- BULLET POINTS -->
+					<ul style="font-size: 16px; list-style-type: disc; padding-right: 20px; margin-top: 20px; text-align: right;">
+						<li>ההרפתקה השלישית עם פרקים חדשים באזור הואן!</li>
+						<li>המון תכונות חדשות, כולל תפניות עלילה מפתיעות ושינויים במקום ובאיזו תדירות ניתן לתפוס
+							פוקימונים מסוימים.</li>
+						<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי לסחור ולהילחם בין גרסאות של פוקימון אמרלד
+							ופוקימון FireRed & LeafGreen.</li>
+						<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link(r), התחברו עם פוקימון רובי
+							וספיר, פוקימון FireRed & LeafGreen או פוקימון קולוסיאום כדי לתפוס את כולם!</li>
+					</ul>
+
+					<h5>
+						יכולת קריאה בסיסית נדרשת כדי להנות באופן מלא מהמשחק הזה.
+					</h5>
+
+				</div>
+			</div>
+		</div>
 	</header>
 
-
+	<script>
+		document.getElementById("aboutToggle").onclick = function () {
+			const content = document.getElementById("aboutContent");
+			content.style.display = content.style.display === "none" ? "block" : "none";
+		};
+	</script>
 	<!-- Rom Patcher JS container -->
 	<!--
 		The following elements are required for Rom Patcher JS to work:
@@ -49,63 +118,126 @@
 			#rom-patcher-button-apply
 		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 	-->
-	
+	<div class="w3-row-padding padding-64 w3-container" id="installation">
+		<div class="w3-content">
+			<h1><u>התקנה</u></h1>
 
-	<div id="rom-patcher-container">
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-			<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM file:</label></div>
-			<div class="rom-patcher-container-input">
-				<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+			<div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;">
+				<span class="text-muted">
+					מבוסס על ה-ROM:<br>
+					Pokémon Emerald.gba (USA, Europe)
+				</span>
+			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+				<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ
+						ROM:</label></div>
+				<div class="rom-patcher-container-input">
+					<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+				</div>
 			</div>
-		</div>
-		<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
-			<div class="rom-patcher-row">
-				<div class="text-right">CRC32:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+			<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+				<div class="rom-patcher-row">
+					<div class="text-right">CRC32:</div>
+					<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+				</div>
+				<div class="rom-patcher-row">
+					<div class="text-right">SHA-1:</div>
+					<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+				</div>
+				<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+					<div class="text-right">ROM:</div>
+					<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+				</div>
 			</div>
-			<div class="rom-patcher-row">
-				<div class="text-right">MD5:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-md5"></span></div>
+
+			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+				<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ
+						Patch:</label>
+				</div>
+				<div class="rom-patcher-container-input">
+					<select id="rom-patcher-select-patch"></select>
+				</div>
 			</div>
-			<div class="rom-patcher-row">
-				<div class="text-right">SHA-1:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+				<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+				<div class="text-truncate" id="rom-patcher-patch-description"></div>
 			</div>
-			<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
-				<div class="text-right">ROM:</div>
-				<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+			<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+				id="rom-patcher-row-patch-requirements">
+				<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
+				<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+			</div>
+
+			<div class="text-center" id="rom-patcher-row-apply">
+				<div id="rom-patcher-row-error-message" class="margin-bottom"><span
+						id="rom-patcher-error-message"></span>
+				</div>
+				<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
 			</div>
 		</div>
 
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-			<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">Patch file:</label>
-			</div>
-			<div class="rom-patcher-container-input">
-				<select id="rom-patcher-select-patch"></select>
-			</div>
-		</div>
-		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-			<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
-			<div class="text-truncate" id="rom-patcher-patch-description"></div>
-		</div>
-		<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
-			id="rom-patcher-row-patch-requirements">
-			<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
-			<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+		<div id="rom-patcher-powered" class="text-center">
+			<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">Powered by Rom Patcher JS<img
+					src="../rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
 		</div>
 
-		<div class="text-center" id="rom-patcher-row-apply">
-			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
-			</div>
-			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
-			<button id="rom-patcher-button-download" data-localize="yes" disabled>Download patch</button>
+		<h5 class="w3-padding-32 w3-text-grey">
+			(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
+				href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
+	</div>
+	</div>
+
+	<div class="w3-row-padding w3-padding-64 w3-container" id="game">
+		<div class="w3-content">
+			<h1><u>משחק</u></h1>
+
 		</div>
 	</div>
 
-	<div id="rom-patcher-powered" class="text-center">
-		<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">Powered by Rom Patcher JS<img
-				src="../rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
+	<div class="w3-row-padding w3-padding-64 w3-container" id="thanks">
+		<div class="w3-content">
+			<h1><u>תודות</u></h1>
+			<h5 class="w3-padding-32">
+				לאלה שיסיימו את המשחק, תגלו שבסוף המשחק אנחנו נמצאים בקרדיטים… אבל לאלה שלא יגיעו כל כך רחוק,
+				אלה השמות של כל אלו שלקחו חלק בפרויקט הזה.
+			</h5>
+
+			<p class="w3-xlarge"><b>
+					שחר ברנסון<br>
+					שגיא בלמש<br>
+					ליאור כלפון (LIJI)<br>
+					נגה שקד<br>
+					מ. ש. אלבוים<br>
+				</b>
+			</p>
+		</div>
 	</div>
+
+	<div class="w3-row-padding w3-padding-64 w3-container" id="contact">
+		<div class="w3-content">
+			<h1><u>צור קשר</u></h1>
+			<h5 class="w3-padding-32">
+				שאלות? טענות? מענות?
+				צרו קשר!
+				מוזמנים לפנות לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
+			</h5>
+		</div>
+	</div>
+
+	<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+		<p dir="LTR">
+			Powered by GitHub &amp;
+			<a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a><br>
+			© 2005 Pokémon. © 1995–2005 Nintendo/Creatures Inc./GAME FREAK inc.<br>
+			Pokémon are trademarks of Nintendo. Other trademarks are the property of
+			their respective owners. <br>
+			Any and all copyrighted material is the property of its respective
+			owners.
+		</p>
+	</footer>
+
+
+
+
 </body>
 
 </html>
