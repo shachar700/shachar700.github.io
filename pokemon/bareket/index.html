@@ -13,7 +13,6 @@
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="./styles/w3.css">
-    <link rel="stylesheet" href="./styles/font-awesome.min.css">
     <style>
         body,
         h1,
@@ -42,12 +41,12 @@
 
     <link type="text/css" rel="stylesheet" href="../rom-patcher-js/style.css" media="all" />
     <link type="text/css" rel="stylesheet" href="./color.css" media="all" />
-    <script type="text/javascript" src="./rom-patcher-js/RomPatcher.webapp.js"></script>
+    <script type="text/javascript" src="../rom-patcher-js/RomPatcher.webapp.js"></script>
 
     <script type="text/javascript">
         window.addEventListener('load', function (evt) {
             try {
-                fetch("./patches.info")
+                fetch("patches.info")
                     .then(res => res.json())
                     .then(patchInfo => {
                         RomPatcherWeb.initialize(
@@ -68,7 +67,7 @@
 
                             const patch = patchInfo.patches[selectedIndex];
                             const link = document.createElement('a');
-                            link.href = `./patches/${patch.file}`;
+                            link.href = `patches/${patch.file}`;
                             link.download = patch.file.split('/').pop();
                             document.body.appendChild(link);
                             link.click();
@@ -236,7 +235,7 @@
                 <div id="rom-patcher-powered" class="text-center">
                     <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"
                         style="color: var(--page-rom-patcher-link-color, --rom-patcher-link-color);"><img
-                            src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher
+                            src="../rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher
                         JS</a>
                 </div>
             </div>
