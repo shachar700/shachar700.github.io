@@ -123,7 +123,7 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			const header = document.querySelector("header");
- 
+
 			// List of images
 			const images = ["1.png", "2.jpeg"];
 
@@ -146,45 +146,45 @@
 			#rom-patcher-button-apply
 		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 	-->
-		<div class="w3-row-padding padding-64 w3-container">
-			<div class="w3-content" style="direction: rtl; text-align: right;">
+	<div class="w3-row-padding padding-64 w3-container">
+		<div class="w3-content" style="direction: rtl; text-align: right;">
 
-				<!-- אודות title -->
-				<h2 id="aboutToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
-					אודות &#9662;
-				</h2>
+			<!-- אודות title -->
+			<h2 id="aboutToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
+				אודות &#9662;
+			</h2>
 
-				<div class="w3-clear"></div>
+			<div class="w3-clear"></div>
 
-				<!-- Hidden content -->
-				<div id="aboutContent" class="w3-animate-opacity" style="display: none; margin-top: 16px;">
+			<!-- Hidden content -->
+			<div id="aboutContent" class="w3-animate-opacity" style="display: none; margin-top: 16px;">
 
-					<h5>
-						אזור הואן אינו יציב - רייקואזה התעורר! כישוריך כמאמנים יעמדו בפני אתגרים שלא היו מעולם, כשאתם
-						מנסים לשמור על האיזון בין קיוגר לגראודון. הוכיחו את כישורכם על ידי צבירת תגים וגשו לחזית הקרב
-						- קו החזית של קרבות פוקימונים המציע רמה חדשה לגמרי של תחרות. קרבות שלא חוויתם מעולם מחכים לכם!
-					</h5>
+				<h5>
+					אזור הואן אינו יציב - רייקואזה התעורר! כישוריך כמאמנים יעמדו בפני אתגרים שלא היו מעולם, כשאתם
+					מנסים לשמור על האיזון בין קיוגר לגראודון. הוכיחו את כישורכם על ידי צבירת תגים וגשו לחזית הקרב
+					- קו החזית של קרבות פוקימונים המציע רמה חדשה לגמרי של תחרות. קרבות שלא חוויתם מעולם מחכים לכם!
+				</h5>
 
-					<!-- BULLET POINTS -->
-					<ul
-						style="font-size: 16px; list-style-type: disc; padding-right: 20px; margin-top: 20px; text-align: right;">
-						<li>ההרפתקה השלישית עם פרקים חדשים באזור הואן!</li>
-						<li>המון תכונות חדשות, כולל תפניות עלילה מפתיעות ושינויים במקום ובאיזו תדירות ניתן לתפוס
-							פוקימונים מסוימים.</li>
-						<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי להחליף ולהילחם בין גרסאות של פוקימון ברקת
-							ופוקימון FireRed & LeafGreen.</li>
-						<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link&#9415;, התחברו עם פוקימון
-							רובי
-							וספיר, פוקימון FireRed & LeafGreen או פוקימון קולוסיאום כדי לתפוס את כולם!</li>
-					</ul>
+				<!-- BULLET POINTS -->
+				<ul
+					style="font-size: 16px; list-style-type: disc; padding-right: 20px; margin-top: 20px; text-align: right;">
+					<li>ההרפתקה השלישית עם פרקים חדשים באזור הואן!</li>
+					<li>המון תכונות חדשות, כולל תפניות עלילה מפתיעות ושינויים במקום ובאיזו תדירות ניתן לתפוס
+						פוקימונים מסוימים.</li>
+					<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי להחליף ולהילחם בין גרסאות של פוקימון ברקת
+						ופוקימון FireRed & LeafGreen.</li>
+					<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link&#9415;, התחברו עם פוקימון
+						רובי
+						וספיר, פוקימון FireRed & LeafGreen או פוקימון קולוסיאום כדי לתפוס את כולם!</li>
+				</ul>
 
-					<h5>
-						יכולת קריאה בסיסית נדרשת כדי להנות באופן מלא מהמשחק הזה.
-					</h5>
+				<h5>
+					יכולת קריאה בסיסית נדרשת כדי להנות באופן מלא מהמשחק הזה.
+				</h5>
 
-				</div>
 			</div>
 		</div>
+	</div>
 	<script>
 		document.getElementById("aboutToggle").onclick = function () {
 			const content = document.getElementById("aboutContent");
@@ -264,30 +264,68 @@
 		</div>
 	</div>
 
-	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
-		<div class="w3-content">
-			<h1><u>משחק</u></h1>
+<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
+    <div class="w3-content">
+        <h1><u>משחק</u></h1>
 
-			<h5>ניתן לשחק גם באמולטור שבדפדפן.<br>
-				מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R</h5>
+        <h5>
+            ניתן לשחק גם באמולטור שבדפדפן.<br>
+            מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R
+        </h5>
 
-			<iframe src="./emulator.html" style="
-            width: 720px;
-            height: 480px;
-            border: none;
-            box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.3);
-            max-width: 100%;
-            display: block;
-            margin: auto;
-        " allowfullscreen loading="lazy"></iframe>
-			<div id="rom-patcher-powered" class="text-center">
-				<a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">Powered by Emulator JS<img
-						src="./emuJS.png" loading="lazy" /></a>
+        <h5>טענו את ה-ROM שלכם כדי לשחק:</h5>
+
+        <!-- ROM input -->
+        <div id="rom-upload-box">
+            <input type="file" id="input">
+        </div>
+
+        <!-- Emulator container (initially empty) -->
+        <div id="emu-container" style="margin-top:20px; text-align:center;">
+			<div id="emu-wrapper" style="width:720px; height:480px; max-width:100%; margin:auto;">
+				<div dir="LTR" id="emu-display" style="width:100%; height:100%; box-shadow:0px 0px 5px 4px rgba(0,0,0,0.1);"></div>
 			</div>
-			<h5>אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו
-				לפורמט שמתאים לאמולטור שבמכשירכם.</h5>
 		</div>
-	</div>
+
+        <div id="rom-patcher-powered" class="text-center">
+            <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">
+                Powered by Emulator JS
+                <img src="./emuJS.png" loading="lazy" />
+            </a>
+        </div>
+        <h5>
+            אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו
+            לפורמט שמתאים לאמולטור שבמכשירכם.
+        </h5>
+    </div>
+</div>
+
+<script>
+input.addEventListener("change", async () => {
+    const url = input.files[0];
+    if (!url) return;
+
+    const parts = url.name.split(".");
+    const ext = parts.pop().toLowerCase();
+    let core = "gba"; // default
+    if (ext === "nds") core = "nds";
+    if (ext === "gb") core = "gb";
+
+    const playerDiv = document.getElementById("emu-display");
+    playerDiv.innerHTML = ""; // clear previous
+
+    window.EJS_player = "#emu-display"; // use the new ID
+    window.EJS_gameName = parts.shift();
+    window.EJS_gameUrl = url;
+    window.EJS_core = core;
+    window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+    window.EJS_startOnLoaded = true;
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+    document.body.appendChild(script);
+});
+</script>
 
 	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="thanks">
 		<div class="w3-content">
