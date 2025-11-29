@@ -9,6 +9,17 @@
 	<meta property="og:description" content="🐉🐲 מדריך התקנה למשחק פוקימון ברקת בעברית. 🐉🐲">
 
 	<link rel="stylesheet" href="./styles/w3.css">
+	<style>
+    .active-nav {
+        background-color: #4CAF50 !important;
+        color: white !important;
+    }
+	.section-divider {
+        border-bottom: 1px solid #ddd; /* thin light grey line */
+        margin-bottom: 50px;           /* space after the line */
+        padding-bottom: 50px;          /* spacing before line */
+    }
+	</style>
 
 	<!-- Rom Patcher JS needed CSS/JS files -->
 	<link type="text/css" rel="stylesheet" href="./rom-patcher-js/style.css" media="all" />
@@ -37,6 +48,42 @@
 			}
 		});
 	</script>
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section, div[id]");
+    const navLinks = {
+        mytop: document.getElementById("nav-top"),
+        installation: document.getElementById("nav-installation"),
+        game: document.getElementById("nav-game"),
+        thanks: document.getElementById("nav-thanks"),
+        contact: document.getElementById("nav-contact"),
+    };
+
+    const options = { threshold: 0.9 };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // remove highlight from all
+                Object.values(navLinks).forEach(link => link.classList.remove("active-nav"));
+
+                // highlight current
+                const id = entry.target.id;
+                if (navLinks[id]) {
+                    navLinks[id].classList.add("active-nav");
+                }
+            }
+        });
+    }, options);
+
+    // Attach observer to every major section
+    ["mytop","installation","game","thanks","contact"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+});
+</script>
+
 </head>
 
 <body dir="RTL" style="font: 15px 'Open Sans', sans-serif;">
@@ -45,25 +92,24 @@
 			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
 				href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
 					class="fa fa-bars"></i></a>
-			<a href="#mytop" class="w3-bar-item w3-button w3-padding-large w3-hover-white">ראש הדף</a>
-			<a href="#installation"
-				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">התקנה</a>
-			<a href="#game" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">משחק</a>
-			<a href="#thanks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
-			<a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+			<a id="nav-top" href="#mytop" class="w3-bar-item w3-button w3-padding-large w3-hover-white">ראש הדף</a>
+			<a id="nav-installation" href="#installation" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">התקנה</a>
+			<a id="nav-game" href="#game" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">משחק</a>
+			<a id="nav-thanks" href="#thanks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
+			<a id="nav-contact" href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
 		</div>
 
 		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-			<a href="#installation" class="w3-bar-item w3-button w3-padding-large">התקנה</a>
-			<a href="#game" class="w3-bar-item w3-button w3-padding-large">משחק</a>
-			<a href="#thanks" class="w3-bar-item w3-button w3-padding-large">תודות</a>
-			<a href="#contact" class="w3-bar-item w3-button w3-padding-large">צור קשר</a>
+			<a id="mnav-installation" href="#installation" class="w3-bar-item w3-button w3-padding-large">התקנה</a>
+			<a id="mnav-game" href="#game" class="w3-bar-item w3-button w3-padding-large">משחק</a>
+			<a id="mnav-thanks" href="#thanks" class="w3-bar-item w3-button w3-padding-large">תודות</a>
+			<a id="mnav-contact" href="#contact" class="w3-bar-item w3-button w3-padding-large">צור קשר</a>
 		</div>
 	</div>
 
 	<header class="w3-container w3-center" style="padding: 128px 16px" id="mytop">
 		<img src="logo.png" class="w3-image w3-center"><br>
-		<h1 class="w3-center"><b>ברקת</b></h1>
+		<h1 class="w3-center"><b>🐉🐲 ברקת 🐉🐲</b></h1>
 
 		<div class="w3-row-padding padding-64 w3-container">
 			<div class="w3-content" style="direction: rtl; text-align: right;">
@@ -80,8 +126,8 @@
 
 					<h5>
 						אזור הואן אינו יציב - רייקואזה התעורר! כישוריך כמאמנים יעמדו בפני אתגרים שלא היו מעולם, כשאתם
-						מנסים לשמור על האיזון בין קיוגר לגראודון. הוכחו את כישוריכם על ידי צבירת תגים וגישה לחזית הקרבות
-						- קו החזית של קרבות הפוקימונים המציע רמה חדשה לגמרי של תחרות. קרבות שלא חוויתם מעולם מחכים לכם!
+						מנסים לשמור על האיזון בין קיוגר לגראודון. הוכיחו את כישורכם על ידי צבירת תגים וגשו לחזית הקרב
+						- קו החזית של קרבות פוקימונים המציע רמה חדשה לגמרי של תחרות. קרבות שלא חוויתם מעולם מחכים לכם!
 					</h5>
 
 					<!-- BULLET POINTS -->
@@ -89,9 +135,9 @@
 						<li>ההרפתקה השלישית עם פרקים חדשים באזור הואן!</li>
 						<li>המון תכונות חדשות, כולל תפניות עלילה מפתיעות ושינויים במקום ובאיזו תדירות ניתן לתפוס
 							פוקימונים מסוימים.</li>
-						<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי לסחור ולהילחם בין גרסאות של פוקימון אמרלד
+						<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי להחליף ולהילחם בין גרסאות של פוקימון ברקת
 							ופוקימון FireRed & LeafGreen.</li>
-						<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link(r), התחברו עם פוקימון רובי
+						<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link&#9415;, התחברו עם פוקימון רובי
 							וספיר, פוקימון FireRed & LeafGreen או פוקימון קולוסיאום כדי לתפוס את כולם!</li>
 					</ul>
 
@@ -101,6 +147,7 @@
 
 				</div>
 			</div>
+			<div class="section-divider w3-padding-64" style="margin: 0;"></div>
 		</div>
 	</header>
 
@@ -118,15 +165,17 @@
 			#rom-patcher-button-apply
 		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 	-->
-	<div class="w3-row-padding padding-64 w3-container" id="installation">
+	<div class="w3-row-padding padding-64 w3-container section-divider" id="installation" style="padding-top: 100px; margin-top: -80px;">
 		<div class="w3-content">
 			<h1><u>התקנה</u></h1>
+			<h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ Apply Patch<br/>
+				 זה יוריד קובץ ROM עם השינויים לעברית</h5>
 
-			<div id="rom-patcher-container" style="justify-content:center;align-items:center;text-align:center;">
-				<span class="text-muted">
+			<div id="rom-patcher-container" style="justify-content:center;align-items:center;">
+				<div class="w3-center"><span class="text-muted">
 					מבוסס על ה-ROM:<br>
 					Pokémon Emerald.gba (USA, Europe)
-				</span>
+				</span></div>
 			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
 				<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ
 						ROM:</label></div>
@@ -177,73 +226,81 @@
 
 		<div id="rom-patcher-powered" class="text-center">
 			<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">Powered by Rom Patcher JS<img
-					src="../rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
+					src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
 		</div>
 
-		<h5 class="w3-padding-32 w3-text-grey">
+		<h5>להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
+		<h5 class="w3-text-grey">
 			(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
 				href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
 	</div>
 	</div>
 
-	<div class="w3-row-padding w3-padding-64 w3-container" id="game-section">
+	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
     <div class="w3-content">
-        <h1><u>משחק</u></h1>
+    <h1><u>משחק</u></h1>
 
-        <!-- Emulator Container -->
-        <div
-            id="emulator-container"
-            style="
-                width: 720px;
-                height: 480px;
-                max-width: 100%;
-                box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.3);
-                background: #000;
-                position: relative;
-                margin: auto;
-            "
-        >
-            <div id="game"></div>
-        </div>
+	<h5>ניתן לשחק גם באמולטור שבדפדפן.<br>
+		מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R</h5>
 
-        <script>
-            EJS_player = "#game";
-            EJS_core = "gba";
-            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            EJS_gameUrl =
-                "https://github.com/shachar700/shachar700.github.io/raw/refs/heads/main/bareket/game.zip";
-        </script>
-
-        <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
-    </div>
+    <iframe
+        src="./emulator.html"
+        style="
+            width: 720px;
+            height: 480px;
+            border: none;
+            box-shadow: 0px 0px 5px 4px rgba(0,0,0,0.3);
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        "
+        allowfullscreen
+        loading="lazy"
+    ></iframe>
+			<div id="rom-patcher-powered" class="text-center">
+			<a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">Powered by Emulator JS<img
+					src="./emuJS.png" loading="lazy" /></a>
+		</div>
+	<h5>אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו לפורמט שמתאים לאמולטור שבמכשירכם.</h5>
+</div>
 </div>
 
-	<div class="w3-row-padding w3-padding-64 w3-container" id="thanks">
+	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="thanks">
 		<div class="w3-content">
 			<h1><u>תודות</u></h1>
-			<h5 class="w3-padding-32">
-				לאלה שיסיימו את המשחק, תגלו שבסוף המשחק אנחנו נמצאים בקרדיטים… אבל לאלה שלא יגיעו כל כך רחוק,
-				אלה השמות של כל אלו שלקחו חלק בפרויקט הזה.
-			</h5>
 
-			<p class="w3-xlarge"><b>
+			<p class="w3-xlarge">
 					שחר ברנסון<br>
 					שגיא בלמש<br>
 					ליאור כלפון (LIJI)<br>
 					נגה שקד<br>
 					מ. ש. אלבוים<br>
-				</b>
 			</p>
+
+			<div class="w3-right-align"><p dir="LTR" class="w3-xlarge">
+					Visual Studio Code<br>
+					Notepad++<br>
+					Graphics Gale<br>
+					Aseprite<br>
+					Tilemap Studio<br>
+					Porymap<br>
+					git & GitHub<br>
+					wsl<br>
+			</p></div>
 		</div>
 	</div>
 
-	<div class="w3-row-padding w3-padding-64 w3-container" id="contact">
+	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="contact">
 		<div class="w3-content">
 			<h1><u>צור קשר</u></h1>
 			<h5 class="w3-padding-32">
 				שאלות? טענות? מענות?
 				צרו קשר!
 				מוזמנים לפנות לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
+				<br/><br/>
+				רוצים לעזור בלתקן? ניתן לפתוח Pull Request בריפו ב-<a
+				href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>.
+				<br/>				בין אם זה לתקן תרגום, תיקון בקוד או תיקון בגרפיקה.
 			</h5>
 		</div>
 	</div>
@@ -262,7 +319,48 @@
 
 
 
+	<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = ["mytop", "installation", "game", "thanks", "contact"];
 
+    const navDesktop = {
+        mytop: document.getElementById("nav-top"),
+        installation: document.getElementById("nav-installation"),
+        game: document.getElementById("nav-game"),
+        thanks: document.getElementById("nav-thanks"),
+        contact: document.getElementById("nav-contact"),
+    };
+
+    const navMobile = {
+        installation: document.getElementById("mnav-installation"),
+        game: document.getElementById("mnav-game"),
+        thanks: document.getElementById("mnav-thanks"),
+        contact: document.getElementById("mnav-contact"),
+    };
+
+    function clearAll() {
+        Object.values(navDesktop).forEach(el => el?.classList.remove("active-nav"));
+        Object.values(navMobile).forEach(el => el?.classList.remove("active-nav"));
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                clearAll();
+                const id = entry.target.id;
+
+                navDesktop[id]?.classList.add("active-nav");
+                navMobile[id]?.classList.add("active-nav");
+            }
+        });
+    }, { threshold: 1 });
+
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+});
+</script>
 </body>
 
 </html>
