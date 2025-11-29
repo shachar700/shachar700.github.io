@@ -10,15 +10,19 @@
 
 	<link rel="stylesheet" href="./styles/w3.css">
 	<style>
-    .active-nav {
-        background-color: #4CAF50 !important;
-        color: white !important;
-    }
-	.section-divider {
-        border-bottom: 1px solid #ddd; /* thin light grey line */
-        margin-bottom: 50px;           /* space after the line */
-        padding-bottom: 50px;          /* spacing before line */
-    }
+		.active-nav {
+			background-color: #4CAF50 !important;
+			color: white !important;
+		}
+
+		.section-divider {
+			border-bottom: 1px solid #ddd;
+			/* thin light grey line */
+			margin-bottom: 50px;
+			/* space after the line */
+			padding-bottom: 50px;
+			/* spacing before line */
+		}
 	</style>
 
 	<!-- Rom Patcher JS needed CSS/JS files -->
@@ -49,40 +53,40 @@
 		});
 	</script>
 	<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section, div[id]");
-    const navLinks = {
-        mytop: document.getElementById("nav-top"),
-        installation: document.getElementById("nav-installation"),
-        game: document.getElementById("nav-game"),
-        thanks: document.getElementById("nav-thanks"),
-        contact: document.getElementById("nav-contact"),
-    };
+		document.addEventListener("DOMContentLoaded", () => {
+			const sections = document.querySelectorAll("section, div[id]");
+			const navLinks = {
+				mytop: document.getElementById("nav-top"),
+				installation: document.getElementById("nav-installation"),
+				game: document.getElementById("nav-game"),
+				thanks: document.getElementById("nav-thanks"),
+				contact: document.getElementById("nav-contact"),
+			};
 
-    const options = { threshold: 0.9 };
+			const options = { threshold: 0.9 };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                // remove highlight from all
-                Object.values(navLinks).forEach(link => link.classList.remove("active-nav"));
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// remove highlight from all
+						Object.values(navLinks).forEach(link => link.classList.remove("active-nav"));
 
-                // highlight current
-                const id = entry.target.id;
-                if (navLinks[id]) {
-                    navLinks[id].classList.add("active-nav");
-                }
-            }
-        });
-    }, options);
+						// highlight current
+						const id = entry.target.id;
+						if (navLinks[id]) {
+							navLinks[id].classList.add("active-nav");
+						}
+					}
+				});
+			}, options);
 
-    // Attach observer to every major section
-    ["mytop","installation","game","thanks","contact"].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-    });
-});
-</script>
+			// Attach observer to every major section
+			["mytop", "installation", "game", "thanks", "contact"].forEach(id => {
+				const el = document.getElementById(id);
+				if (el) observer.observe(el);
+			});
+		});
+	</script>
 
 </head>
 
@@ -93,10 +97,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
 					class="fa fa-bars"></i></a>
 			<a id="nav-top" href="#mytop" class="w3-bar-item w3-button w3-padding-large w3-hover-white">ראש הדף</a>
-			<a id="nav-installation" href="#installation" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">התקנה</a>
-			<a id="nav-game" href="#game" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">משחק</a>
-			<a id="nav-thanks" href="#thanks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
-			<a id="nav-contact" href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+			<a id="nav-installation" href="#installation"
+				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">התקנה</a>
+			<a id="nav-game" href="#game"
+				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">משחק</a>
+			<a id="nav-thanks" href="#thanks"
+				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
+			<a id="nav-contact" href="#contact"
+				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
 		</div>
 
 		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
@@ -110,7 +118,34 @@ document.addEventListener("DOMContentLoaded", () => {
 	<header class="w3-container w3-center" style="padding: 128px 16px" id="mytop">
 		<img src="logo.png" class="w3-image w3-center"><br>
 		<h1 class="w3-center"><b>🐉🐲 ברקת 🐉🐲</b></h1>
+	</header>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const header = document.querySelector("header");
+ 
+			// List of images
+			const images = ["1.png", "2.jpeg"];
+
+			// Pick a random image
+			const randomImage = images[Math.floor(Math.random() * images.length)];
+
+			// Apply as background
+			header.style.backgroundImage = `url('${randomImage}')`;
+			header.style.backgroundSize = "cover";          // Cover entire header
+			header.style.backgroundPosition = "center";     // Center the image
+			header.style.backgroundRepeat = "no-repeat";    // Don't repeat
+		});
+	</script>
+
+	<!-- Rom Patcher JS container -->
+	<!--
+		The following elements are required for Rom Patcher JS to work:
+			#rom-patcher-input-file-rom
+			#rom-patcher-select-patch
+			#rom-patcher-button-apply
+		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
+	-->
 		<div class="w3-row-padding padding-64 w3-container">
 			<div class="w3-content" style="direction: rtl; text-align: right;">
 
@@ -131,13 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
 					</h5>
 
 					<!-- BULLET POINTS -->
-					<ul style="font-size: 16px; list-style-type: disc; padding-right: 20px; margin-top: 20px; text-align: right;">
+					<ul
+						style="font-size: 16px; list-style-type: disc; padding-right: 20px; margin-top: 20px; text-align: right;">
 						<li>ההרפתקה השלישית עם פרקים חדשים באזור הואן!</li>
 						<li>המון תכונות חדשות, כולל תפניות עלילה מפתיעות ושינויים במקום ובאיזו תדירות ניתן לתפוס
 							פוקימונים מסוימים.</li>
 						<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי להחליף ולהילחם בין גרסאות של פוקימון ברקת
 							ופוקימון FireRed & LeafGreen.</li>
-						<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link&#9415;, התחברו עם פוקימון רובי
+						<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link&#9415;, התחברו עם פוקימון
+							רובי
 							וספיר, פוקימון FireRed & LeafGreen או פוקימון קולוסיאום כדי לתפוס את כולם!</li>
 					</ul>
 
@@ -147,105 +184,94 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				</div>
 			</div>
-			<div class="section-divider w3-padding-64" style="margin: 0;"></div>
 		</div>
-	</header>
-
 	<script>
 		document.getElementById("aboutToggle").onclick = function () {
 			const content = document.getElementById("aboutContent");
 			content.style.display = content.style.display === "none" ? "block" : "none";
 		};
 	</script>
-	<!-- Rom Patcher JS container -->
-	<!--
-		The following elements are required for Rom Patcher JS to work:
-			#rom-patcher-input-file-rom
-			#rom-patcher-select-patch
-			#rom-patcher-button-apply
-		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
-	-->
-	<div class="w3-row-padding padding-64 w3-container section-divider" id="installation" style="padding-top: 100px; margin-top: -80px;">
+
+	<div class="w3-row-padding padding-64 w3-container section-divider" id="installation"
+		style="padding-top: 100px; margin-top: -80px;">
 		<div class="w3-content">
 			<h1><u>התקנה</u></h1>
-			<h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ Apply Patch<br/>
-				 זה יוריד קובץ ROM עם השינויים לעברית</h5>
+			<h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ Apply Patch<br />
+				זה יוריד קובץ ROM עם השינויים לעברית</h5>
 
 			<div id="rom-patcher-container" style="justify-content:center;align-items:center;">
 				<div class="w3-center"><span class="text-muted">
-					מבוסס על ה-ROM:<br>
-					Pokémon Emerald.gba (USA, Europe)
-				</span></div>
-			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-				<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ
-						ROM:</label></div>
-				<div class="rom-patcher-container-input">
-					<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+						מבוסס על ה-ROM:<br>
+						Pokémon Emerald.gba (USA, Europe)
+					</span></div>
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+					<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ
+							ROM:</label></div>
+					<div class="rom-patcher-container-input">
+						<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+					</div>
 				</div>
-			</div>
-			<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
-				<div class="rom-patcher-row">
-					<div class="text-right">CRC32:</div>
-					<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+				<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+					<div class="rom-patcher-row">
+						<div class="text-right">CRC32:</div>
+						<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+					</div>
+					<div class="rom-patcher-row">
+						<div class="text-right">SHA-1:</div>
+						<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+					</div>
+					<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+						<div class="text-right">ROM:</div>
+						<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+					</div>
 				</div>
-				<div class="rom-patcher-row">
-					<div class="text-right">SHA-1:</div>
-					<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+					<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ
+							Patch:</label>
+					</div>
+					<div class="rom-patcher-container-input">
+						<select id="rom-patcher-select-patch"></select>
+					</div>
 				</div>
-				<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
-					<div class="text-right">ROM:</div>
-					<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+					<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+					<div class="text-truncate" id="rom-patcher-patch-description"></div>
+				</div>
+				<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+					id="rom-patcher-row-patch-requirements">
+					<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
+					<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+				</div>
+
+				<div class="text-center" id="rom-patcher-row-apply">
+					<div id="rom-patcher-row-error-message" class="margin-bottom"><span
+							id="rom-patcher-error-message"></span>
+					</div>
+					<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
 				</div>
 			</div>
 
-			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-				<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ
-						Patch:</label>
-				</div>
-				<div class="rom-patcher-container-input">
-					<select id="rom-patcher-select-patch"></select>
-				</div>
-			</div>
-			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-				<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
-				<div class="text-truncate" id="rom-patcher-patch-description"></div>
-			</div>
-			<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
-				id="rom-patcher-row-patch-requirements">
-				<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
-				<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+			<div id="rom-patcher-powered" class="text-center">
+				<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">Powered by Rom Patcher JS<img
+						src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
 			</div>
 
-			<div class="text-center" id="rom-patcher-row-apply">
-				<div id="rom-patcher-row-error-message" class="margin-bottom"><span
-						id="rom-patcher-error-message"></span>
-				</div>
-				<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
-			</div>
+			<h5>להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
+			<h5 class="w3-text-grey">
+				(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
+					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
 		</div>
-
-		<div id="rom-patcher-powered" class="text-center">
-			<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">Powered by Rom Patcher JS<img
-					src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
-		</div>
-
-		<h5>להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
-		<h5 class="w3-text-grey">
-			(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
-				href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
-	</div>
 	</div>
 
 	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
-    <div class="w3-content">
-    <h1><u>משחק</u></h1>
+		<div class="w3-content">
+			<h1><u>משחק</u></h1>
 
-	<h5>ניתן לשחק גם באמולטור שבדפדפן.<br>
-		מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R</h5>
+			<h5>ניתן לשחק גם באמולטור שבדפדפן.<br>
+				מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R</h5>
 
-    <iframe
-        src="./emulator.html"
-        style="
+			<iframe src="./emulator.html" style="
             width: 720px;
             height: 480px;
             border: none;
@@ -253,31 +279,30 @@ document.addEventListener("DOMContentLoaded", () => {
             max-width: 100%;
             display: block;
             margin: auto;
-        "
-        allowfullscreen
-        loading="lazy"
-    ></iframe>
+        " allowfullscreen loading="lazy"></iframe>
 			<div id="rom-patcher-powered" class="text-center">
-			<a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">Powered by Emulator JS<img
-					src="./emuJS.png" loading="lazy" /></a>
+				<a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">Powered by Emulator JS<img
+						src="./emuJS.png" loading="lazy" /></a>
+			</div>
+			<h5>אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו
+				לפורמט שמתאים לאמולטור שבמכשירכם.</h5>
 		</div>
-	<h5>אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו לפורמט שמתאים לאמולטור שבמכשירכם.</h5>
-</div>
-</div>
+	</div>
 
 	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="thanks">
 		<div class="w3-content">
 			<h1><u>תודות</u></h1>
 
 			<p class="w3-xlarge">
-					שחר ברנסון<br>
-					שגיא בלמש<br>
-					ליאור כלפון (LIJI)<br>
-					נגה שקד<br>
-					מ. ש. אלבוים<br>
+				שחר ברנסון<br>
+				שגיא בלמש<br>
+				ליאור כלפון (LIJI)<br>
+				נגה שקד<br>
+				מ. ש. אלבוים<br>
 			</p>
 
-			<div class="w3-right-align"><p dir="LTR" class="w3-xlarge">
+			<div class="w3-right-align">
+				<p dir="LTR" class="w3-xlarge">
 					Visual Studio Code<br>
 					Notepad++<br>
 					Graphics Gale<br>
@@ -286,7 +311,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					Porymap<br>
 					git & GitHub<br>
 					wsl<br>
-			</p></div>
+				</p>
+			</div>
 		</div>
 	</div>
 
@@ -297,10 +323,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				שאלות? טענות? מענות?
 				צרו קשר!
 				מוזמנים לפנות לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
-				<br/><br/>
+				<br /><br />
 				רוצים לעזור בלתקן? ניתן לפתוח Pull Request בריפו ב-<a
-				href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>.
-				<br/>				בין אם זה לתקן תרגום, תיקון בקוד או תיקון בגרפיקה.
+					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>.
+				<br /> בין אם זה לתקן תרגום, תיקון בקוד או תיקון בגרפיקה.
 			</h5>
 		</div>
 	</div>
@@ -320,47 +346,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = ["mytop", "installation", "game", "thanks", "contact"];
+		document.addEventListener("DOMContentLoaded", () => {
+			const sections = ["mytop", "installation", "game", "thanks", "contact"];
 
-    const navDesktop = {
-        mytop: document.getElementById("nav-top"),
-        installation: document.getElementById("nav-installation"),
-        game: document.getElementById("nav-game"),
-        thanks: document.getElementById("nav-thanks"),
-        contact: document.getElementById("nav-contact"),
-    };
+			const navDesktop = {
+				mytop: document.getElementById("nav-top"),
+				installation: document.getElementById("nav-installation"),
+				game: document.getElementById("nav-game"),
+				thanks: document.getElementById("nav-thanks"),
+				contact: document.getElementById("nav-contact"),
+			};
 
-    const navMobile = {
-        installation: document.getElementById("mnav-installation"),
-        game: document.getElementById("mnav-game"),
-        thanks: document.getElementById("mnav-thanks"),
-        contact: document.getElementById("mnav-contact"),
-    };
+			const navMobile = {
+				installation: document.getElementById("mnav-installation"),
+				game: document.getElementById("mnav-game"),
+				thanks: document.getElementById("mnav-thanks"),
+				contact: document.getElementById("mnav-contact"),
+			};
 
-    function clearAll() {
-        Object.values(navDesktop).forEach(el => el?.classList.remove("active-nav"));
-        Object.values(navMobile).forEach(el => el?.classList.remove("active-nav"));
-    }
+			function clearAll() {
+				Object.values(navDesktop).forEach(el => el?.classList.remove("active-nav"));
+				Object.values(navMobile).forEach(el => el?.classList.remove("active-nav"));
+			}
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                clearAll();
-                const id = entry.target.id;
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						clearAll();
+						const id = entry.target.id;
 
-                navDesktop[id]?.classList.add("active-nav");
-                navMobile[id]?.classList.add("active-nav");
-            }
-        });
-    }, { threshold: 1 });
+						navDesktop[id]?.classList.add("active-nav");
+						navMobile[id]?.classList.add("active-nav");
+					}
+				});
+			}, { threshold: 1 });
 
-    sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-    });
-});
-</script>
+			sections.forEach(id => {
+				const el = document.getElementById(id);
+				if (el) observer.observe(el);
+			});
+		});
+	</script>
 </body>
 
 </html>
