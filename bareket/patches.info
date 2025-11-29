@@ -1,0 +1,17 @@
+{
+  "file": "./patches.zip",
+  "patches": [
+    {
+      "file": "Pokemon_BAREKET_v0.1.bps",
+      "name": "Pokemon_BAREKET_v0.1.bps",
+      "description": "",
+      "outputName": "Pokemon Bareket"
+    },
+    {
+      "file": "Pokemon_BAREKET_v0.1.ups",
+      "name": "Pokemon_BAREKET_v0.1.ups",
+      "description": "",
+      "outputName": "Pokemon Bareket"
+    }
+  ]
+}

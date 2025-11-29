@@ -31,27 +31,80 @@
 
 	<!-- Rom Patcher JS initialization -->
 	<script type="text/javascript">
-		window.addEventListener('load', function (evt) {
-			try {
-				RomPatcherWeb.initialize({
-					language: 'en', //default: en
-					requireValidation: false,
-				}, {
-					file: './patch.zip', //zip containing patches
-					name: 'Pokemon_BAREKET.bps',
-					//description: 'English fan translation for Game',
-					outputName: 'Pokemon Bareket', //patched ROM name
-				});
-			} catch (err) {
-				var message = err.message;
-				if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
-					message = 'Your browser is outdated and it is not compatible with this app.';
+window.addEventListener('load', async function () {
+    try {
+        // load patches.info (must be valid JSON)
+        const res = await fetch('./patches.info');
+        if (!res.ok) throw new Error('patches.info not found (HTTP ' + res.status + ')');
+        const patchInfo = await res.json();
 
-				document.getElementById('rom-patcher-container').innerHTML = message;
-				document.getElementById('rom-patcher-container').style.color = 'red';
-			}
-		});
-	</script>
+        // initialize RomPatcherJS with the correct signature (options, patchInfo)
+        RomPatcherWeb.initialize(
+            {
+                language: 'en',
+                requireValidation: true,
+                allowDropFiles: true
+            },
+            patchInfo
+        );
+
+        const downloadBtn = document.getElementById('rom-patcher-button-download');
+        const patchSelect = document.getElementById('rom-patcher-select-patch');
+
+        // Defensive: populate the <select> from patchInfo if RomPatcher didn't
+        // (this guarantees the list is present and we can enable download)
+        if (Array.isArray(patchInfo.patches) && patchInfo.patches.length > 0) {
+            // Clear any existing options
+            patchSelect.innerHTML = '';
+            patchInfo.patches.forEach((p, i) => {
+                const opt = document.createElement('option');
+                opt.value = i;
+                opt.textContent = p.name || p.file || ('Patch ' + i);
+                patchSelect.appendChild(opt);
+            });
+
+            // Select first patch by default so UI shows something and enable download
+            patchSelect.selectedIndex = 0;
+            downloadBtn.disabled = false;
+        } else {
+            // No patches found
+            patchSelect.innerHTML = '<option disabled>No patches found</option>';
+            downloadBtn.disabled = true;
+        }
+
+        // If user changes selection, ensure download remains enabled
+        patchSelect.addEventListener('change', () => {
+            downloadBtn.disabled = patchSelect.selectedIndex < 0;
+        });
+
+        // Download the actual file from ./patches/<filename>
+        downloadBtn.addEventListener('click', () => {
+            const idx = patchSelect.selectedIndex;
+            if (idx < 0) return;
+            const patch = patchInfo.patches[idx];
+            if (!patch || !patch.file) return alert('Patch file not specified.');
+
+            // Make sure the file path matches where you store patch files
+            const href = `./patches/${patch.file}`;
+            const link = document.createElement('a');
+            link.href = href;
+            link.download = patch.file.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+    } catch (err) {
+        console.error('RomPatcher init error:', err);
+        const container = document.getElementById('rom-patcher-container');
+        if (container) {
+            container.innerHTML = 'Error loading patch index: ' + (err.message || err);
+            container.style.color = 'red';
+        }
+    }
+});
+</script>
+	
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			const sections = document.querySelectorAll("section, div[id]");
@@ -193,76 +246,81 @@
 	</script>
 
 	<div class="w3-row-padding padding-64 w3-container section-divider" id="installation"
-		style="padding-top: 100px; margin-top: -80px;">
-		<div class="w3-content">
-			<h1><u>התקנה</u></h1>
-			<h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ Apply Patch<br />
-				זה יוריד קובץ ROM עם השינויים לעברית</h5>
+     style="padding-top: 100px; margin-top: -80px;">
+    <div class="w3-content">
+        <h1><u>התקנה</u></h1>
+        <h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ Apply Patch<br />
+            זה יוריד קובץ ROM עם השינויים לעברית</h5>
 
-			<div id="rom-patcher-container" style="justify-content:center;align-items:center;">
-				<div class="w3-center"><span class="text-muted">
-						מבוסס על ה-ROM:<br>
-						Pokémon Emerald.gba (USA, Europe)
-					</span></div>
-				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-					<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ
-							ROM:</label></div>
-					<div class="rom-patcher-container-input">
-						<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
-					</div>
-				</div>
-				<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
-					<div class="rom-patcher-row">
-						<div class="text-right">CRC32:</div>
-						<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
-					</div>
-					<div class="rom-patcher-row">
-						<div class="text-right">SHA-1:</div>
-						<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
-					</div>
-					<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
-						<div class="text-right">ROM:</div>
-						<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
-					</div>
-				</div>
+        <!-- ROM Patcher Container (only one!) -->
+        <div id="rom-patcher-container" style="justify-content:center;align-items:center;">
 
-				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-					<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ
-							Patch:</label>
-					</div>
-					<div class="rom-patcher-container-input">
-						<select id="rom-patcher-select-patch"></select>
-					</div>
-				</div>
-				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-					<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
-					<div class="text-truncate" id="rom-patcher-patch-description"></div>
-				</div>
-				<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
-					id="rom-patcher-row-patch-requirements">
-					<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
-					<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
-				</div>
+            <div class="w3-center"><span class="text-muted">
+                מבוסס על ה-ROM:<br>
+                Pokémon Emerald.gba (USA, Europe)
+            </span></div>
 
-				<div class="text-center" id="rom-patcher-row-apply">
-					<div id="rom-patcher-row-error-message" class="margin-bottom"><span
-							id="rom-patcher-error-message"></span>
-					</div>
-					<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
-				</div>
-			</div>
+            <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+                <div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ ROM:</label></div>
+                <div class="rom-patcher-container-input">
+                    <input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+                </div>
+            </div>
 
-			<div id="rom-patcher-powered" class="text-center">
-				<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">Powered by Rom Patcher JS<img
-						src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" /></a>
-			</div>
+            <div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+                <div class="rom-patcher-row">
+                    <div class="text-right">CRC32:</div>
+                    <div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+                </div>
+                <div class="rom-patcher-row">
+                    <div class="text-right">SHA-1:</div>
+                    <div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+                </div>
+                <div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+                    <div class="text-right">ROM:</div>
+                    <div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+                </div>
+            </div>
 
-			<h5>להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
-			<h5 class="w3-text-grey">
-				(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
-					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)</h5><br>
-		</div>
-	</div>
+            <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+                <div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ Patch:</label></div>
+                <div class="rom-patcher-container-input">
+                    <select id="rom-patcher-select-patch"></select>
+                </div>
+            </div>
+
+            <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+                <div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+                <div class="text-truncate" id="rom-patcher-patch-description"></div>
+            </div>
+
+            <div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+                 id="rom-patcher-row-patch-requirements">
+                <div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
+                <div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+            </div>
+
+            <div class="text-center" id="rom-patcher-row-apply">
+                <div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span></div>
+                <button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
+                <button id="rom-patcher-button-download" data-localize="yes" disabled>Download patch</button>
+            </div>
+        </div>
+
+        <div id="rom-patcher-powered" class="text-center">
+            <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">
+                Powered by Rom Patcher JS
+                <img src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />
+            </a>
+        </div>
+
+        <h5>להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
+        <h5 class="w3-text-grey">
+            (אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)
+        </h5>
+        <br>
+    </div>
+</div>
 
 <div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
     <div class="w3-content">
@@ -332,11 +390,12 @@ input.addEventListener("change", async () => {
 			<h1><u>תודות</u></h1>
 
 			<p class="w3-xlarge">
-				שחר ברנסון<br>
-				שגיא בלמש<br>
-				ליאור כלפון (LIJI)<br>
-				נגה שקד<br>
-				מ. ש. אלבוים<br>
+				<u>שחר ברנסון</u> - תכנות, תרגום, גרפיקה<br>
+				שגיא בלמש - עזרה טכנית<br>
+				ליאור כלפון (LIJI) - עזרה טכנית<br>
+				נגה שקד - עזרה ראשונית<br>
+				מ. ש. אלבוים - עברות<br>
+				מאיה כץ - תמיכה
 			</p>
 
 			<div class="w3-right-align">
@@ -360,11 +419,11 @@ input.addEventListener("change", async () => {
 			<h5 class="w3-padding-32">
 				שאלות? טענות? מענות?
 				צרו קשר!
-				מוזמנים לפנות לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
+				מוזמנים לפנות אליי לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
 				<br /><br />
-				רוצים לעזור בלתקן? ניתן לפתוח Pull Request בריפו ב-<a
+				מצאתם טעות? רוצים לתקן? ניתן לפתוח Pull Request בריפו ב-<a
 					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>.
-				<br /> בין אם זה לתקן תרגום, תיקון בקוד או תיקון בגרפיקה.
+				<br /> בין אם זה בתרגום, בקוד או בגרפיקה.
 			</h5>
 		</div>
 	</div>
