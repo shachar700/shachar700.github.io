@@ -22,7 +22,7 @@
 					language: 'en', //default: en
 					requireValidation: false,
 				}, {
-					file: './patches.zip', //zip containing patches
+					file: './patch.zip', //zip containing patches
 					name: 'Pokemon_BAREKET.bps',
 					//description: 'English fan translation for Game',
 					outputName: 'Pokemon Bareket', //patched ROM name
@@ -186,12 +186,37 @@
 	</div>
 	</div>
 
-	<div class="w3-row-padding w3-padding-64 w3-container" id="game">
-		<div class="w3-content">
-			<h1><u>משחק</u></h1>
+	<div class="w3-row-padding w3-padding-64 w3-container" id="game-section">
+    <div class="w3-content">
+        <h1><u>משחק</u></h1>
 
-		</div>
-	</div>
+        <!-- Emulator Container -->
+        <div
+            id="emulator-container"
+            style="
+                width: 720px;
+                height: 480px;
+                max-width: 100%;
+                box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.3);
+                background: #000;
+                position: relative;
+                margin: auto;
+            "
+        >
+            <div id="game"></div>
+        </div>
+
+        <script>
+            EJS_player = "#game";
+            EJS_core = "gba";
+            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            EJS_gameUrl =
+                "https://github.com/shachar700/shachar700.github.io/raw/refs/heads/main/bareket/game.zip";
+        </script>
+
+        <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+    </div>
+</div>
 
 	<div class="w3-row-padding w3-padding-64 w3-container" id="thanks">
 		<div class="w3-content">
