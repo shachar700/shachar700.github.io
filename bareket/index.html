@@ -23,6 +23,120 @@
 			padding-bottom: 50px;
 			/* spacing before line */
 		}
+
+		/* --- Dark Mode Styles --- */
+		body.dark-mode {
+			background-color: #121212 !important;
+			color: #e0e0e0 !important;
+		}
+
+		/* Override w3.css light backgrounds */
+		body.dark-mode .w3-light-grey,
+		body.dark-mode .w3-white,
+		body.dark-mode .w3-card {
+			background-color: #1e1e1e !important;
+			color: #e0e0e0 !important;
+		}
+
+		/* Fix text colors for dark mode */
+		body.dark-mode h1,
+		body.dark-mode h2,
+		body.dark-mode h3,
+		body.dark-mode h4,
+		body.dark-mode h5,
+		body.dark-mode p {
+			color: #e0e0e0 !important;
+		}
+
+		/* Form inputs and Selects */
+		body.dark-mode input,
+		body.dark-mode select,
+		body.dark-mode textarea {
+			background-color: #2d2d2d !important;
+			color: #fff !important;
+			border: 1px solid #444 !important;
+		}
+
+		/* Rom Patcher Specifics */
+		body.dark-mode .text-muted {
+			color: #a0a0a0 !important;
+		}
+
+		/* Mobile Menu */
+		body.dark-mode #navDemo {
+			background-color: #1e1e1e !important;
+		}
+
+		/* Footer */
+		body.dark-mode footer {
+			background-color: #000 !important;
+			opacity: 0.8;
+		}
+
+		/* Links in dark mode */
+		body.dark-mode a {
+			color: #81c784;
+			/* Light green to match Emerald theme */
+		}
+
+		/* --- Fix Nav Bar Hover in Dark Mode --- */
+		/* Changes the white hover to a dark grey */
+		body.dark-mode .w3-hover-white:hover {
+			background-color: #444 !important;
+			color: #fff !important;
+		}
+
+		/* --- Fix ROM Patcher Container in Dark Mode --- */
+		/* Background and text color for the main box */
+		body.dark-mode #rom-patcher-container {
+			background-color: #1e1e1e !important;
+			/* Dark card color */
+			color: #e0e0e0 !important;
+			border: 1px solid #333;
+		}
+
+		/* Fix Inputs (File selector) and Dropdowns inside the patcher */
+		body.dark-mode #rom-patcher-container input,
+		body.dark-mode #rom-patcher-container select {
+			background-color: #2d2d2d !important;
+			color: #fff !important;
+			border: 1px solid #555;
+		}
+
+		/* Fix the 'muted' text (labels like CRC32, SHA-1) so they are visible */
+		body.dark-mode #rom-patcher-container .text-muted {
+			color: #aaa !important;
+		}
+
+		/* Fix file select hover state */
+		body.dark-mode #rom-patcher-container input[type=file]:hover:not(:disabled),
+		body.dark-mode #rom-patcher-container select:hover:not(:disabled) {
+			background-color: #383838 !important;
+		}
+
+		.gba-container {
+    position: relative; /* This makes the video position relative to this box */
+    max-width: 900px;   /* Adjust this to control the overall size on the page */
+    margin: 0 auto;     /* Centers the console */
+}
+
+.gba-container img {
+    width: 100%;       /* Forces the GBA image to fit the container */
+    display: block;    /* Removes tiny spacing gaps */
+}
+
+.gba-container video {
+    position: absolute;
+    /* These percentages position the video over the white screen area */
+    top: 24.5%;
+    left: 32.9%;
+    width: 36%;
+    height: 42%;
+    
+    background-color: #000; /* Black background while loading */
+    object-fit: fill;       /* Stretches video to fit the corners exactly */
+    z-index: 10;            /* Ensures video is on top of the image */
+}
 	</style>
 
 	<!-- Rom Patcher JS needed CSS/JS files -->
@@ -31,80 +145,80 @@
 
 	<!-- Rom Patcher JS initialization -->
 	<script type="text/javascript">
-window.addEventListener('load', async function () {
-    try {
-        // load patches.info (must be valid JSON)
-        const res = await fetch('./patches.info');
-        if (!res.ok) throw new Error('patches.info not found (HTTP ' + res.status + ')');
-        const patchInfo = await res.json();
+		window.addEventListener('load', async function () {
+			try {
+				// load patches.info (must be valid JSON)
+				const res = await fetch('./patches.info');
+				if (!res.ok) throw new Error('patches.info not found (HTTP ' + res.status + ')');
+				const patchInfo = await res.json();
 
-        // initialize RomPatcherJS with the correct signature (options, patchInfo)
-        RomPatcherWeb.initialize(
-            {
-                language: 'en',
-                requireValidation: true,
-                allowDropFiles: true
-            },
-            patchInfo
-        );
+				// initialize RomPatcherJS with the correct signature (options, patchInfo)
+				RomPatcherWeb.initialize(
+					{
+						language: 'en',
+						requireValidation: true,
+						allowDropFiles: true
+					},
+					patchInfo
+				);
 
-        const downloadBtn = document.getElementById('rom-patcher-button-download');
-        const patchSelect = document.getElementById('rom-patcher-select-patch');
+				const downloadBtn = document.getElementById('rom-patcher-button-download');
+				const patchSelect = document.getElementById('rom-patcher-select-patch');
 
-        // Defensive: populate the <select> from patchInfo if RomPatcher didn't
-        // (this guarantees the list is present and we can enable download)
-        if (Array.isArray(patchInfo.patches) && patchInfo.patches.length > 0) {
-            // Clear any existing options
-            patchSelect.innerHTML = '';
-            patchInfo.patches.forEach((p, i) => {
-                const opt = document.createElement('option');
-                opt.value = i;
-                opt.textContent = p.name || p.file || ('Patch ' + i);
-                patchSelect.appendChild(opt);
-            });
+				// Defensive: populate the <select> from patchInfo if RomPatcher didn't
+				// (this guarantees the list is present and we can enable download)
+				if (Array.isArray(patchInfo.patches) && patchInfo.patches.length > 0) {
+					// Clear any existing options
+					patchSelect.innerHTML = '';
+					patchInfo.patches.forEach((p, i) => {
+						const opt = document.createElement('option');
+						opt.value = i;
+						opt.textContent = p.name || p.file || ('Patch ' + i);
+						patchSelect.appendChild(opt);
+					});
 
-            // Select first patch by default so UI shows something and enable download
-            patchSelect.selectedIndex = 0;
-            downloadBtn.disabled = false;
-        } else {
-            // No patches found
-            patchSelect.innerHTML = '<option disabled>No patches found</option>';
-            downloadBtn.disabled = true;
-        }
+					// Select first patch by default so UI shows something and enable download
+					patchSelect.selectedIndex = 0;
+					downloadBtn.disabled = false;
+				} else {
+					// No patches found
+					patchSelect.innerHTML = '<option disabled>No patches found</option>';
+					downloadBtn.disabled = true;
+				}
 
-        // If user changes selection, ensure download remains enabled
-        patchSelect.addEventListener('change', () => {
-            downloadBtn.disabled = patchSelect.selectedIndex < 0;
-        });
+				// If user changes selection, ensure download remains enabled
+				patchSelect.addEventListener('change', () => {
+					downloadBtn.disabled = patchSelect.selectedIndex < 0;
+				});
 
-        // Download the actual file from ./patches/<filename>
-        downloadBtn.addEventListener('click', () => {
-            const idx = patchSelect.selectedIndex;
-            if (idx < 0) return;
-            const patch = patchInfo.patches[idx];
-            if (!patch || !patch.file) return alert('Patch file not specified.');
+				// Download the actual file from ./patches/<filename>
+				downloadBtn.addEventListener('click', () => {
+					const idx = patchSelect.selectedIndex;
+					if (idx < 0) return;
+					const patch = patchInfo.patches[idx];
+					if (!patch || !patch.file) return alert('Patch file not specified.');
 
-            // Make sure the file path matches where you store patch files
-            const href = `./patches/${patch.file}`;
-            const link = document.createElement('a');
-            link.href = href;
-            link.download = patch.file.split('/').pop();
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
+					// Make sure the file path matches where you store patch files
+					const href = `./patches/${patch.file}`;
+					const link = document.createElement('a');
+					link.href = href;
+					link.download = patch.file.split('/').pop();
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+				});
 
-    } catch (err) {
-        console.error('RomPatcher init error:', err);
-        const container = document.getElementById('rom-patcher-container');
-        if (container) {
-            container.innerHTML = 'Error loading patch index: ' + (err.message || err);
-            container.style.color = 'red';
-        }
-    }
-});
-</script>
-	
+			} catch (err) {
+				console.error('RomPatcher init error:', err);
+				const container = document.getElementById('rom-patcher-container');
+				if (container) {
+					container.innerHTML = 'Error loading patch index: ' + (err.message || err);
+					container.style.color = 'red';
+				}
+			}
+		});
+	</script>
+
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 			const sections = document.querySelectorAll("section, div[id]");
@@ -158,7 +272,18 @@ window.addEventListener('load', async function () {
 				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
 			<a id="nav-contact" href="#contact"
 				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+
+			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
+				href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+					class="fa fa-bars"></i></a>
+
+			<a href="javascript:void(0);" onclick="toggleDarkMode()"
+				class="w3-bar-item w3-button w3-left w3-padding-large w3-hover-white" title="Toggle Dark Mode">
+				<span id="darkModeIcon">🌙</span>
+			</a>
 		</div>
+
+
 
 		<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
 			<a id="mnav-installation" href="#installation" class="w3-bar-item w3-button w3-padding-large">התקנה</a>
@@ -169,8 +294,8 @@ window.addEventListener('load', async function () {
 	</div>
 
 	<header class="w3-container w3-center" style="padding: 128px 16px" id="mytop">
-		<img src="logo.png" class="w3-image w3-center"><br>
-		<h1 class="w3-center"><b>🐉🐲 ברקת 🐉🐲</b></h1>
+		<img src="pokemon_logo.png" class="w3-image w3-center"><br>
+		<img src="emerald_logo.png" class="w3-image w3-center"><br>
 	</header>
 
 	<script>
@@ -178,7 +303,7 @@ window.addEventListener('load', async function () {
 			const header = document.querySelector("header");
 
 			// List of images
-			const images = ["1.png", "2.jpeg"];
+			const images = ["sky_empty.png", "sky_dragons.jpeg"];
 
 			// Pick a random image
 			const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -201,6 +326,16 @@ window.addEventListener('load', async function () {
 	-->
 	<div class="w3-row-padding padding-64 w3-container">
 		<div class="w3-content" style="direction: rtl; text-align: right;">
+			<h1><b>🐉🐲פוקימון ברקת בעברית 🐉🐲</b></h1>
+	
+<div class="gba-container">
+    <img src="cover.png" alt="GameBoy Advance">
+    
+    <video class="main-video" controls loop muted playsinline autoplay>
+        <source src="demonstration.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בתג סרטון.
+    </video>
+</div>
 
 			<!-- אודות title -->
 			<h2 id="aboutToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
@@ -213,8 +348,8 @@ window.addEventListener('load', async function () {
 			<div id="aboutContent" class="w3-animate-opacity" style="display: none; margin-top: 16px;">
 
 				<h5>
-					אזור הואן אינו יציב - רייקואזה התעורר! כישוריך כמאמנים יעמדו בפני אתגרים שלא היו מעולם, כשאתם
-					מנסים לשמור על האיזון בין קיוגר לגראודון. הוכיחו את כישורכם על ידי צבירת תגים וגשו לחזית הקרב
+					אזור הואן אינו יציב - רייקואזה התעורר! כישורכם כמאמנים יעמדו בפני אתגרים שלא היו מעולם, כשאתם
+					מנסים לשמור על האיזון בין קיוגר לגראודון. הוכיחו את כישורכם על ידי צבירת תגים ובואו לחזית הקרב
 					- קו החזית של קרבות פוקימונים המציע רמה חדשה לגמרי של תחרות. קרבות שלא חוויתם מעולם מחכים לכם!
 				</h5>
 
@@ -226,7 +361,7 @@ window.addEventListener('load', async function () {
 						פוקימונים מסוימים.</li>
 					<li>השתמשו במתאם האלחוטי של Game Boy Advance כדי להחליף ולהילחם בין גרסאות של פוקימון ברקת
 						ופוקימון FireRed & LeafGreen.</li>
-					<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link&#9415;, התחברו עם פוקימון
+					<li>הרחיבו את האוסף שלכם כשאתם סוחרים עם חבר. באמצעות כבל Game Link התחברו עם פוקימון
 						רובי
 						וספיר, פוקימון FireRed & LeafGreen או פוקימון קולוסיאום כדי לתפוס את כולם!</li>
 				</ul>
@@ -236,6 +371,24 @@ window.addEventListener('load', async function () {
 				</h5>
 
 			</div>
+
+			<h2 id="featuresToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
+				מאפניים &#9662;
+			</h2>
+
+			<div class="w3-clear"></div>
+
+			<!-- Hidden content -->
+			<div id="featuresContent" class="w3-animate-opacity" style="display: none; margin-top: 16px;">
+
+				<ul
+					style="font-size: 16px; list-style-type: disc; padding-right: 20px; margin-top: 20px; text-align: right;">
+					<li>תמיכה מלאה בעברית!</li>
+					<li>תרגום מלא לעברית!</li>
+					<li>כל הגרפיקה בעברית!</li>
+				</ul>
+			</div>
+
 		</div>
 	</div>
 	<script>
@@ -244,161 +397,173 @@ window.addEventListener('load', async function () {
 			content.style.display = content.style.display === "none" ? "block" : "none";
 		};
 	</script>
+	<script>
+		document.getElementById("featuresToggle").onclick = function () {
+			const content = document.getElementById("featuresContent");
+			content.style.display = content.style.display === "none" ? "block" : "none";
+		};
+	</script>
 
 	<div class="w3-row-padding padding-64 w3-container section-divider" id="installation"
-     style="padding-top: 100px; margin-top: -80px;">
-    <div class="w3-content">
-        <h1><u>התקנה</u></h1>
-        <h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ Apply Patch<br />
-            זה יוריד קובץ ROM עם השינויים לעברית</h5>
+		style="padding-top: 100px; margin-top: -80px;">
+		<div class="w3-content">
+			<h1><u>התקנה</u></h1>
+			<h5>יש לצרף קובץ ROM של פוקימון ברקת באנגלית וללחוץ 'יישום Patch'<br />
+				זה יוריד קובץ ROM עם השינויים לעברית</h5>
 
-        <!-- ROM Patcher Container (only one!) -->
-        <div id="rom-patcher-container" style="justify-content:center;align-items:center;">
+			<!-- ROM Patcher Container (only one!) -->
+			<div id="rom-patcher-container" style="justify-content:center;align-items:center;">
 
-            <div class="w3-center"><span class="text-muted">
-                מבוסס על ה-ROM:<br>
-                Pokémon Emerald.gba (USA, Europe)
-            </span></div>
+				<div class="w3-center"><span class="text-muted">
+						מבוסס על ה-ROM:<br>
+						Pokémon Emerald.gba (USA, Europe)
+					</span></div>
 
-            <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-                <div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ ROM:</label></div>
-                <div class="rom-patcher-container-input">
-                    <input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
-                </div>
-            </div>
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+					<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">קובץ
+							ROM:</label></div>
+					<div class="rom-patcher-container-input">
+						<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+					</div>
+				</div>
 
-            <div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
-                <div class="rom-patcher-row">
-                    <div class="text-right">CRC32:</div>
-                    <div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
-                </div>
-                <div class="rom-patcher-row">
-                    <div class="text-right">SHA-1:</div>
-                    <div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
-                </div>
-                <div class="rom-patcher-row" id="rom-patcher-row-info-rom">
-                    <div class="text-right">ROM:</div>
-                    <div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
-                </div>
-            </div>
+				<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
+					<div class="rom-patcher-row">
+						<div class="text-right">CRC32:</div>
+						<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+					</div>
+					<div class="rom-patcher-row">
+						<div class="text-right">SHA-1:</div>
+						<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+					</div>
+					<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+						<div class="text-right">ROM:</div>
+						<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+					</div>
+				</div>
 
-            <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
-                <div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ Patch:</label></div>
-                <div class="rom-patcher-container-input">
-                    <select id="rom-patcher-select-patch"></select>
-                </div>
-            </div>
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+					<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">קובץ
+							Patch:</label></div>
+					<div class="rom-patcher-container-input">
+						<select id="rom-patcher-select-patch"></select>
+					</div>
+				</div>
 
-            <div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
-                <div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
-                <div class="text-truncate" id="rom-patcher-patch-description"></div>
-            </div>
+				<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+					<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+					<div class="text-truncate" id="rom-patcher-patch-description"></div>
+				</div>
 
-            <div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
-                 id="rom-patcher-row-patch-requirements">
-                <div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
-                <div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
-            </div>
+				<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+					id="rom-patcher-row-patch-requirements">
+					<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
+					<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+				</div>
 
-            <div class="text-center" id="rom-patcher-row-apply">
-                <div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span></div>
-                <button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
-                <button id="rom-patcher-button-download" data-localize="yes" disabled>Download patch</button>
-            </div>
-        </div>
+				<div class="text-center" id="rom-patcher-row-apply">
+					<div id="rom-patcher-row-error-message" class="margin-bottom"><span
+							id="rom-patcher-error-message"></span></div>
+					<button id="rom-patcher-button-apply" data-localize="yes" disabled>יישום Patch</button>
+					<button id="rom-patcher-button-download" data-localize="yes" disabled>הורדת Patch</button>
+				</div>
+			</div>
 
-        <div id="rom-patcher-powered" class="text-center">
-            <a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">
-                Powered by Rom Patcher JS
-                <img src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />
-            </a>
-        </div>
+			<div id="rom-patcher-powered" class="text-center">
+				<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank">
+					Powered by Rom Patcher JS
+					<img src="./rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />
+				</a>
+			</div>
 
-        <h5>להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
-        <h5 class="w3-text-grey">
-            (אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)
-        </h5>
-        <br>
-    </div>
-</div>
+			<h5>יש להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
+			<h5 class="w3-text-grey">
+				(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
+					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)
+			</h5>
+			<br>
+		</div>
+	</div>
 
 <div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
-    <div class="w3-content">
-        <h1><u>משחק</u></h1>
+        <div class="w3-content">
+            <h1><u>משחק</u></h1>
 
-        <h5>
-            ניתן לשחק גם באמולטור שבדפדפן.<br>
-            מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R
-        </h5>
+            <h5>
+                ניתן לשחק גם באמולטור שבדפדפן.<br>
+                מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R
+            </h5>
 
-        <h5>טענו את ה-ROM שלכם כדי לשחק:</h5>
+            <h5>טענו את ה-ROM שלכם כדי לשחק:</h5>
 
-        <!-- ROM input -->
-        <div id="rom-upload-box">
-            <input type="file" id="input">
+            <div id="rom-upload-box">
+                <input type="file" id="input">
+            </div>
+
+            <div id="emu-container" style="display: none; margin-top:20px; text-align:center;">
+                <div id="emu-wrapper" style="width:720px; height:480px; max-width:100%; margin:auto;">
+                    <div dir="LTR" id="emu-display"
+                        style="width:100%; height:100%; box-shadow:0px 0px 5px 4px rgba(0,0,0,0.1);"></div>
+                </div>
+				            <div id="rom-patcher-powered" class="text-center">
+                <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">
+                    Powered by Emulator JS
+                    <img src="./emuJS.png" loading="lazy" />
+                </a>
+            </div>
+            </div>
+            <h5>
+                אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו
+                לפורמט שמתאים לאמולטור שבמכשירכם.
+            </h5>
         </div>
-
-        <!-- Emulator container (initially empty) -->
-        <div id="emu-container" style="margin-top:20px; text-align:center;">
-			<div id="emu-wrapper" style="width:720px; height:480px; max-width:100%; margin:auto;">
-				<div dir="LTR" id="emu-display" style="width:100%; height:100%; box-shadow:0px 0px 5px 4px rgba(0,0,0,0.1);"></div>
-			</div>
-		</div>
-
-        <div id="rom-patcher-powered" class="text-center">
-            <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">
-                Powered by Emulator JS
-                <img src="./emuJS.png" loading="lazy" />
-            </a>
-        </div>
-        <h5>
-            אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו
-            לפורמט שמתאים לאמולטור שבמכשירכם.
-        </h5>
     </div>
-</div>
 
-<script>
-input.addEventListener("change", async () => {
-    const url = input.files[0];
-    if (!url) return;
+    <script>
+        const input = document.getElementById("input"); // Ensure input is defined
+        
+        input.addEventListener("change", async () => {
+            const url = input.files[0];
+            if (!url) return;
 
-    const parts = url.name.split(".");
-    const ext = parts.pop().toLowerCase();
-    let core = "gba"; // default
-    if (ext === "nds") core = "nds";
-    if (ext === "gb") core = "gb";
+            // 1. Reveal the emulator container
+            document.getElementById("emu-container").style.display = "block";
 
-    const playerDiv = document.getElementById("emu-display");
-    playerDiv.innerHTML = ""; // clear previous
+            const parts = url.name.split(".");
+            const ext = parts.pop().toLowerCase();
+            let core = "gba"; // default
+            if (ext === "nds") core = "nds";
+            if (ext === "gb") core = "gb";
 
-    window.EJS_player = "#emu-display"; // use the new ID
-    window.EJS_gameName = parts.shift();
-    window.EJS_gameUrl = url;
-    window.EJS_core = core;
-    window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-    window.EJS_startOnLoaded = true;
+            const playerDiv = document.getElementById("emu-display");
+            playerDiv.innerHTML = ""; // clear previous
 
-    const script = document.createElement("script");
-    script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-    document.body.appendChild(script);
-});
-</script>
+            window.EJS_player = "#emu-display"; 
+            window.EJS_gameName = parts.shift();
+            window.EJS_gameUrl = url;
+            window.EJS_core = core;
+            window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            window.EJS_startOnLoaded = true;
+
+            const script = document.createElement("script");
+            script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+            document.body.appendChild(script);
+        });
+    </script>
 
 	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="thanks">
 		<div class="w3-content">
 			<h1><u>תודות</u></h1>
 
 			<p class="w3-xlarge">
-				<u>שחר ברנסון</u> - תכנות, תרגום, גרפיקה<br>
+				<u>שחר ברנסון</u> - תכנות, תרגום, גרפיקה<br><br>
 				שגיא בלמש - עזרה טכנית<br>
 				ליאור כלפון (LIJI) - עזרה טכנית<br>
-				נגה שקד - עזרה ראשונית<br>
-				מ. ש. אלבוים - עברות<br>
-				מאיה כץ - תמיכה
+				נגה שקד - עזרה טכנית ראשונית<br>
+				מ. ש. אלבוים - עברות שמות לפוקימון<br>
 			</p>
 
-			<div class="w3-right-align">
+			<!-- 			<div class="w3-right-align">
 				<p dir="LTR" class="w3-xlarge">
 					Visual Studio Code<br>
 					Notepad++<br>
@@ -408,9 +573,9 @@ input.addEventListener("change", async () => {
 					Porymap<br>
 					git & GitHub<br>
 					wsl<br>
-				</p>
-			</div>
+				</p> -->
 		</div>
+	</div>
 	</div>
 
 	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="contact">
@@ -421,12 +586,37 @@ input.addEventListener("change", async () => {
 				צרו קשר!
 				מוזמנים לפנות אליי לשחר, shachar700, בדיסקורד לכל שאלה או פניה.
 				<br /><br />
-				מצאתם טעות? רוצים לתקן? ניתן לפתוח Pull Request בריפו ב-<a
+				מצאתם טעות? רוצים לתקן? ניתן לפתוח Issue או Pull Request בריפו ב-<a
 					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>.
 				<br /> בין אם זה בתרגום, בקוד או בגרפיקה.
 			</h5>
 		</div>
 	</div>
+
+	<div class="w3-row-padding w3-padding-64 w3-container" id="thanks">
+		<div class="w3-content">
+			<!-- אודות title -->
+			<h2 id="changelogToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
+				יומן שינויים &#9662;
+			</h2>
+
+			<div class="w3-clear"></div>
+
+			<!-- Hidden content -->
+			<div id="changelogContent" class="w3-animate-opacity" style="display: none; margin-top: 16px;">
+				<h5>1.0 - 1 בדצמבר 2025</h5>
+				<ul>
+					<li>גרסה ראשונית.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script>
+		document.getElementById("changelogToggle").onclick = function () {
+			const content = document.getElementById("changelogContent");
+			content.style.display = content.style.display === "none" ? "block" : "none";
+		};
+	</script>
 
 	<footer class="w3-container w3-padding-64 w3-center w3-opacity">
 		<p dir="LTR">
@@ -482,6 +672,45 @@ input.addEventListener("change", async () => {
 				const el = document.getElementById(id);
 				if (el) observer.observe(el);
 			});
+		});
+	</script>
+
+	<script>
+		function toggleDarkMode() {
+			const body = document.body;
+			const icon = document.getElementById("darkModeIcon");
+
+			// Toggle the class
+			body.classList.toggle("dark-mode");
+
+			// Update Icon and LocalStorage
+			if (body.classList.contains("dark-mode")) {
+				icon.textContent = "☀️"; // Switch to Sun icon
+				localStorage.setItem("theme", "dark");
+			} else {
+				icon.textContent = "🌙"; // Switch to Moon icon
+				localStorage.setItem("theme", "light");
+			}
+		}
+
+		// Check LocalStorage on page load
+		document.addEventListener("DOMContentLoaded", () => {
+			const savedTheme = localStorage.getItem("theme");
+			const icon = document.getElementById("darkModeIcon");
+
+			if (savedTheme === "dark") {
+				document.body.classList.add("dark-mode");
+				if (icon) icon.textContent = "☀️";
+			} else if (savedTheme === "light") {
+				document.body.classList.remove("dark-mode");
+				if (icon) icon.textContent = "🌙";
+			} else {
+				// Optional: Check system preference if no save exists
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.body.classList.add("dark-mode");
+					if (icon) icon.textContent = "☀️";
+				}
+			}
 		});
 	</script>
 </body>
