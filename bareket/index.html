@@ -125,17 +125,17 @@
     display: block;    /* Removes tiny spacing gaps */
 }
 
-.gba-container video {
+.gba-container iframe {
     position: absolute;
     /* These percentages position the video over the white screen area */
-    top: 24.5%;
+    top: 24.1%;
     left: 32.9%;
-    width: 36%;
-    height: 42%;
+    width: 35.9%;
+    height: 41.8%;
     
     background-color: #000; /* Black background while loading */
-    object-fit: fill;       /* Stretches video to fit the corners exactly */
     z-index: 10;            /* Ensures video is on top of the image */
+    border: none;           /* Removes default iframe border */
 }
 	</style>
 
@@ -331,10 +331,12 @@
 <div class="gba-container">
     <img src="cover.png" alt="GameBoy Advance">
     
-    <video class="main-video" controls loop muted playsinline autoplay>
-        <source src="demonstration.mp4" type="video/mp4">
-        הדפדפן שלך אינו תומך בתג סרטון.
-    </video>
+    <iframe 
+        src="https://www.youtube.com/embed/dXBSlF5knC0?autoplay=1&mute=1&loop=1&playlist=dXBSlF5knC0&showinfo=0&rel=0" 
+        title="פוקימון ברקת בעברית"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
 </div>
 
 			<!-- אודות title -->
