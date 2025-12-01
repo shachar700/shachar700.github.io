@@ -24,95 +24,93 @@
 			/* spacing before line */
 		}
 
-		/* --- Dark Mode Styles --- */
-		body.dark-mode {
-			background-color: #121212 !important;
-			color: #e0e0e0 !important;
-		}
+	/* --- Dark Mode Styles (Midnight Blue Theme) --- */
+    body.dark-mode {
+        background-color: #0a192f !important; /* Deep Navy Background */
+        color: #e6f1ff !important; /* Light blue-white text */
+    }
 
-		/* Override w3.css light backgrounds */
-		body.dark-mode .w3-light-grey,
-		body.dark-mode .w3-white,
-		body.dark-mode .w3-card {
-			background-color: #1e1e1e !important;
-			color: #e0e0e0 !important;
-		}
+    /* Override w3.css light backgrounds */
+    body.dark-mode .w3-light-grey,
+    body.dark-mode .w3-white,
+    body.dark-mode .w3-card {
+        background-color: #112240 !important; /* Lighter Navy for cards/bars */
+        color: #e6f1ff !important;
+    }
 
-		/* Fix text colors for dark mode */
-		body.dark-mode h1,
-		body.dark-mode h2,
-		body.dark-mode h3,
-		body.dark-mode h4,
-		body.dark-mode h5,
-		body.dark-mode p {
-			color: #e0e0e0 !important;
-		}
+    /* Fix text colors for dark mode */
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode p {
+        color: #e6f1ff !important;
+    }
 
-		/* Form inputs and Selects */
-		body.dark-mode input,
-		body.dark-mode select,
-		body.dark-mode textarea {
-			background-color: #2d2d2d !important;
-			color: #fff !important;
-			border: 1px solid #444 !important;
-		}
+    /* Form inputs and Selects */
+    body.dark-mode input,
+    body.dark-mode select,
+    body.dark-mode textarea {
+        background-color: #233554 !important; /* Blue-grey input background */
+        color: #fff !important;
+        border: 1px solid #405b7a !important; /* Blue border */
+    }
 
-		/* Rom Patcher Specifics */
-		body.dark-mode .text-muted {
-			color: #a0a0a0 !important;
-		}
+    /* Rom Patcher Specifics */
+    body.dark-mode .text-muted {
+        color: #8892b0 !important; /* Muted slate blue */
+    }
 
-		/* Mobile Menu */
-		body.dark-mode #navDemo {
-			background-color: #1e1e1e !important;
-		}
+    /* Mobile Menu */
+    body.dark-mode #navDemo {
+        background-color: #112240 !important;
+    }
 
-		/* Footer */
-		body.dark-mode footer {
-			background-color: #000 !important;
-			opacity: 0.8;
-		}
+    /* Footer */
+    body.dark-mode footer {
+        background-color: #020c1b !important; /* Very dark blue (almost black) */
+        opacity: 0.9;
+    }
 
-		/* Links in dark mode */
-		body.dark-mode a {
-			color: #81c784;
-			/* Light green to match Emerald theme */
-		}
+    /* Links in dark mode */
+    body.dark-mode a {
+        color: #64ffda; /* Teal/Cyan - looks great on dark blue */
+    }
 
-		/* --- Fix Nav Bar Hover in Dark Mode --- */
-		/* Changes the white hover to a dark grey */
-		body.dark-mode .w3-hover-white:hover {
-			background-color: #444 !important;
-			color: #fff !important;
-		}
+    /* --- Fix Nav Bar Hover in Dark Mode --- */
+    /* Changes the white hover to a lighter blue */
+    body.dark-mode .w3-hover-white:hover {
+        background-color: #233554 !important;
+        color: #fff !important;
+    }
 
-		/* --- Fix ROM Patcher Container in Dark Mode --- */
-		/* Background and text color for the main box */
-		body.dark-mode #rom-patcher-container {
-			background-color: #1e1e1e !important;
-			/* Dark card color */
-			color: #e0e0e0 !important;
-			border: 1px solid #333;
-		}
+    /* --- Fix ROM Patcher Container in Dark Mode --- */
+    /* Background and text color for the main box */
+    body.dark-mode #rom-patcher-container {
+        background-color: #112240 !important; /* Matches card color */
+        color: #e6f1ff !important;
+        border: 1px solid #233554;
+    }
 
-		/* Fix Inputs (File selector) and Dropdowns inside the patcher */
-		body.dark-mode #rom-patcher-container input,
-		body.dark-mode #rom-patcher-container select {
-			background-color: #2d2d2d !important;
-			color: #fff !important;
-			border: 1px solid #555;
-		}
+    /* Fix Inputs (File selector) and Dropdowns inside the patcher */
+    body.dark-mode #rom-patcher-container input,
+    body.dark-mode #rom-patcher-container select {
+        background-color: #233554 !important;
+        color: #fff !important;
+        border: 1px solid #405b7a;
+    }
 
-		/* Fix the 'muted' text (labels like CRC32, SHA-1) so they are visible */
-		body.dark-mode #rom-patcher-container .text-muted {
-			color: #aaa !important;
-		}
+    /* Fix the 'muted' text (labels like CRC32, SHA-1) */
+    body.dark-mode #rom-patcher-container .text-muted {
+        color: #8892b0 !important;
+    }
 
-		/* Fix file select hover state */
-		body.dark-mode #rom-patcher-container input[type=file]:hover:not(:disabled),
-		body.dark-mode #rom-patcher-container select:hover:not(:disabled) {
-			background-color: #383838 !important;
-		}
+    /* Fix file select hover state */
+    body.dark-mode #rom-patcher-container input[type=file]:hover:not(:disabled),
+    body.dark-mode #rom-patcher-container select:hover:not(:disabled) {
+        background-color: #304a75 !important; /* Slightly lighter blue on hover */
+    }
 
 		.gba-container {
     position: relative; /* This makes the video position relative to this box */
@@ -134,9 +132,14 @@
     height: 41.8%;
     
     background-color: #000; /* Black background while loading */
-    z-index: 10;            /* Ensures video is on top of the image */
     border: none;           /* Removes default iframe border */
 }
+
+/* --- List Item Styles --- */
+        li {
+            font-size: 18px !important;
+            margin-bottom: 8px; /* Adds space between bullet points */
+        }
 	</style>
 
 	<!-- Rom Patcher JS needed CSS/JS files -->
@@ -297,24 +300,6 @@
 		<img src="pokemon_logo.png" class="w3-image w3-center"><br>
 		<img src="emerald_logo.png" class="w3-image w3-center"><br>
 	</header>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const header = document.querySelector("header");
-
-			// List of images
-			const images = ["sky_empty.png", "sky_dragons.jpeg"];
-
-			// Pick a random image
-			const randomImage = images[Math.floor(Math.random() * images.length)];
-
-			// Apply as background
-			header.style.backgroundImage = `url('${randomImage}')`;
-			header.style.backgroundSize = "cover";          // Cover entire header
-			header.style.backgroundPosition = "center";     // Center the image
-			header.style.backgroundRepeat = "no-repeat";    // Don't repeat
-		});
-	</script>
 
 	<!-- Rom Patcher JS container -->
 	<!--
@@ -613,6 +598,7 @@
 					<li>גרסה ראשונית.</li>
 				</ul>
 			</div>
+			<img src="collage.png" alt="GameBoy Advance">
 		</div>
 	</div>
 	<script>
@@ -679,44 +665,77 @@
 		});
 	</script>
 
-	<script>
-		function toggleDarkMode() {
-			const body = document.body;
-			const icon = document.getElementById("darkModeIcon");
+<script>
+    // --- Helper Function: Sets Header Image based on Mode ---
+    function updateHeaderImage(isDark) {
+        const header = document.querySelector("header");
+        
+        if (isDark) {
+            // Dark Mode: Always sky_night.jpg
+            header.style.backgroundImage = "url('sky_night.jpg')";
+        } else {
+            // Light Mode: Randomize between the original two
+            const images = ["sky_empty.png", "sky_dragons.jpeg"];
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            header.style.backgroundImage = `url('${randomImage}')`;
+        }
 
-			// Toggle the class
-			body.classList.toggle("dark-mode");
+        // Apply shared styles
+        header.style.backgroundSize = "cover";
+        header.style.backgroundPosition = "center";
+        header.style.backgroundRepeat = "no-repeat";
+    }
 
-			// Update Icon and LocalStorage
-			if (body.classList.contains("dark-mode")) {
-				icon.textContent = "☀️"; // Switch to Sun icon
-				localStorage.setItem("theme", "dark");
-			} else {
-				icon.textContent = "🌙"; // Switch to Moon icon
-				localStorage.setItem("theme", "light");
-			}
-		}
+    // --- Toggle Function (Triggered by Button) ---
+    function toggleDarkMode() {
+        const body = document.body;
+        const icon = document.getElementById("darkModeIcon");
 
-		// Check LocalStorage on page load
-		document.addEventListener("DOMContentLoaded", () => {
-			const savedTheme = localStorage.getItem("theme");
-			const icon = document.getElementById("darkModeIcon");
+        // Toggle the class
+        body.classList.toggle("dark-mode");
+        const isDark = body.classList.contains("dark-mode");
 
-			if (savedTheme === "dark") {
-				document.body.classList.add("dark-mode");
-				if (icon) icon.textContent = "☀️";
-			} else if (savedTheme === "light") {
-				document.body.classList.remove("dark-mode");
-				if (icon) icon.textContent = "🌙";
-			} else {
-				// Optional: Check system preference if no save exists
-				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					document.body.classList.add("dark-mode");
-					if (icon) icon.textContent = "☀️";
-				}
-			}
-		});
-	</script>
+        // Update Icon and LocalStorage
+        if (isDark) {
+            icon.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+        } else {
+            icon.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+
+        // Update the header image immediately
+        updateHeaderImage(isDark);
+    }
+
+    // --- Initialization on Page Load ---
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme");
+        const icon = document.getElementById("darkModeIcon");
+        let isDark = false;
+
+        // 1. Determine if we are in dark mode
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            if (icon) icon.textContent = "☀️";
+            isDark = true;
+        } else if (savedTheme === "light") {
+            document.body.classList.remove("dark-mode");
+            if (icon) icon.textContent = "🌙";
+            isDark = false;
+        } else {
+            // Check system preference if no save exists
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add("dark-mode");
+                if (icon) icon.textContent = "☀️";
+                isDark = true;
+            }
+        }
+
+        // 2. Set the correct image based on the determined mode
+        updateHeaderImage(isDark);
+    });
+</script>
 </body>
 
 </html>
