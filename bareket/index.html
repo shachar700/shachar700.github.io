@@ -151,79 +151,57 @@
 
 	<!-- Rom Patcher JS initialization -->
 	<script type="text/javascript">
-		window.addEventListener('load', async function () {
-			try {
-				// load patches.info (must be valid JSON)
-				const res = await fetch('./patches.info');
-				if (!res.ok) throw new Error('patches.info not found (HTTP ' + res.status + ')');
-				const patchInfo = await res.json();
+window.addEventListener('load', function () {
+    fetch("./patches.info")
+        .then(res => res.json())
+        .then(patchInfo => {
+            RomPatcherWeb.initialize(
+                {
+                    language: 'en',
+                    requireValidation: true,
+                    allowDropFiles: true
+                },
+                patchInfo
+            );
 
-				// initialize RomPatcherJS with the correct signature (options, patchInfo)
-				RomPatcherWeb.initialize(
-					{
-						language: 'en',
-						requireValidation: true,
-						allowDropFiles: true
-					},
-					patchInfo
-				);
+            const downloadBtn = document.getElementById('rom-patcher-button-download');
+            const patchSelect = document.getElementById('rom-patcher-select-patch');
 
-				const downloadBtn = document.getElementById('rom-patcher-button-download');
-				const patchSelect = document.getElementById('rom-patcher-select-patch');
+            // 1. Enable the download button immediately if patches exist
+            if (patchInfo.patches.length > 0) {
+                downloadBtn.disabled = false;
+            }
 
-				// Defensive: populate the <select> from patchInfo if RomPatcher didn't
-				// (this guarantees the list is present and we can enable download)
-				if (Array.isArray(patchInfo.patches) && patchInfo.patches.length > 0) {
-					// Clear any existing options
-					patchSelect.innerHTML = '';
-					patchInfo.patches.forEach((p, i) => {
-						const opt = document.createElement('option');
-						opt.value = i;
-						opt.textContent = p.name || p.file || ('Patch ' + i);
-						patchSelect.appendChild(opt);
-					});
+            // 2. Re-enable if the user changes selection
+            patchSelect.addEventListener('change', () => {
+                downloadBtn.disabled = false;
+            });
 
-					// Select first patch by default so UI shows something and enable download
-					patchSelect.selectedIndex = 0;
-					downloadBtn.disabled = false;
-				} else {
-					// No patches found
-					patchSelect.innerHTML = '<option disabled>No patches found</option>';
-					downloadBtn.disabled = true;
-				}
+            downloadBtn.onclick = () => {
+                // Get the text name of the currently selected option
+                const selectedOption = patchSelect.options[patchSelect.selectedIndex];
+                if (!selectedOption) return;
+                const selectedName = selectedOption.text;
 
-				// If user changes selection, ensure download remains enabled
-				patchSelect.addEventListener('change', () => {
-					downloadBtn.disabled = patchSelect.selectedIndex < 0;
-				});
+                // Find the patch object in the JSON that matches this name
+                const patch = patchInfo.patches.find(p => p.name === selectedName);
 
-				// Download the actual file from ./patches/<filename>
-				downloadBtn.addEventListener('click', () => {
-					const idx = patchSelect.selectedIndex;
-					if (idx < 0) return;
-					const patch = patchInfo.patches[idx];
-					if (!patch || !patch.file) return alert('Patch file not specified.');
-
-					// Make sure the file path matches where you store patch files
-					const href = `./patches/${patch.file}`;
-					const link = document.createElement('a');
-					link.href = href;
-					link.download = patch.file.split('/').pop();
-					document.body.appendChild(link);
-					link.click();
-					document.body.removeChild(link);
-				});
-
-			} catch (err) {
-				console.error('RomPatcher init error:', err);
-				const container = document.getElementById('rom-patcher-container');
-				if (container) {
-					container.innerHTML = 'Error loading patch index: ' + (err.message || err);
-					container.style.color = 'red';
-				}
-			}
-		});
-	</script>
+                if (patch) {
+                    const link = document.createElement('a');
+                    // Add the folder path manually since JSON has clean filenames
+                    link.href = `./patches/${patch.file}`;
+                    link.download = patch.file;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    console.error("Could not find patch with name:", selectedName);
+                }
+            };
+        })
+        .catch(err => console.error(err));
+});
+</script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
@@ -497,7 +475,7 @@
                     <div dir="LTR" id="emu-display"
                         style="width:100%; height:100%; box-shadow:0px 0px 5px 4px rgba(0,0,0,0.1);"></div>
                 </div>
-				            <div id="rom-patcher-powered" class="text-center">
+				            <div id="emulatorJS-powered" class="text-center">
                 <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">
                     Powered by Emulator JS
                     <img src="./emuJS.png" loading="lazy" />
