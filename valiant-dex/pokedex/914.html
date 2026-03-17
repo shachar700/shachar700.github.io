@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quaquaval - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Quaquaval</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/quaquaval/front.png" alt="Quaquaval front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Quaquaval</p>
+      <p><strong>National Dex #:</strong> 914</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Dancer</p>
+    <p><strong>Types:</strong> <span class="type-badge type-water">Water</span> <span class="type-badge type-fighting">Fighting</span></p>
+    <p><strong>Abilities:</strong> Torrent, Moxie</p>
+    <p><strong>Growth Rate:</strong> Medium Slow</p>
+    <p><strong>Egg Groups:</strong> Flying, Water 1</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 85</li>
+        <li>Base Attack: 120</li>
+        <li>Base Defense: 80</li>
+        <li>Base Speed: 85</li>
+        <li>Base Sp. Attack: 85</li>
+        <li>Base Sp. Defense: 75</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>A single kick from a Quaquaval can
+send a truck rolling. This Pokémon
+uses its powerful legs to perform
+striking dances from far-off lands.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 0 — Aqua Step</li>
+        <li>Lv. 1 — Counter</li>
+        <li>Lv. 1 — Pound</li>
+        <li>Lv. 1 — Growl</li>
+        <li>Lv. 1 — Water Gun</li>
+        <li>Lv. 1 — Double Hit</li>
+        <li>Lv. 7 — Work Up</li>
+        <li>Lv. 10 — Wing Attack</li>
+        <li>Lv. 13 — Aqua Jet</li>
+        <li>Lv. 17 — Low Sweep</li>
+        <li>Lv. 17 — Water Pulse</li>
+        <li>Lv. 21 — Aqua Cutter</li>
+        <li>Lv. 27 — Air Slash</li>
+        <li>Lv. 32 — Focus Energy</li>
+        <li>Lv. 38 — Mega Kick</li>
+        <li>Lv. 43 — Acrobatics</li>
+        <li>Lv. 47 — Liquidation</li>
+        <li>Lv. 52 — Feather Dance</li>
+        <li>Lv. 58 — Close Combat</li>
+        <li>Lv. 64 — Wave Crash</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Aerial Ace</li>
+        <li>Brick Break</li>
+        <li>Bulk Up</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Surf</li>
+        <li>Taunt</li>
+        <li>Water Pulse</li>
+        <li>Counter</li>
+        <li>Endure</li>
+        <li>Icy Wind</li>
+        <li>Mega Kick</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Sleep Talk</li>
+        <li>Substitute</li>
+        <li>Swift</li>
+        <li>Swords Dance</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Detect, Last Resort, Rapid Spin, Roost</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

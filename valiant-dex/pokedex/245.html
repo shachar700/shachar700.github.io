@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suicune - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Suicune</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/suicune/anim_front.png" alt="Suicune front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Suicune</p>
+      <p><strong>National Dex #:</strong> 245</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Aurora</p>
+    <p><strong>Types:</strong> <span class="type-badge type-water">Water</span></p>
+    <p><strong>Abilities:</strong> Pressure, Inner Focus</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> No Eggs Discovered</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 100</li>
+        <li>Base Attack: 75</li>
+        <li>Base Defense: 115</li>
+        <li>Base Speed: 85</li>
+        <li>Base Sp. Attack: 90</li>
+        <li>Base Sp. Defense: 115</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>Suicune embodies the compassion of
+a pure spring of water. It runs across
+the land with gliding elegance. It has the
+power to purify dirty water.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Extreme Speed</li>
+        <li>Lv. 1 — Sheer Cold</li>
+        <li>Lv. 1 — Gust</li>
+        <li>Lv. 1 — Leer</li>
+        <li>Lv. 1 — Mist</li>
+        <li>Lv. 1 — Water Gun</li>
+        <li>Lv. 6 — Water Pulse</li>
+        <li>Lv. 12 — Bite</li>
+        <li>Lv. 18 — Calm Mind</li>
+        <li>Lv. 24 — Roar</li>
+        <li>Lv. 30 — Ice Fang</li>
+        <li>Lv. 36 — Tailwind</li>
+        <li>Lv. 42 — Crunch</li>
+        <li>Lv. 48 — Extrasensory</li>
+        <li>Lv. 54 — Surf</li>
+        <li>Lv. 60 — Mirror Coat</li>
+        <li>Lv. 66 — Rain Dance</li>
+        <li>Lv. 72 — Hydro Pump</li>
+        <li>Lv. 78 — Blizzard</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Blizzard</li>
+        <li>Calm Mind</li>
+        <li>Cut</li>
+        <li>Dig</li>
+        <li>Dive</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Hail</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Ice Beam</li>
+        <li>Iron Tail</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Reflect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Roar</li>
+        <li>Rock Smash</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Sunny Day</li>
+        <li>Surf</li>
+        <li>Toxic</li>
+        <li>Waterfall</li>
+        <li>Water Pulse</li>
+        <li>Body Slam</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Icy Wind</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Psych Up</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

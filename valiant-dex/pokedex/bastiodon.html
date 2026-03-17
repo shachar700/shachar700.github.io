@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bastiodon - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Bastiodon</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/bastiodon/anim_front.png" alt="Bastiodon front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Bastiodon</p>
+      <p><strong>National Dex #:</strong> 411</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Shield</p>
+    <p><strong>Types:</strong> <span class="type-badge type-rock">Rock</span> <span class="type-badge type-steel">Steel</span></p>
+    <p><strong>Abilities:</strong> Sturdy, Soundproof</p>
+    <p><strong>Growth Rate:</strong> Erratic</p>
+    <p><strong>Egg Groups:</strong> Monster</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 60</li>
+        <li>Base Attack: 52</li>
+        <li>Base Defense: 168</li>
+        <li>Base Speed: 30</li>
+        <li>Base Sp. Attack: 47</li>
+        <li>Base Sp. Defense: 138</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>Their rock-hard faces serve to protect
+them from any frontral attacks.
+When attacked, they form a wall.
+They shielded their young in that way.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 0 — Block</li>
+        <li>Lv. 1 — Wide Guard</li>
+        <li>Lv. 1 — Tackle</li>
+        <li>Lv. 1 — Protect</li>
+        <li>Lv. 1 — Taunt</li>
+        <li>Lv. 1 — Metal Sound</li>
+        <li>Lv. 15 — Take Down</li>
+        <li>Lv. 19 — Iron Defense</li>
+        <li>Lv. 24 — Swagger</li>
+        <li>Lv. 28 — Ancient Power</li>
+        <li>Lv. 36 — Endure</li>
+        <li>Lv. 43 — Metal Burst</li>
+        <li>Lv. 51 — Iron Head</li>
+        <li>Lv. 58 — Heavy Slam</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Blizzard</li>
+        <li>Dig</li>
+        <li>Double Team</li>
+        <li>Earthquake</li>
+        <li>Facade</li>
+        <li>Fire Blast</li>
+        <li>Flamethrower</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Ice Beam</li>
+        <li>Iron Tail</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Reflect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Roar</li>
+        <li>Rock Smash</li>
+        <li>Rock Tomb</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Shock Wave</li>
+        <li>Strength</li>
+        <li>Sunny Day</li>
+        <li>Taunt</li>
+        <li>Thunder</li>
+        <li>Thunderbolt</li>
+        <li>Torment</li>
+        <li>Toxic</li>
+        <li>Body Slam</li>
+        <li>Counter</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Rock Slide</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Headbutt, Scary Face, Focus Energy, Double Edge, Rock Blast, Body Slam, Screech, Curse, Fissure, Counter, Stealth Rock, Wide Guard, Guard Split</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

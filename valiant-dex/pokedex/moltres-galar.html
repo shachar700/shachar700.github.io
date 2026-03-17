@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moltres - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Moltres</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/moltres/galar/front.png" alt="Moltres front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Moltres Galar</p>
+      <p><strong>National Dex #:</strong> 146</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Malevolent</p>
+    <p><strong>Types:</strong> <span class="type-badge type-dark">Dark</span> <span class="type-badge type-flying">Flying</span></p>
+    <p><strong>Abilities:</strong> Berserk</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> No Eggs Discovered</p>
+<p><strong>Base Species:</strong> <a href="moltres.html">Moltres</a></p><p><strong>Form:</strong> Galar</p>  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 90</li>
+        <li>Base Attack: 85</li>
+        <li>Base Defense: 90</li>
+        <li>Base Speed: 90</li>
+        <li>Base Sp. Attack: 100</li>
+        <li>Base Sp. Defense: 125</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>This Pokémon&#39;s sinister, flame-like aura
+will consume the spirit of any creature
+it hits. Victims become burned-out
+shadows of themselves.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Gust</li>
+        <li>Lv. 1 — Leer</li>
+        <li>Lv. 5 — Payback</li>
+        <li>Lv. 10 — Safeguard</li>
+        <li>Lv. 15 — Wing Attack</li>
+        <li>Lv. 20 — Agility</li>
+        <li>Lv. 25 — Ancient Power</li>
+        <li>Lv. 30 — Sucker Punch</li>
+        <li>Lv. 35 — Air Slash</li>
+        <li>Lv. 40 — After You</li>
+        <li>Lv. 45 — Fiery Wrath</li>
+        <li>Lv. 50 — Nasty Plot</li>
+        <li>Lv. 55 — Hurricane</li>
+        <li>Lv. 60 — Endure</li>
+        <li>Lv. 65 — Memento</li>
+        <li>Lv. 70 — Sky Attack</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Aerial Ace</li>
+        <li>Facade</li>
+        <li>Fly</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Safeguard</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Steel Wing</li>
+        <li>Sunny Day</li>
+        <li>Taunt</li>
+        <li>Thief</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swift</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

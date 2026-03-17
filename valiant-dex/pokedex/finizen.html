@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finizen - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Finizen</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/finizen/front.png" alt="Finizen front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Finizen</p>
+      <p><strong>National Dex #:</strong> 963</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Dolphin</p>
+    <p><strong>Types:</strong> <span class="type-badge type-water">Water</span></p>
+    <p><strong>Abilities:</strong> Water Veil</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> Field, Water 2</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 70</li>
+        <li>Base Attack: 45</li>
+        <li>Base Defense: 40</li>
+        <li>Base Speed: 75</li>
+        <li>Base Sp. Attack: 45</li>
+        <li>Base Sp. Defense: 40</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>Its water ring is made from
+seawater mixed with a sticky fluid that
+Finizen secretes from its blowhole.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Level up: 38 → Palafin Zero</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Supersonic</li>
+        <li>Lv. 1 — Water Gun</li>
+        <li>Lv. 7 — Astonish</li>
+        <li>Lv. 10 — Focus Energy</li>
+        <li>Lv. 13 — Aqua Jet</li>
+        <li>Lv. 17 — Double Hit</li>
+        <li>Lv. 21 — Dive</li>
+        <li>Lv. 25 — Charm</li>
+        <li>Lv. 29 — Acrobatics</li>
+        <li>Lv. 34 — Encore</li>
+        <li>Lv. 39 — Aqua Tail</li>
+        <li>Lv. 44 — Mist</li>
+        <li>Lv. 50 — Hydro Pump</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Blizzard</li>
+        <li>Dive</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Ice Beam</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Surf</li>
+        <li>Waterfall</li>
+        <li>Water Pulse</li>
+        <li>Body Slam</li>
+        <li>Counter</li>
+        <li>Endure</li>
+        <li>Icy Wind</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Sleep Talk</li>
+        <li>Substitute</li>
+        <li>Swift</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Boomburst, Bounce, Counter, Haze, Tickle</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

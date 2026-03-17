@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drampa - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Drampa</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/drampa/anim_front.png" alt="Drampa front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Drampa</p>
+      <p><strong>National Dex #:</strong> 780</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Placid</p>
+    <p><strong>Types:</strong> <span class="type-badge type-normal">Normal</span> <span class="type-badge type-dragon">Dragon</span></p>
+    <p><strong>Abilities:</strong> Berserk, Sap Sipper, Cloud Nine</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Monster, Dragon</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 78</li>
+        <li>Base Attack: 60</li>
+        <li>Base Defense: 85</li>
+        <li>Base Speed: 36</li>
+        <li>Base Sp. Attack: 135</li>
+        <li>Base Sp. Defense: 91</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>This Pokémon is friendly to people and
+loves children most of all. It comes from
+deep in the mountains to play with
+children it likes in town.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Play Nice</li>
+        <li>Lv. 1 — Echoed Voice</li>
+        <li>Lv. 5 — Twister</li>
+        <li>Lv. 10 — Protect</li>
+        <li>Lv. 15 — Glare</li>
+        <li>Lv. 20 — Safeguard</li>
+        <li>Lv. 25 — Dragon Breath</li>
+        <li>Lv. 30 — Extrasensory</li>
+        <li>Lv. 35 — Dragon Pulse</li>
+        <li>Lv. 40 — Light Screen</li>
+        <li>Lv. 45 — Fly</li>
+        <li>Lv. 50 — Hyper Voice</li>
+        <li>Lv. 55 — Outrage</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Blizzard</li>
+        <li>Calm Mind</li>
+        <li>Double Team</li>
+        <li>Dragon Claw</li>
+        <li>Earthquake</li>
+        <li>Facade</li>
+        <li>Fire Blast</li>
+        <li>Flamethrower</li>
+        <li>Fly</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Ice Beam</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Roar</li>
+        <li>Safeguard</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Shock Wave</li>
+        <li>Solar Beam</li>
+        <li>Steel Wing</li>
+        <li>Sunny Day</li>
+        <li>Surf</li>
+        <li>Thunder</li>
+        <li>Thunderbolt</li>
+        <li>Toxic</li>
+        <li>Water Pulse</li>
+        <li>Body Slam</li>
+        <li>Endure</li>
+        <li>Icy Wind</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Rock Slide</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swift</li>
+        <li>Thunder Wave</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Hurricane, Dragon Rush, Razor Wind, Mist, Play Rough</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

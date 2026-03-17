@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frillish - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Frillish</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/frillish/anim_front.png" alt="Frillish front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Frillish</p>
+      <p><strong>National Dex #:</strong> 592</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Floating</p>
+    <p><strong>Types:</strong> <span class="type-badge type-water">Water</span> <span class="type-badge type-ghost">Ghost</span></p>
+    <p><strong>Abilities:</strong> Water Absorb, Cursed Body, Damp</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Amorphous</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 55</li>
+        <li>Base Attack: 40</li>
+        <li>Base Defense: 50</li>
+        <li>Base Speed: 40</li>
+        <li>Base Sp. Attack: 65</li>
+        <li>Base Sp. Defense: 85</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>If its veil-like arms stun and wrap an
+opponent, that foe will be dragged
+five miles below the surface to its lair,
+never to return.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Level up: 40 → Jellicent</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Absorb</li>
+        <li>Lv. 1 — Water Gun</li>
+        <li>Lv. 4 — Poison Sting</li>
+        <li>Lv. 8 — Night Shade</li>
+        <li>Lv. 12 — Water Pulse</li>
+        <li>Lv. 16 — Rain Dance</li>
+        <li>Lv. 20 — Hex</li>
+        <li>Lv. 24 — Brine</li>
+        <li>Lv. 28 — Recover</li>
+        <li>Lv. 32 — Shadow Ball</li>
+        <li>Lv. 36 — Whirlpool</li>
+        <li>Lv. 41 — Hydro Pump</li>
+        <li>Lv. 44 — Destiny Bond</li>
+        <li>Lv. 48 — Water Spout</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Blizzard</li>
+        <li>Dive</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Flash</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hail</li>
+        <li>Hidden Power</li>
+        <li>Ice Beam</li>
+        <li>Protect</li>
+        <li>Psychic</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Safeguard</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Shock Wave</li>
+        <li>Sludge Bomb</li>
+        <li>Surf</li>
+        <li>Taunt</li>
+        <li>Toxic</li>
+        <li>Waterfall</li>
+        <li>Water Pulse</li>
+        <li>Dream Eater</li>
+        <li>Endure</li>
+        <li>Icy Wind</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Acid Armor, Confuse Ray, Pain Split, Mist, Recover, Constrict</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

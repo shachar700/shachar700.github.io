@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ogerpon - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Ogerpon</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/ogerpon/wellspring_tera/front.png" alt="Ogerpon front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Ogerpon Wellspring Tera</p>
+      <p><strong>National Dex #:</strong> 1017</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Mask</p>
+    <p><strong>Types:</strong> <span class="type-badge type-grass">Grass</span> <span class="type-badge type-water">Water</span></p>
+    <p><strong>Abilities:</strong> Embody Aspect Wellspring Mask</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> No Eggs Discovered</p>
+<p><strong>Base Species:</strong> <a href="ogerpon-teal.html">Ogerpon Teal</a></p><p><strong>Form:</strong> Ogerpon Wellspring Tera</p>  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 80</li>
+        <li>Base Attack: 120</li>
+        <li>Base Defense: 84</li>
+        <li>Base Speed: 110</li>
+        <li>Base Sp. Attack: 60</li>
+        <li>Base Sp. Defense: 96</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>No description parsed.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Double Kick</li>
+        <li>Lv. 1 — Counter</li>
+        <li>Lv. 1 — Retaliate</li>
+        <li>Lv. 1 — Horn Leech</li>
+        <li>Lv. 1 — Vine Whip</li>
+        <li>Lv. 1 — Leech Seed</li>
+        <li>Lv. 1 — Quick Attack</li>
+        <li>Lv. 1 — Follow Me</li>
+        <li>Lv. 6 — Focus Energy</li>
+        <li>Lv. 12 — Growth</li>
+        <li>Lv. 18 — Slam</li>
+        <li>Lv. 24 — Low Sweep</li>
+        <li>Lv. 30 — Ivy Cudgel</li>
+        <li>Lv. 36 — Throat Chop</li>
+        <li>Lv. 42 — Synthesis</li>
+        <li>Lv. 48 — Spiky Shield</li>
+        <li>Lv. 54 — Power Whip</li>
+        <li>Lv. 60 — Superpower</li>
+        <li>Lv. 66 — Wood Hammer</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Brick Break</li>
+        <li>Bullet Seed</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Rock Tomb</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Solar Beam</li>
+        <li>Sunny Day</li>
+        <li>Taunt</li>
+        <li>Counter</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Sleep Talk</li>
+        <li>Substitute</li>
+        <li>Swords Dance</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

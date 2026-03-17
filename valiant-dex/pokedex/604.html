@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eelektross - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Eelektross</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/eelektross/anim_front.png" alt="Eelektross front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Eelektross</p>
+      <p><strong>National Dex #:</strong> 604</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> EleFish</p>
+    <p><strong>Types:</strong> <span class="type-badge type-electric">Electric</span></p>
+    <p><strong>Abilities:</strong> Levitate</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> Amorphous</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 85</li>
+        <li>Base Attack: 115</li>
+        <li>Base Defense: 80</li>
+        <li>Base Speed: 50</li>
+        <li>Base Sp. Attack: 105</li>
+        <li>Base Sp. Defense: 80</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>They crawl out of the ocean using their
+arms. They will attack prey on shore and
+immediately drag it into the ocean, with
+their sucker mouths.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Headbutt</li>
+        <li>Lv. 1 — Thrash</li>
+        <li>Lv. 1 — Acid</li>
+        <li>Lv. 1 — Zap Cannon</li>
+        <li>Lv. 1 — Crunch</li>
+        <li>Lv. 1 — Crush Claw</li>
+        <li>Lv. 1 — Gastro Acid</li>
+        <li>Lv. 1 — Discharge</li>
+        <li>Lv. 1 — Coil</li>
+        <li>Lv. 5 — Wild Charge</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Brick Break</li>
+        <li>Bulk Up</li>
+        <li>Cut</li>
+        <li>Double Team</li>
+        <li>Dragon Claw</li>
+        <li>Facade</li>
+        <li>Flamethrower</li>
+        <li>Flash</li>
+        <li>Focus Punch</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Iron Tail</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Roar</li>
+        <li>Rock Smash</li>
+        <li>Rock Tomb</li>
+        <li>Secret Power</li>
+        <li>Shock Wave</li>
+        <li>Strength</li>
+        <li>Sunny Day</li>
+        <li>Thunder</li>
+        <li>Thunderbolt</li>
+        <li>Toxic</li>
+        <li>Waterfall</li>
+        <li>Body Slam</li>
+        <li>Endure</li>
+        <li>Fire Punch</li>
+        <li>Mimic</li>
+        <li>Rock Slide</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+        <li>Thunder Punch</li>
+        <li>Thunder Wave</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

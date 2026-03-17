@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guzzlord - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Guzzlord</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/guzzlord/front.png" alt="Guzzlord front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Guzzlord</p>
+      <p><strong>National Dex #:</strong> 799</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Junkivore</p>
+    <p><strong>Types:</strong> <span class="type-badge type-dark">Dark</span> <span class="type-badge type-dragon">Dragon</span></p>
+    <p><strong>Abilities:</strong> Beast Boost</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> No Eggs Discovered</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 223</li>
+        <li>Base Attack: 101</li>
+        <li>Base Defense: 53</li>
+        <li>Base Speed: 43</li>
+        <li>Base Sp. Attack: 97</li>
+        <li>Base Sp. Defense: 53</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>A dangerous Ultra Beast, it has gobbled
+mountains and swallowed whole buildings,
+according to reports. But for some reason
+its droppings have never been found.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Bite</li>
+        <li>Lv. 1 — Dragon Tail</li>
+        <li>Lv. 5 — Swallow</li>
+        <li>Lv. 5 — Stockpile</li>
+        <li>Lv. 10 — Knock Off</li>
+        <li>Lv. 15 — Stomp</li>
+        <li>Lv. 20 — Stomping Tantrum</li>
+        <li>Lv. 25 — Wide Guard</li>
+        <li>Lv. 30 — Crunch</li>
+        <li>Lv. 35 — Body Slam</li>
+        <li>Lv. 40 — Gastro Acid</li>
+        <li>Lv. 45 — Hammer Arm</li>
+        <li>Lv. 50 — Heavy Slam</li>
+        <li>Lv. 55 — Dragon Rush</li>
+        <li>Lv. 60 — Belch</li>
+        <li>Lv. 65 — Thrash</li>
+        <li>Lv. 70 — Giga Impact</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Brick Break</li>
+        <li>Double Team</li>
+        <li>Dragon Claw</li>
+        <li>Earthquake</li>
+        <li>Facade</li>
+        <li>Fire Blast</li>
+        <li>Flamethrower</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Iron Tail</li>
+        <li>Protect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Rock Tomb</li>
+        <li>Secret Power</li>
+        <li>Shock Wave</li>
+        <li>Sludge Bomb</li>
+        <li>Thief</li>
+        <li>Toxic</li>
+        <li>Body Slam</li>
+        <li>Endure</li>
+        <li>Mega Kick</li>
+        <li>Mega Punch</li>
+        <li>Mimic</li>
+        <li>Rock Slide</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

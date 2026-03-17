@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staravia - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Staravia</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/staravia/anim_front.png" alt="Staravia front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Staravia</p>
+      <p><strong>National Dex #:</strong> 397</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Starling</p>
+    <p><strong>Types:</strong> <span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></p>
+    <p><strong>Abilities:</strong> Intimidate, Reckless</p>
+    <p><strong>Growth Rate:</strong> Medium Slow</p>
+    <p><strong>Egg Groups:</strong> Flying</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 55</li>
+        <li>Base Attack: 75</li>
+        <li>Base Defense: 50</li>
+        <li>Base Speed: 80</li>
+        <li>Base Sp. Attack: 40</li>
+        <li>Base Sp. Defense: 40</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>Recognizing their own weakness, they
+maintain huge flocks. Fierce scuffles
+break out between various flocks.
+When alone, a Staravia cries noisily.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Level up: 34 → Staraptor</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Tackle</li>
+        <li>Lv. 1 — Growl</li>
+        <li>Lv. 1 — Quick Attack</li>
+        <li>Lv. 9 — Wing Attack</li>
+        <li>Lv. 13 — Double Team</li>
+        <li>Lv. 18 — Endeavor</li>
+        <li>Lv. 23 — Whirlwind</li>
+        <li>Lv. 28 — Aerial Ace</li>
+        <li>Lv. 33 — Take Down</li>
+        <li>Lv. 38 — Agility</li>
+        <li>Lv. 43 — Brave Bird</li>
+        <li>Lv. 48 — Final Gambit</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Aerial Ace</li>
+        <li>Attract</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Fly</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Steel Wing</li>
+        <li>Sunny Day</li>
+        <li>Thief</li>
+        <li>Toxic</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Feather Dance, Fury Attack, Pursuit, Astonish, Sand Attack, Foresight, Double Edge, Steel Wing, Uproar, Roost, Detect, Revenge, Mirror Move</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berber - Valiant Dex</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Berber</h1>
+<section class="card pokemon-hero-card trainer-hero-card">
+  <div class="pokemon-hero trainer-hero">
+      <img src="../assets/game/graphics/trainers/front_pics/palace_maven_spenser.png" alt="Berber trainer pic" class="trainer-page-pic">
+    <div>
+      <p><strong>Location:</strong> Petalburg City Gym</p>
+<p><strong>Class:</strong> Dojo Master</p>    </div>
+  </div>
+</section>
+<section class="card species-section table-card">
+  <h2>Party</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th><th>Picture</th><th>Types</th><th>Ability</th><th>EVs</th><th>IVs</th><th>Held Item</th><th>Moves</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="../pokedex/vibrava.html">Vibrava Level 33</a></td>
+          <td><img src="../assets/game/graphics/pokemon/vibrava/anim_front.png" alt="Vibrava Level 33 sprite" class="trainer-mon-sprite"></td>
+          <td>
+              <div class="trainer-type-stack">
+                <div class="trainer-types-row"><img src="../assets/generated/types/ground.svg" alt="Ground type" class="type-icon"> <img src="../assets/generated/types/dragon.svg" alt="Dragon type" class="type-icon"></div>
+              </div>
+          </td>
+          <td>Levitate</td>
+          <td>—</td>
+          <td>24 HP<br>24 Atk<br>24 Def<br>24 SpA<br>24 SpD<br>24 Spe</td>
+          <td>—</td>
+          <td>Dragon Tail<br>Scorching Sands<br>Sunny Day<br>U-Turn</td>
+        </tr>
+        <tr>
+          <td><a href="../pokedex/skarmory.html">Skarmory Level 33</a></td>
+          <td><img src="../assets/game/graphics/pokemon/skarmory/anim_front.png" alt="Skarmory Level 33 sprite" class="trainer-mon-sprite"></td>
+          <td>
+              <div class="trainer-type-stack">
+                <div class="trainer-types-row"><img src="../assets/generated/types/steel.svg" alt="Steel type" class="type-icon"> <img src="../assets/generated/types/flying.svg" alt="Flying type" class="type-icon"></div>
+              </div>
+          </td>
+          <td>Keen Eye</td>
+          <td>—</td>
+          <td>24 HP<br>24 Atk<br>24 Def<br>24 SpA<br>24 SpD<br>24 Spe</td>
+          <td>—</td>
+          <td>Metal Claw<br>Air Slash<br>Brave Bird<br>Dark Pulse</td>
+        </tr>
+        <tr>
+          <td><a href="../pokedex/seviper.html">Seviper Level 33</a></td>
+          <td><img src="../assets/game/graphics/pokemon/seviper/anim_front.png" alt="Seviper Level 33 sprite" class="trainer-mon-sprite"></td>
+          <td>
+              <div class="trainer-type-stack">
+                <div class="trainer-types-row"><img src="../assets/generated/types/poison.svg" alt="Poison type" class="type-icon"></div>
+              </div>
+          </td>
+          <td>Shed Skin</td>
+          <td>—</td>
+          <td>24 HP<br>24 Atk<br>24 Def<br>24 SpA<br>24 SpD<br>24 Spe</td>
+          <td>—</td>
+          <td>Venoshock<br>Haze<br>Crunch<br>Gunk Shot</td>
+        </tr>
+        <tr>
+          <td><a href="../pokedex/vigoroth.html">Vigoroth Level 33</a></td>
+          <td><img src="../assets/game/graphics/pokemon/vigoroth/anim_front.png" alt="Vigoroth Level 33 sprite" class="trainer-mon-sprite"></td>
+          <td>
+              <div class="trainer-type-stack">
+                <div class="trainer-types-row"><img src="../assets/generated/types/normal.svg" alt="Normal type" class="type-icon"></div>
+              </div>
+          </td>
+          <td>Vital Spirit</td>
+          <td>—</td>
+          <td>30 HP<br>30 Atk<br>30 Def<br>30 SpA<br>30 SpD<br>30 Spe</td>
+          <td>Sitrus Berry</td>
+          <td>Counter<br>Yawn<br>Facade<br>Feint Attack</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

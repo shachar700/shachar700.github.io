@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinderace - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Cinderace</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/cinderace/gmax/front.png" alt="Cinderace front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Cinderace Gmax</p>
+      <p><strong>National Dex #:</strong> 815</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Striker</p>
+    <p><strong>Types:</strong> <span class="type-badge type-fire">Fire</span></p>
+    <p><strong>Abilities:</strong> Blaze, Libero</p>
+    <p><strong>Growth Rate:</strong> Medium Slow</p>
+    <p><strong>Egg Groups:</strong> Field, Human Like</p>
+<p><strong>Base Species:</strong> <a href="cinderace.html">Cinderace</a></p><p><strong>Form:</strong> Gmax</p>  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 80</li>
+        <li>Base Attack: 116</li>
+        <li>Base Defense: 75</li>
+        <li>Base Speed: 119</li>
+        <li>Base Sp. Attack: 65</li>
+        <li>Base Sp. Defense: 75</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>Infused with Cinderace&#39;s fighting
+spirit, the gigantic Pyro Ball never
+misses its targets and completely
+roasts opponents.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 0 — Pyro Ball</li>
+        <li>Lv. 1 — Tackle</li>
+        <li>Lv. 1 — Growl</li>
+        <li>Lv. 1 — Ember</li>
+        <li>Lv. 1 — Quick Attack</li>
+        <li>Lv. 1 — Feint</li>
+        <li>Lv. 12 — Double Kick</li>
+        <li>Lv. 19 — Flame Charge</li>
+        <li>Lv. 24 — Agility</li>
+        <li>Lv. 30 — Headbutt</li>
+        <li>Lv. 38 — Counter</li>
+        <li>Lv. 46 — Bounce</li>
+        <li>Lv. 54 — Double Edge</li>
+        <li>Lv. 62 — Court Change</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Bulk Up</li>
+        <li>Facade</li>
+        <li>Fire Blast</li>
+        <li>Flamethrower</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Overheat</li>
+        <li>Protect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Sunny Day</li>
+        <li>Taunt</li>
+        <li>Counter</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Fire Punch</li>
+        <li>Mega Kick</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swift</li>
+        <li>Swords Dance</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

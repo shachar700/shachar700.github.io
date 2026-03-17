@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sinistea - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Sinistea</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/sinistea/front.png" alt="Sinistea front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Sinistea Antique</p>
+      <p><strong>National Dex #:</strong> 854</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Black Tea</p>
+    <p><strong>Types:</strong> <span class="type-badge type-ghost">Ghost</span></p>
+    <p><strong>Abilities:</strong> Weak Armor, Cursed Body</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Mineral, Amorphous</p>
+<p><strong>Base Species:</strong> <a href="sinistea-phony.html">Sinistea Phony</a></p><p><strong>Form:</strong> Sinistea Antique</p>  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 40</li>
+        <li>Base Attack: 45</li>
+        <li>Base Defense: 45</li>
+        <li>Base Speed: 50</li>
+        <li>Base Sp. Attack: 74</li>
+        <li>Base Sp. Defense: 54</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>The swirl pattern in this Pokémon&#39;s
+body is its weakness. If it gets
+stirred, the swirl loses its shape, and
+Sinistea gets dizzy.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Use item: Chipped Pot → Polteageist Antique</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Withdraw</li>
+        <li>Lv. 1 — Astonish</li>
+        <li>Lv. 6 — Aromatic Mist</li>
+        <li>Lv. 12 — Mega Drain</li>
+        <li>Lv. 24 — Sucker Punch</li>
+        <li>Lv. 30 — Sweet Scent</li>
+        <li>Lv. 36 — Giga Drain</li>
+        <li>Lv. 42 — Nasty Plot</li>
+        <li>Lv. 48 — Shadow Ball</li>
+        <li>Lv. 54 — Memento</li>
+        <li>Lv. 60 — Shell Smash</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Calm Mind</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Protect</li>
+        <li>Psychic</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Skill Swap</li>
+        <li>Endure</li>
+        <li>Metronome</li>
+        <li>Mimic</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

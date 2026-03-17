@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trubbish - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Trubbish</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/trubbish/anim_front.png" alt="Trubbish front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Trubbish</p>
+      <p><strong>National Dex #:</strong> 568</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Trash Bag</p>
+    <p><strong>Types:</strong> <span class="type-badge type-poison">Poison</span></p>
+    <p><strong>Abilities:</strong> Stench, Sticky Hold, Aftermath</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Mineral</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 50</li>
+        <li>Base Attack: 50</li>
+        <li>Base Defense: 62</li>
+        <li>Base Speed: 65</li>
+        <li>Base Sp. Attack: 40</li>
+        <li>Base Sp. Defense: 62</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>It gorges on trash until its stomach
+is full. Then it belches toxic gas.
+An unlucky whiff of this gas will put
+a person in the hospital.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Level up: 36 → Garbodor</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Pound</li>
+        <li>Lv. 1 — Poison Gas</li>
+        <li>Lv. 3 — Recycle</li>
+        <li>Lv. 6 — Acid Spray</li>
+        <li>Lv. 9 — Amnesia</li>
+        <li>Lv. 12 — Clear Smog</li>
+        <li>Lv. 15 — Toxic Spikes</li>
+        <li>Lv. 18 — Sludge</li>
+        <li>Lv. 21 — Stockpile</li>
+        <li>Lv. 21 — Swallow</li>
+        <li>Lv. 24 — Take Down</li>
+        <li>Lv. 27 — Sludge Bomb</li>
+        <li>Lv. 30 — Toxic</li>
+        <li>Lv. 33 — Belch</li>
+        <li>Lv. 37 — Pain Split</li>
+        <li>Lv. 39 — Gunk Shot</li>
+        <li>Lv. 42 — Explosion</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Bullet Seed</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Sludge Bomb</li>
+        <li>Sunny Day</li>
+        <li>Thief</li>
+        <li>Toxic</li>
+        <li>Endure</li>
+        <li>Explosion</li>
+        <li>Mimic</li>
+        <li>Rollout</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Spikes, Rollout, Haze, Curse, Rock Blast, Sand Attack, Mud Sport, Self Destruct, Autotomize</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

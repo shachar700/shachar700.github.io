@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vivillon - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Vivillon</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/vivillon/fancy/anim_front.png" alt="Vivillon front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Vivillon Fancy</p>
+      <p><strong>National Dex #:</strong> 666</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Scale</p>
+    <p><strong>Types:</strong> <span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></p>
+    <p><strong>Abilities:</strong> Shield Dust, Compound Eyes, Friend Guard</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Bug</p>
+<p><strong>Base Species:</strong> <a href="vivillon-icy-snow.html">Vivillon Icy Snow</a></p><p><strong>Form:</strong> Vivillon Fancy</p>  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 80</li>
+        <li>Base Attack: 52</li>
+        <li>Base Defense: 50</li>
+        <li>Base Speed: 89</li>
+        <li>Base Sp. Attack: 90</li>
+        <li>Base Sp. Defense: 50</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>Its pattern depends on the climate and
+topography of the land it was born in.
+This form is from a mysterious land.
+It scatters toxic color scales in battle.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 0 — Gust</li>
+        <li>Lv. 1 — Poison Powder</li>
+        <li>Lv. 1 — Stun Spore</li>
+        <li>Lv. 1 — Sleep Powder</li>
+        <li>Lv. 1 — Struggle Bug</li>
+        <li>Lv. 12 — Light Screen</li>
+        <li>Lv. 17 — Psybeam</li>
+        <li>Lv. 21 — Supersonic</li>
+        <li>Lv. 25 — Draining Kiss</li>
+        <li>Lv. 31 — Safeguard</li>
+        <li>Lv. 35 — Bug Buzz</li>
+        <li>Lv. 45 — Quiver Dance</li>
+        <li>Lv. 50 — Hurricane</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Aerial Ace</li>
+        <li>Attract</li>
+        <li>Calm Mind</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Flash</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Psychic</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Safeguard</li>
+        <li>Secret Power</li>
+        <li>Solar Beam</li>
+        <li>Sunny Day</li>
+        <li>Thief</li>
+        <li>Toxic</li>
+        <li>Dream Eater</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Stun Spore, Poison Powder, Rage Powder</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

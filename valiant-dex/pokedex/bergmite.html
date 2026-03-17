@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bergmite - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Bergmite</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/bergmite/anim_front.png" alt="Bergmite front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Bergmite</p>
+      <p><strong>National Dex #:</strong> 712</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Ice Chunk</p>
+    <p><strong>Types:</strong> <span class="type-badge type-ice">Ice</span></p>
+    <p><strong>Abilities:</strong> Own Tempo, Ice Body, Sturdy</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Monster, Mineral</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 55</li>
+        <li>Base Attack: 69</li>
+        <li>Base Defense: 85</li>
+        <li>Base Speed: 28</li>
+        <li>Base Sp. Attack: 32</li>
+        <li>Base Sp. Defense: 35</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>It blocks opponents&#39; attacks with the ice
+that shields its body. It uses cold air to
+repair any cracks with new ice. They live
+in herds on snowy mountains.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Level up: 37 → Avalugg</li>
+        <li>Level up: 37 → Avalugg Hisui</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Harden</li>
+        <li>Lv. 1 — Rapid Spin</li>
+        <li>Lv. 3 — Tackle</li>
+        <li>Lv. 6 — Powder Snow</li>
+        <li>Lv. 9 — Curse</li>
+        <li>Lv. 12 — Icy Wind</li>
+        <li>Lv. 15 — Protect</li>
+        <li>Lv. 18 — Avalanche</li>
+        <li>Lv. 21 — Bite</li>
+        <li>Lv. 24 — Ice Fang</li>
+        <li>Lv. 27 — Iron Defense</li>
+        <li>Lv. 30 — Recover</li>
+        <li>Lv. 33 — Crunch</li>
+        <li>Lv. 36 — Take Down</li>
+        <li>Lv. 39 — Blizzard</li>
+        <li>Lv. 42 — Double Edge</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Blizzard</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Flash</li>
+        <li>Frustration</li>
+        <li>Hail</li>
+        <li>Hidden Power</li>
+        <li>Ice Beam</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Rock Smash</li>
+        <li>Rock Tomb</li>
+        <li>Safeguard</li>
+        <li>Secret Power</li>
+        <li>Strength</li>
+        <li>Surf</li>
+        <li>Toxic</li>
+        <li>Water Pulse</li>
+        <li>Body Slam</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Icy Wind</li>
+        <li>Mimic</li>
+        <li>Rock Slide</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Recover, Mist, Barrier, Mirror Coat</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

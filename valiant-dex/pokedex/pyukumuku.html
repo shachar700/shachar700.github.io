@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pyukumuku - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Pyukumuku</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/pyukumuku/anim_front.png" alt="Pyukumuku front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Pyukumuku</p>
+      <p><strong>National Dex #:</strong> 771</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Sea Cucumber</p>
+    <p><strong>Types:</strong> <span class="type-badge type-water">Water</span></p>
+    <p><strong>Abilities:</strong> Innards Out, Unaware</p>
+    <p><strong>Growth Rate:</strong> Fast</p>
+    <p><strong>Egg Groups:</strong> Water 1</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 55</li>
+        <li>Base Attack: 60</li>
+        <li>Base Defense: 130</li>
+        <li>Base Speed: 5</li>
+        <li>Base Sp. Attack: 30</li>
+        <li>Base Sp. Defense: 130</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>It lives in shallow seas, such as areas
+near a beach. The sticky mucous that
+covers their bodies can be used to soothe
+sunburned skin. How convenient!</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Baton Pass</li>
+        <li>Lv. 1 — Harden</li>
+        <li>Lv. 5 — Helping Hand</li>
+        <li>Lv. 10 — Taunt</li>
+        <li>Lv. 15 — Safeguard</li>
+        <li>Lv. 20 — Counter</li>
+        <li>Lv. 25 — Purify</li>
+        <li>Lv. 30 — Curse</li>
+        <li>Lv. 35 — Gastro Acid</li>
+        <li>Lv. 40 — Pain Split</li>
+        <li>Lv. 45 — Recover</li>
+        <li>Lv. 50 — Soak</li>
+        <li>Lv. 55 — Toxic</li>
+        <li>Lv. 60 — Memento</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Double Team</li>
+        <li>Hail</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Reflect</li>
+        <li>Rest</li>
+        <li>Safeguard</li>
+        <li>Taunt</li>
+        <li>Toxic</li>
+        <li>Counter</li>
+        <li>Endure</li>
+        <li>Psych Up</li>
+        <li>Sleep Talk</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Endure, Venom Drench, Bestow, Tickle, Spite</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ting-Lu - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Ting-Lu</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/ting_lu/front.png" alt="Ting-Lu front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Ting Lu</p>
+      <p><strong>National Dex #:</strong> 1003</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Ruinous</p>
+    <p><strong>Types:</strong> <span class="type-badge type-dark">Dark</span> <span class="type-badge type-ground">Ground</span></p>
+    <p><strong>Abilities:</strong> Vessel Of Ruin</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> No Eggs Discovered</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 155</li>
+        <li>Base Attack: 110</li>
+        <li>Base Defense: 125</li>
+        <li>Base Speed: 45</li>
+        <li>Base Sp. Attack: 55</li>
+        <li>Base Sp. Defense: 80</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>It slowly brings its exceedingly
+heavy head down upon the ground,
+splitting the earth open with huge
+fissures that run over 160 feet deep.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Mean Look</li>
+        <li>Lv. 1 — Sand Tomb</li>
+        <li>Lv. 1 — Spite</li>
+        <li>Lv. 5 — Spikes</li>
+        <li>Lv. 10 — Payback</li>
+        <li>Lv. 15 — Stomp</li>
+        <li>Lv. 20 — Bulldoze</li>
+        <li>Lv. 25 — Whirlwind</li>
+        <li>Lv. 30 — Taunt</li>
+        <li>Lv. 35 — Thrash</li>
+        <li>Lv. 40 — Dark Pulse</li>
+        <li>Lv. 45 — Stomping Tantrum</li>
+        <li>Lv. 50 — Ruination</li>
+        <li>Lv. 55 — Throat Chop</li>
+        <li>Lv. 60 — Rock Slide</li>
+        <li>Lv. 65 — Memento</li>
+        <li>Lv. 70 — Earthquake</li>
+        <li>Lv. 75 — Fissure</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Dig</li>
+        <li>Earthquake</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Protect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Rock Tomb</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Sunny Day</li>
+        <li>Taunt</li>
+        <li>Body Slam</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Rock Slide</li>
+        <li>Sleep Talk</li>
+        <li>Substitute</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

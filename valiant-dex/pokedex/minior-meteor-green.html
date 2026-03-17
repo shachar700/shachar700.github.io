@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minior - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Minior</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/minior/front.png" alt="Minior front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Minior Meteor Green</p>
+      <p><strong>National Dex #:</strong> 774</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Meteor</p>
+    <p><strong>Types:</strong> <span class="type-badge type-rock">Rock</span> <span class="type-badge type-flying">Flying</span></p>
+    <p><strong>Abilities:</strong> Shields Down</p>
+    <p><strong>Growth Rate:</strong> Medium Slow</p>
+    <p><strong>Egg Groups:</strong> Mineral</p>
+<p><strong>Base Species:</strong> <a href="minior-meteor-red.html">Minior Meteor Red</a></p><p><strong>Form:</strong> Minior Meteor Green</p>  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 60</li>
+        <li>Base Attack: 60</li>
+        <li>Base Defense: 100</li>
+        <li>Base Speed: 60</li>
+        <li>Base Sp. Attack: 60</li>
+        <li>Base Sp. Defense: 100</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>No description parsed.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Tackle</li>
+        <li>Lv. 3 — Defense Curl</li>
+        <li>Lv. 8 — Rollout</li>
+        <li>Lv. 10 — Confuse Ray</li>
+        <li>Lv. 15 — Swift</li>
+        <li>Lv. 17 — Ancient Power</li>
+        <li>Lv. 22 — Self Destruct</li>
+        <li>Lv. 24 — Stealth Rock</li>
+        <li>Lv. 29 — Take Down</li>
+        <li>Lv. 31 — Rock Polish</li>
+        <li>Lv. 36 — Cosmic Power</li>
+        <li>Lv. 38 — Power Gem</li>
+        <li>Lv. 43 — Double Edge</li>
+        <li>Lv. 45 — Shell Smash</li>
+        <li>Lv. 50 — Explosion</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Calm Mind</li>
+        <li>Double Team</li>
+        <li>Earthquake</li>
+        <li>Facade</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Psychic</li>
+        <li>Reflect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Rock Tomb</li>
+        <li>Safeguard</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Solar Beam</li>
+        <li>Toxic</li>
+        <li>Defense Curl</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Explosion</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Rock Slide</li>
+        <li>Rollout</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

@@ -1,0 +1,1482 @@
+{
+  "validation": {
+    "summary": {
+      "species_checked": 1517,
+      "species_with_findings": 138,
+      "errors": 0,
+      "warnings": 238
+    },
+    "species": {
+      "SPECIES_NONE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/types/none.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPic",
+          "message": "path tokens look suspicious for frontPic: graphics/types/none.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSprite",
+          "message": "path tokens look suspicious for iconSprite: graphics/items/icons/question_mark.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "shinyPalette",
+          "message": "path tokens look suspicious for shinyPalette: graphics/trade/wireless_signal_none.pal"
+        }
+      ],
+      "SPECIES_VENUSAUR": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/venusaur/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/venusaur/anim_front.png"
+        }
+      ],
+      "SPECIES_BUTTERFREE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/butterfree/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/butterfree/anim_front.png"
+        }
+      ],
+      "SPECIES_RATTATA": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/rattata/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/rattata/anim_front.png"
+        }
+      ],
+      "SPECIES_RATICATE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/raticate/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/raticate/anim_front.png"
+        }
+      ],
+      "SPECIES_PIKACHU": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/pikachu/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/pikachu/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/pikachu/icon.png"
+        }
+      ],
+      "SPECIES_PIKACHU_STARTER": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/pikachu/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/pikachu/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/pikachu/starter/icon.png"
+        }
+      ],
+      "SPECIES_RAICHU": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/raichu/anim_front.png"
+        }
+      ],
+      "SPECIES_ZUBAT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/zubat/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/zubat/anim_front.png"
+        }
+      ],
+      "SPECIES_GOLBAT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/golbat/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/golbat/anim_front.png"
+        }
+      ],
+      "SPECIES_GLOOM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/gloom/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/gloom/anim_front.png"
+        }
+      ],
+      "SPECIES_VILEPLUME": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/vileplume/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/vileplume/anim_front.png"
+        }
+      ],
+      "SPECIES_POLITOED": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/politoed/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/politoed/anim_front.png"
+        }
+      ],
+      "SPECIES_KADABRA": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/kadabra/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/kadabra/anim_front.png"
+        }
+      ],
+      "SPECIES_ALAKAZAM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/alakazam/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/alakazam/anim_front.png"
+        }
+      ],
+      "SPECIES_DODUO": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/doduo/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/doduo/anim_front.png"
+        }
+      ],
+      "SPECIES_DODRIO": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/dodrio/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/dodrio/anim_front.png"
+        }
+      ],
+      "SPECIES_STEELIX": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/steelix/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/steelix/anim_front.png"
+        }
+      ],
+      "SPECIES_HYPNO": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/hypno/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/hypno/anim_front.png"
+        }
+      ],
+      "SPECIES_RHYHORN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/rhyhorn/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/rhyhorn/anim_front.png"
+        }
+      ],
+      "SPECIES_RHYDON": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/rhydon/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/rhydon/anim_front.png"
+        }
+      ],
+      "SPECIES_RHYPERIOR": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/rhyperior/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/rhyperior/anim_front.png"
+        }
+      ],
+      "SPECIES_TANGROWTH": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/tangrowth/anim_front.png"
+        }
+      ],
+      "SPECIES_GOLDEEN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/goldeen/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/goldeen/anim_front.png"
+        }
+      ],
+      "SPECIES_SEAKING": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/seaking/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/seaking/anim_front.png"
+        }
+      ],
+      "SPECIES_SCYTHER": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/scyther/anim_front.png"
+        }
+      ],
+      "SPECIES_SCIZOR": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/scizor/anim_front.png"
+        }
+      ],
+      "SPECIES_MAGIKARP": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/magikarp/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/magikarp/anim_front.png"
+        }
+      ],
+      "SPECIES_GYARADOS": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/gyarados/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/gyarados/anim_front.png"
+        }
+      ],
+      "SPECIES_EEVEE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/eevee/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/eevee/anim_front.png"
+        }
+      ],
+      "SPECIES_EEVEE_STARTER": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/eevee/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/eevee/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/eevee/icon.png"
+        }
+      ],
+      "SPECIES_MEGANIUM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/meganium/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/meganium/anim_front.png"
+        }
+      ],
+      "SPECIES_LEDYBA": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/ledyba/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/ledyba/anim_front.png"
+        }
+      ],
+      "SPECIES_LEDIAN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/ledian/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/ledian/anim_front.png"
+        }
+      ],
+      "SPECIES_XATU": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/xatu/anim_front.png"
+        }
+      ],
+      "SPECIES_SUDOWOODO": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/sudowoodo/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/sudowoodo/anim_front.png"
+        }
+      ],
+      "SPECIES_AIPOM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/aipom/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/aipom/anim_front.png"
+        }
+      ],
+      "SPECIES_AMBIPOM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/ambipom/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/ambipom/anim_front.png"
+        }
+      ],
+      "SPECIES_WOOPER": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/wooper/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/wooper/anim_front.png"
+        }
+      ],
+      "SPECIES_QUAGSIRE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/quagsire/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/quagsire/anim_front.png"
+        }
+      ],
+      "SPECIES_MURKROW": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/murkrow/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/murkrow/anim_front.png"
+        }
+      ],
+      "SPECIES_WOBBUFFET": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/wobbuffet/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/wobbuffet/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/wobbuffet/icon.png"
+        }
+      ],
+      "SPECIES_GIRAFARIG": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/girafarig/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/girafarig/anim_front.png"
+        }
+      ],
+      "SPECIES_GLIGAR": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/gligar/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/gligar/anim_front.png"
+        }
+      ],
+      "SPECIES_HERACROSS": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/heracross/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/heracross/anim_front.png"
+        }
+      ],
+      "SPECIES_SNEASEL": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/sneasel/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/sneasel/anim_front.png"
+        }
+      ],
+      "SPECIES_WEAVILE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/weavile/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/weavile/anim_front.png"
+        }
+      ],
+      "SPECIES_SNEASEL_HISUI": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/sneasel/hisui/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/sneasel/hisui/front.png"
+        }
+      ],
+      "SPECIES_URSARING": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/ursaring/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/ursaring/anim_front.png"
+        }
+      ],
+      "SPECIES_PILOSWINE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/piloswine/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/piloswine/anim_front.png"
+        }
+      ],
+      "SPECIES_MAMOSWINE": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/mamoswine/anim_front.png"
+        }
+      ],
+      "SPECIES_OCTILLERY": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/octillery/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/octillery/anim_front.png"
+        }
+      ],
+      "SPECIES_HOUNDOOM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/houndoom/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/houndoom/anim_front.png"
+        }
+      ],
+      "SPECIES_DONPHAN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/donphan/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/donphan/anim_front.png"
+        }
+      ],
+      "SPECIES_TORCHIC": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/torchic/back.png"
+        }
+      ],
+      "SPECIES_COMBUSKEN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/combusken/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/combusken/anim_front.png"
+        }
+      ],
+      "SPECIES_BLAZIKEN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/blaziken/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/blaziken/anim_front.png"
+        }
+      ],
+      "SPECIES_BEAUTIFLY": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/beautifly/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/beautifly/anim_front.png"
+        }
+      ],
+      "SPECIES_DUSTOX": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/dustox/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/dustox/anim_front.png"
+        }
+      ],
+      "SPECIES_LUDICOLO": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/ludicolo/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/ludicolo/anim_front.png"
+        }
+      ],
+      "SPECIES_NUZLEAF": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/nuzleaf/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/nuzleaf/anim_front.png"
+        }
+      ],
+      "SPECIES_SHIFTRY": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/shiftry/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/shiftry/anim_front.png"
+        }
+      ],
+      "SPECIES_MEDITITE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/meditite/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/meditite/anim_front.png"
+        }
+      ],
+      "SPECIES_MEDICHAM": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/medicham/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/medicham/anim_front.png"
+        }
+      ],
+      "SPECIES_ROSELIA": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/roselia/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/roselia/anim_front.png"
+        }
+      ],
+      "SPECIES_ROSERADE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/roserade/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/roserade/anim_front.png"
+        }
+      ],
+      "SPECIES_GULPIN": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/gulpin/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/gulpin/anim_front.png"
+        }
+      ],
+      "SPECIES_SWALOT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/swalot/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/swalot/anim_front.png"
+        }
+      ],
+      "SPECIES_NUMEL": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/numel/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/numel/anim_front.png"
+        }
+      ],
+      "SPECIES_CAMERUPT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/camerupt/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/camerupt/anim_front.png"
+        }
+      ],
+      "SPECIES_CACTURNE": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/cacturne/anim_front.png"
+        }
+      ],
+      "SPECIES_MILOTIC": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/milotic/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/milotic/anim_front.png"
+        }
+      ],
+      "SPECIES_RELICANTH": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/relicanth/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/relicanth/anim_front.png"
+        }
+      ],
+      "SPECIES_STARLY": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/starly/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/starly/anim_front.png"
+        }
+      ],
+      "SPECIES_STARAVIA": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/staravia/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/staravia/anim_front.png"
+        }
+      ],
+      "SPECIES_STARAPTOR": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/staraptor/anim_front.png"
+        }
+      ],
+      "SPECIES_BIDOOF": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/bidoof/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/bidoof/anim_front.png"
+        }
+      ],
+      "SPECIES_BIBAREL": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/bibarel/anim_front.png"
+        }
+      ],
+      "SPECIES_KRICKETOT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/kricketot/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/kricketot/anim_front.png"
+        }
+      ],
+      "SPECIES_KRICKETUNE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/kricketune/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/kricketune/anim_front.png"
+        }
+      ],
+      "SPECIES_SHINX": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/shinx/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/shinx/anim_front.png"
+        }
+      ],
+      "SPECIES_LUXIO": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/luxio/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/luxio/anim_front.png"
+        }
+      ],
+      "SPECIES_LUXRAY": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/luxray/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/luxray/anim_front.png"
+        }
+      ],
+      "SPECIES_COMBEE": [
+        {
+          "severity": "warning",
+          "kind": "paletteFemale",
+          "message": "path tokens look suspicious for paletteFemale: graphics/pokemon/combee/normal.pal"
+        }
+      ],
+      "SPECIES_PACHIRISU": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/pachirisu/anim_front.png"
+        }
+      ],
+      "SPECIES_BUIZEL": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/buizel/back.png"
+        }
+      ],
+      "SPECIES_FLOATZEL": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/floatzel/back.png"
+        }
+      ],
+      "SPECIES_GIBLE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/gible/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/gible/anim_front.png"
+        }
+      ],
+      "SPECIES_GABITE": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/gabite/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/gabite/anim_front.png"
+        }
+      ],
+      "SPECIES_GARCHOMP": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/garchomp/anim_front.png"
+        }
+      ],
+      "SPECIES_HIPPOPOTAS": [
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/hippopotas/icon.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "paletteFemale",
+          "message": "path tokens look suspicious for paletteFemale: graphics/pokemon/hippopotas/normal.pal"
+        }
+      ],
+      "SPECIES_HIPPOWDON": [
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/hippowdon/icon.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "paletteFemale",
+          "message": "path tokens look suspicious for paletteFemale: graphics/pokemon/hippowdon/normal.pal"
+        }
+      ],
+      "SPECIES_CROAGUNK": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/croagunk/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/croagunk/anim_front.png"
+        }
+      ],
+      "SPECIES_TOXICROAK": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/toxicroak/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/toxicroak/anim_front.png"
+        }
+      ],
+      "SPECIES_FINNEON": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/finneon/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/finneon/anim_front.png"
+        }
+      ],
+      "SPECIES_LUMINEON": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/lumineon/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/lumineon/anim_front.png"
+        }
+      ],
+      "SPECIES_SNOVER": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/snover/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/snover/anim_front.png"
+        }
+      ],
+      "SPECIES_ABOMASNOW": [
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/abomasnow/anim_front.png"
+        }
+      ],
+      "SPECIES_ARCEUS_FIGHTING": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/fighting/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_FLYING": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/flying/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_POISON": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/poison/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_GROUND": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/ground/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_ROCK": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/rock/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_BUG": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/bug/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_GHOST": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/ghost/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_STEEL": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/steel/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_FIRE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/fire/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_WATER": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/water/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_GRASS": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/grass/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_ELECTRIC": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/electric/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_PSYCHIC": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/psychic/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_ICE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/ice/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_DRAGON": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/dragon/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_DARK": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/dark/overworld.png"
+        }
+      ],
+      "SPECIES_ARCEUS_FAIRY": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/arceus/fairy/overworld.png"
+        }
+      ],
+      "SPECIES_UNFEZANT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/unfezant/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/unfezant/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/unfezant/icon.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "paletteFemale",
+          "message": "path tokens look suspicious for paletteFemale: graphics/pokemon/unfezant/normal.pal"
+        }
+      ],
+      "SPECIES_DEERLING_SUMMER": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/deerling/summer/overworld.png"
+        }
+      ],
+      "SPECIES_DEERLING_AUTUMN": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/deerling/autumn/overworld.png"
+        }
+      ],
+      "SPECIES_DEERLING_WINTER": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/deerling/winter/overworld.png"
+        }
+      ],
+      "SPECIES_FRILLISH": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/frillish/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/frillish/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/frillish/icon.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "paletteFemale",
+          "message": "path tokens look suspicious for paletteFemale: graphics/pokemon/frillish/normal.pal"
+        }
+      ],
+      "SPECIES_JELLICENT": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/jellicent/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/jellicent/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/jellicent/icon.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "paletteFemale",
+          "message": "path tokens look suspicious for paletteFemale: graphics/pokemon/jellicent/normal.pal"
+        }
+      ],
+      "SPECIES_PYROAR": [
+        {
+          "severity": "warning",
+          "kind": "backPicFemale",
+          "message": "path tokens look suspicious for backPicFemale: graphics/pokemon/pyroar/back.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "frontPicFemale",
+          "message": "path tokens look suspicious for frontPicFemale: graphics/pokemon/pyroar/anim_front.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "iconSpriteFemale",
+          "message": "path tokens look suspicious for iconSpriteFemale: graphics/pokemon/pyroar/icon.png"
+        }
+      ],
+      "SPECIES_FLABEBE_YELLOW": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/flabebe/yellow/overworld.png"
+        }
+      ],
+      "SPECIES_FLABEBE_ORANGE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/flabebe/orange/overworld.png"
+        }
+      ],
+      "SPECIES_FLABEBE_BLUE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/flabebe/blue/overworld.png"
+        }
+      ],
+      "SPECIES_FLABEBE_WHITE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/flabebe/white/overworld.png"
+        }
+      ],
+      "SPECIES_FLOETTE_YELLOW": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/floette/yellow/overworld.png"
+        }
+      ],
+      "SPECIES_FLOETTE_ORANGE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/floette/orange/overworld.png"
+        }
+      ],
+      "SPECIES_FLOETTE_BLUE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/floette/blue/overworld.png"
+        }
+      ],
+      "SPECIES_FLOETTE_WHITE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/floette/white/overworld.png"
+        }
+      ],
+      "SPECIES_FLORGES_YELLOW": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/florges/yellow/overworld.png"
+        }
+      ],
+      "SPECIES_FLORGES_ORANGE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/florges/orange/overworld.png"
+        }
+      ],
+      "SPECIES_FLORGES_BLUE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/florges/blue/overworld.png"
+        }
+      ],
+      "SPECIES_FLORGES_WHITE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/florges/white/overworld.png"
+        }
+      ],
+      "SPECIES_SQUAWKABILLY_BLUE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/squawkabilly/blue/overworld.png"
+        }
+      ],
+      "SPECIES_SQUAWKABILLY_YELLOW": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/squawkabilly/yellow/overworld.png"
+        }
+      ],
+      "SPECIES_SQUAWKABILLY_WHITE": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/squawkabilly/white/overworld.png"
+        }
+      ],
+      "SPECIES_EGG": [
+        {
+          "severity": "warning",
+          "kind": "backPic",
+          "message": "path tokens look suspicious for backPic: graphics/pokemon/egg/shard.png"
+        },
+        {
+          "severity": "warning",
+          "kind": "shinyPalette",
+          "message": "path tokens look suspicious for shinyPalette: graphics/pokemon/egg/normal.pal"
+        }
+      ]
+    }
+  },
+  "sprite_diagnostics": {
+    "missing": {},
+    "duplicates": {}
+  }
+}

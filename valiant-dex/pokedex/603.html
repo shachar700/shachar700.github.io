@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eelektrik - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Eelektrik</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/eelektrik/anim_front.png" alt="Eelektrik front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Eelektrik</p>
+      <p><strong>National Dex #:</strong> 603</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> EleFish</p>
+    <p><strong>Types:</strong> <span class="type-badge type-electric">Electric</span></p>
+    <p><strong>Abilities:</strong> Levitate</p>
+    <p><strong>Growth Rate:</strong> Slow</p>
+    <p><strong>Egg Groups:</strong> Amorphous</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 65</li>
+        <li>Base Attack: 85</li>
+        <li>Base Defense: 70</li>
+        <li>Base Speed: 40</li>
+        <li>Base Sp. Attack: 75</li>
+        <li>Base Sp. Defense: 70</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>These Pokémon have a big appetite.
+It wraps itself around its prey and
+paralyzes it with electricity from the
+round spots on its sides. Then it chomps.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Use item: Thunder Stone → Eelektross</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 0 — Crunch</li>
+        <li>Lv. 1 — Headbutt</li>
+        <li>Lv. 1 — Thunder Wave</li>
+        <li>Lv. 1 — Spark</li>
+        <li>Lv. 1 — Charge Beam</li>
+        <li>Lv. 9 — Bind</li>
+        <li>Lv. 19 — Acid</li>
+        <li>Lv. 29 — Discharge</li>
+        <li>Lv. 44 — Thunderbolt</li>
+        <li>Lv. 49 — Acid Spray</li>
+        <li>Lv. 54 — Coil</li>
+        <li>Lv. 59 — Wild Charge</li>
+        <li>Lv. 64 — Gastro Acid</li>
+        <li>Lv. 69 — Zap Cannon</li>
+        <li>Lv. 74 — Thrash</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Flash</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Iron Tail</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Shock Wave</li>
+        <li>Thunder</li>
+        <li>Thunderbolt</li>
+        <li>Toxic</li>
+        <li>Body Slam</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Thunder Wave</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

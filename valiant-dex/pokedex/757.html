@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salandit - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../forms/index.html">Forms</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Salandit</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/salandit/anim_front.png" alt="Salandit front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Salandit</p>
+      <p><strong>National Dex #:</strong> 757</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Toxic Lizard</p>
+    <p><strong>Types:</strong> <span class="type-badge type-poison">Poison</span> <span class="type-badge type-fire">Fire</span></p>
+    <p><strong>Abilities:</strong> Corrosion, Oblivious</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Monster, Dragon</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 48</li>
+        <li>Base Attack: 44</li>
+        <li>Base Defense: 40</li>
+        <li>Base Speed: 77</li>
+        <li>Base Sp. Attack: 71</li>
+        <li>Base Sp. Defense: 40</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>It burns its bodily fluids to create a
+sweet-smelling poisonous gas. When its
+enemies become disoriented from inhaling
+the gas, it attacks them.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>Level up: 33 → Salazzle</li>
+        <li>None → Salazzle Totem</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Scratch</li>
+        <li>Lv. 1 — Poison Gas</li>
+        <li>Lv. 5 — Smog</li>
+        <li>Lv. 10 — Ember</li>
+        <li>Lv. 15 — Poison Fang</li>
+        <li>Lv. 20 — Sweet Scent</li>
+        <li>Lv. 25 — Nasty Plot</li>
+        <li>Lv. 30 — Incinerate</li>
+        <li>Lv. 35 — Venoshock</li>
+        <li>Lv. 40 — Dragon Pulse</li>
+        <li>Lv. 45 — Flamethrower</li>
+        <li>Lv. 50 — Toxic</li>
+        <li>Lv. 55 — Endeavor</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Attract</li>
+        <li>Double Team</li>
+        <li>Dragon Claw</li>
+        <li>Facade</li>
+        <li>Fire Blast</li>
+        <li>Flamethrower</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Iron Tail</li>
+        <li>Overheat</li>
+        <li>Protect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Secret Power</li>
+        <li>Sludge Bomb</li>
+        <li>Snatch</li>
+        <li>Sunny Day</li>
+        <li>Taunt</li>
+        <li>Thief</li>
+        <li>Torment</li>
+        <li>Toxic</li>
+        <li>Endure</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+        <li>Thunder Wave</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Belch, Knock Off, Sand Attack, Snatch, Fake Out</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>
