@@ -27,122 +27,140 @@
 			/* spacing before line */
 		}
 
-	/* --- Dark Mode Styles (Midnight Blue Theme) --- */
-    body.dark-mode {
-        background-color: #0a192f !important; /* Deep Navy Background */
-        color: #e6f1ff !important; /* Light blue-white text */
-    }
+		/* --- Dark Mode Styles (Midnight Blue Theme) --- */
+		body.dark-mode {
+			background-color: #0a192f !important;
+			/* Deep Navy Background */
+			color: #e6f1ff !important;
+			/* Light blue-white text */
+		}
 
-    /* Override w3.css light backgrounds */
-    body.dark-mode .w3-light-grey,
-    body.dark-mode .w3-white,
-    body.dark-mode .w3-card {
-        background-color: #112240 !important; /* Lighter Navy for cards/bars */
-        color: #e6f1ff !important;
-    }
+		/* Override w3.css light backgrounds */
+		body.dark-mode .w3-light-grey,
+		body.dark-mode .w3-white,
+		body.dark-mode .w3-card {
+			background-color: #112240 !important;
+			/* Lighter Navy for cards/bars */
+			color: #e6f1ff !important;
+		}
 
-    /* Fix text colors for dark mode */
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode p {
-        color: #e6f1ff !important;
-    }
+		/* Fix text colors for dark mode */
+		body.dark-mode h1,
+		body.dark-mode h2,
+		body.dark-mode h3,
+		body.dark-mode h4,
+		body.dark-mode h5,
+		body.dark-mode p {
+			color: #e6f1ff !important;
+		}
 
-    /* Form inputs and Selects */
-    body.dark-mode input,
-    body.dark-mode select,
-    body.dark-mode textarea {
-        background-color: #233554 !important; /* Blue-grey input background */
-        color: #fff !important;
-        border: 1px solid #405b7a !important; /* Blue border */
-    }
+		/* Form inputs and Selects */
+		body.dark-mode input,
+		body.dark-mode select,
+		body.dark-mode textarea {
+			background-color: #233554 !important;
+			/* Blue-grey input background */
+			color: #fff !important;
+			border: 1px solid #405b7a !important;
+			/* Blue border */
+		}
 
-    /* Rom Patcher Specifics */
-    body.dark-mode .text-muted {
-        color: #8892b0 !important; /* Muted slate blue */
-    }
+		/* Rom Patcher Specifics */
+		body.dark-mode .text-muted {
+			color: #8892b0 !important;
+			/* Muted slate blue */
+		}
 
-    /* Mobile Menu */
-    body.dark-mode #navDemo {
-        background-color: #112240 !important;
-    }
+		/* Mobile Menu */
+		body.dark-mode #navDemo {
+			background-color: #112240 !important;
+		}
 
-    /* Footer */
-    body.dark-mode footer {
-        background-color: #020c1b !important; /* Very dark blue (almost black) */
-        opacity: 0.9;
-    }
+		/* Footer */
+		body.dark-mode footer {
+			background-color: #020c1b !important;
+			/* Very dark blue (almost black) */
+			opacity: 0.9;
+		}
 
-    /* Links in dark mode */
-    body.dark-mode a {
-        color: #64ffda; /* Teal/Cyan - looks great on dark blue */
-    }
+		/* Links in dark mode */
+		body.dark-mode a {
+			color: #64ffda;
+			/* Teal/Cyan - looks great on dark blue */
+		}
 
-    /* --- Fix Nav Bar Hover in Dark Mode --- */
-    /* Changes the white hover to a lighter blue */
-    body.dark-mode .w3-hover-white:hover {
-        background-color: #233554 !important;
-        color: #fff !important;
-    }
+		/* --- Fix Nav Bar Hover in Dark Mode --- */
+		/* Changes the white hover to a lighter blue */
+		body.dark-mode .w3-hover-white:hover {
+			background-color: #233554 !important;
+			color: #fff !important;
+		}
 
-    /* --- Fix ROM Patcher Container in Dark Mode --- */
-    /* Background and text color for the main box */
-    body.dark-mode #rom-patcher-container {
-        background-color: #112240 !important; /* Matches card color */
-        color: #e6f1ff !important;
-        border: 1px solid #233554;
-    }
+		/* --- Fix ROM Patcher Container in Dark Mode --- */
+		/* Background and text color for the main box */
+		body.dark-mode #rom-patcher-container {
+			background-color: #112240 !important;
+			/* Matches card color */
+			color: #e6f1ff !important;
+			border: 1px solid #233554;
+		}
 
-    /* Fix Inputs (File selector) and Dropdowns inside the patcher */
-    body.dark-mode #rom-patcher-container input,
-    body.dark-mode #rom-patcher-container select {
-        background-color: #233554 !important;
-        color: #fff !important;
-        border: 1px solid #405b7a;
-    }
+		/* Fix Inputs (File selector) and Dropdowns inside the patcher */
+		body.dark-mode #rom-patcher-container input,
+		body.dark-mode #rom-patcher-container select {
+			background-color: #233554 !important;
+			color: #fff !important;
+			border: 1px solid #405b7a;
+		}
 
-    /* Fix the 'muted' text (labels like CRC32, SHA-1) */
-    body.dark-mode #rom-patcher-container .text-muted {
-        color: #8892b0 !important;
-    }
+		/* Fix the 'muted' text (labels like CRC32, SHA-1) */
+		body.dark-mode #rom-patcher-container .text-muted {
+			color: #8892b0 !important;
+		}
 
-    /* Fix file select hover state */
-    body.dark-mode #rom-patcher-container input[type=file]:hover:not(:disabled),
-    body.dark-mode #rom-patcher-container select:hover:not(:disabled) {
-        background-color: #304a75 !important; /* Slightly lighter blue on hover */
-    }
+		/* Fix file select hover state */
+		body.dark-mode #rom-patcher-container input[type=file]:hover:not(:disabled),
+		body.dark-mode #rom-patcher-container select:hover:not(:disabled) {
+			background-color: #304a75 !important;
+			/* Slightly lighter blue on hover */
+		}
 
 		.gba-container {
-    position: relative; /* This makes the video position relative to this box */
-    max-width: 1000px;   /* Adjust this to control the overall size on the page */
-    margin: 0 auto;     /* Centers the console */
-}
+			position: relative;
+			/* This makes the video position relative to this box */
+			max-width: 1000px;
+			/* Adjust this to control the overall size on the page */
+			margin: 0 auto;
+			/* Centers the console */
+		}
 
-.gba-container img {
-    width: 100%;       /* Forces the GBA image to fit the container */
-    display: block;    /* Removes tiny spacing gaps */
-}
+		.gba-container img {
+			width: 100%;
+			/* Forces the GBA image to fit the container */
+			display: block;
+			/* Removes tiny spacing gaps */
+		}
 
-.gba-container iframe {
-    position: absolute;
-    /* These percentages position the video over the white screen area */
-    top: 24.1%;
-    left: 32.9%;
-    width: 35.9%;
-    height: 41.8%;
-    
-    background-color: #000; /* Black background while loading */
-    border: none;           /* Removes default iframe border */
-}
+		.gba-container iframe {
+			position: absolute;
+			/* These percentages position the video over the white screen area */
+			top: 24.1%;
+			left: 32.9%;
+			width: 35.9%;
+			height: 41.8%;
 
-/* --- List Item Styles --- */
-        li {
-            font-size: 18px !important;
-            margin-bottom: 8px; /* Adds space between bullet points */
-        }
+			background-color: #000;
+			/* Black background while loading */
+			border: none;
+			/* Removes default iframe border */
+		}
+
+		/* --- List Item Styles --- */
+		li {
+			font-size: 18px !important;
+			margin-bottom: 8px;
+			/* Adds space between bullet points */
+		}
 	</style>
 
 	<!-- Rom Patcher JS needed CSS/JS files -->
@@ -151,57 +169,57 @@
 
 	<!-- Rom Patcher JS initialization -->
 	<script type="text/javascript">
-window.addEventListener('load', function () {
-    fetch("./patches.info")
-        .then(res => res.json())
-        .then(patchInfo => {
-            RomPatcherWeb.initialize(
-                {
-                    language: 'en',
-                    requireValidation: true,
-                    allowDropFiles: true
-                },
-                patchInfo
-            );
+		window.addEventListener('load', function () {
+			fetch("./patches.info")
+				.then(res => res.json())
+				.then(patchInfo => {
+					RomPatcherWeb.initialize(
+						{
+							language: 'en',
+							requireValidation: true,
+							allowDropFiles: true
+						},
+						patchInfo
+					);
 
-            const downloadBtn = document.getElementById('rom-patcher-button-download');
-            const patchSelect = document.getElementById('rom-patcher-select-patch');
+					const downloadBtn = document.getElementById('rom-patcher-button-download');
+					const patchSelect = document.getElementById('rom-patcher-select-patch');
 
-            // 1. Enable the download button immediately if patches exist
-            if (patchInfo.patches.length > 0) {
-                downloadBtn.disabled = false;
-            }
+					// 1. Enable the download button immediately if patches exist
+					if (patchInfo.patches.length > 0) {
+						downloadBtn.disabled = false;
+					}
 
-            // 2. Re-enable if the user changes selection
-            patchSelect.addEventListener('change', () => {
-                downloadBtn.disabled = false;
-            });
+					// 2. Re-enable if the user changes selection
+					patchSelect.addEventListener('change', () => {
+						downloadBtn.disabled = false;
+					});
 
-            downloadBtn.onclick = () => {
-                // Get the text name of the currently selected option
-                const selectedOption = patchSelect.options[patchSelect.selectedIndex];
-                if (!selectedOption) return;
-                const selectedName = selectedOption.text;
+					downloadBtn.onclick = () => {
+						// Get the text name of the currently selected option
+						const selectedOption = patchSelect.options[patchSelect.selectedIndex];
+						if (!selectedOption) return;
+						const selectedName = selectedOption.text;
 
-                // Find the patch object in the JSON that matches this name
-                const patch = patchInfo.patches.find(p => p.name === selectedName);
+						// Find the patch object in the JSON that matches this name
+						const patch = patchInfo.patches.find(p => p.name === selectedName);
 
-                if (patch) {
-                    const link = document.createElement('a');
-                    // Add the folder path manually since JSON has clean filenames
-                    link.href = `./patches/${patch.file}`;
-                    link.download = patch.file;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                } else {
-                    console.error("Could not find patch with name:", selectedName);
-                }
-            };
-        })
-        .catch(err => console.error(err));
-});
-</script>
+						if (patch) {
+							const link = document.createElement('a');
+							// Add the folder path manually since JSON has clean filenames
+							link.href = `./patches/${patch.file}`;
+							link.download = patch.file;
+							document.body.appendChild(link);
+							link.click();
+							document.body.removeChild(link);
+						} else {
+							console.error("Could not find patch with name:", selectedName);
+						}
+					};
+				})
+				.catch(err => console.error(err));
+		});
+	</script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
@@ -256,6 +274,8 @@ window.addEventListener('load', function () {
 				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">תודות</a>
 			<a id="nav-contact" href="#contact"
 				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">צור קשר</a>
+			<a id="nav-changelog" href="#changelog"
+				class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">יומן</a>
 
 			<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-light-grey"
 				href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
@@ -274,6 +294,7 @@ window.addEventListener('load', function () {
 			<a id="mnav-game" href="#game" class="w3-bar-item w3-button w3-padding-large">משחק</a>
 			<a id="mnav-thanks" href="#thanks" class="w3-bar-item w3-button w3-padding-large">תודות</a>
 			<a id="mnav-contact" href="#contact" class="w3-bar-item w3-button w3-padding-large">צור קשר</a>
+			<a id="mnav-changelog" href="#changelog" class="w3-bar-item w3-button w3-padding-large">יומן</a>
 		</div>
 	</div>
 
@@ -290,20 +311,20 @@ window.addEventListener('load', function () {
 			#rom-patcher-button-apply
 		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 	-->
-	<div class="w3-row-padding padding-64 w3-container">
-		<div class="w3-content" style="direction: rtl; text-align: right;"> 
+	<div class="w3-row-padding padding-64 w3-container section-divider">
+		<div class="w3-content" style="direction: rtl; text-align: right;">
 			<h1><b>🐉🐲פוקימון ברקת בעברית 🐉🐲</b></h1>
-	
-<div class="gba-container">
-    <img src="cover.png" alt="GameBoy Advance">
-    
-    <iframe 
-        src="https://www.youtube.com/embed/dXBSlF5knC0?autoplay=1&mute=1&loop=1&playlist=dXBSlF5knC0&showinfo=0&rel=0" 
-        title="פוקימון ברקת בעברית"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-</div>
+
+			<div class="gba-container">
+				<img src="cover.png" alt="GameBoy Advance">
+
+				<iframe
+					src="https://www.youtube.com/embed/dXBSlF5knC0?autoplay=1&mute=1&loop=1&playlist=dXBSlF5knC0&showinfo=0&rel=0"
+					title="פוקימון ברקת בעברית"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+			</div>
 
 			<!-- אודות title -->
 			<h2 id="aboutToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
@@ -357,9 +378,12 @@ window.addEventListener('load', function () {
 					<li>שתי אפשרויות לשמות הפוקימון - תעתיק ומילולי</li>
 					<li>דיאלוג מבוסס מגדר</li>
 					<li>מחיצת פירות יער לבד</li>
-					
+
 				</ul>
 			</div>
+
+			<h1>גלריה</h1>
+			<img src="collage.png" alt="GameBoy Advance">
 
 		</div>
 	</div>
@@ -451,91 +475,92 @@ window.addEventListener('load', function () {
 			<h5>יש להריץ על החומרה של Game Boy Advance או באמולטור לבחירתכם.</h5>
 			<h5 class="w3-text-grey">
 				(אלה שרוצים לקמפל בעצמם או סתם להסתכל בקבצים מוזמנים לבקר בריפו ב-<a
-					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>)
+					href="https://github.com/shachar700/pokeemerald-fork/tree/bareket">GitHub</a>)
 			</h5>
 			<br>
 		</div>
 	</div>
 
-<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
-        <div class="w3-content">
-            <h1><u>משחק</u></h1>
-
-            <h5>
-                ניתן לשחק גם באמולטור שבדפדפן.<br>
-                מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R
-            </h5>
-
-            <h5>טענו את ה-ROM שלכם כדי לשחק:</h5>
-
-            <div id="rom-upload-box">
-                <input type="file" id="input">
-            </div>
-
-            <div id="emu-container" style="display: none; margin-top:20px; text-align:center;">
-                <div id="emu-wrapper" style="width:720px; height:480px; max-width:100%; margin:auto;">
-                    <div dir="LTR" id="emu-display"
-                        style="width:100%; height:100%; box-shadow:0px 0px 5px 4px rgba(0,0,0,0.1);"></div>
-                </div>
-				            <div id="emulatorJS-powered" class="text-center">
-                <a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">
-                    Powered by Emulator JS
-                    <img src="./emuJS.png" loading="lazy" />
-                </a>
-            </div>
-            </div>
-            <h5>
-                אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או שתמירו אותו
-                לפורמט שמתאים לאמולטור שבמכשירכם.
-            </h5>
-        </div>
-    </div>
-
-    <script>
-        const input = document.getElementById("input"); // Ensure input is defined
-        
-        input.addEventListener("change", async () => {
-            const url = input.files[0];
-            if (!url) return;
-
-            // 1. Reveal the emulator container
-            document.getElementById("emu-container").style.display = "block";
-
-            const parts = url.name.split(".");
-            const ext = parts.pop().toLowerCase();
-            let core = "gba"; // default
-            if (ext === "nds") core = "nds";
-            if (ext === "gb") core = "gb";
-
-            const playerDiv = document.getElementById("emu-display");
-            playerDiv.innerHTML = ""; // clear previous
-
-            window.EJS_player = "#emu-display"; 
-            window.EJS_gameName = parts.shift();
-            window.EJS_gameUrl = url;
-            window.EJS_core = core;
-            window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            window.EJS_startOnLoaded = true;
-
-            const script = document.createElement("script");
-            script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
-            document.body.appendChild(script);
-        });
-    </script>
-
-	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="thanks">
+	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="game">
 		<div class="w3-content">
-			<h1><u>תודות</u></h1>
+			<h1><u>משחק</u></h1>
 
-			<p class="w3-xlarge">
-				<u>שחר ברנסון</u> - תכנות, תרגום, גרפיקה<br><br>
-				שגיא בלמש - עזרה טכנית<br>
-				ליאור כלפון (LIJI) - עזרה טכנית<br>
-				נגה שקד - עזרה טכנית ראשונית<br>
-				מ. ש. אלבוים - עברות שמות לפוקימון<br>
-			</p>
+			<h5>
+				ניתן לשחק גם באמולטור שבדפדפן.
+			</h5>
 
-			<!-- 			<div class="w3-right-align">
+			<h5>טענו את ה-ROM שלכם כדי לשחק:</h5>
+
+			<div id="rom-upload-box">
+				<input type="file" id="input">
+			</div>
+
+			<div id="emu-container" style="display: none; margin-top:20px;">
+				<div id="emu-wrapper" style="width:720px; height:480px; max-width:100%; margin:auto;">
+					<div dir="LTR" id="emu-display"
+						style="width:100%; height:100%; box-shadow:0px 0px 5px 4px rgba(0,0,0,0.1);"></div>
+				</div>
+				<div id="rom-patcher-powered">
+					<a href="https://github.com/EmulatorJS/EmulatorJS" target="_blank">
+						Powered by Emulator JS
+						<img src="./emuJS.png" loading="lazy" />
+					</a>
+				</div>
+									<h5>מקשי המשחק: W,A,S,D לתזוזה, Z-אישור, X-ביטול, ENTER- START, BACKSPACE - SELECT, A - L, S - R
+					</h5>
+					<h5>
+							אם תרצו להמשיך אחר כך את ההתקדמות, תורידו את קובץ השמירה ותטענו אותו באמולטור בדפדפן או
+							שתמירו אותו לפורמט שמתאים לאמולטור שבמכשירכם.
+						</h5>
+			</div>
+		</div>
+	</div>
+
+		<script>
+			const input = document.getElementById("input"); // Ensure input is defined
+
+			input.addEventListener("change", async () => {
+				const url = input.files[0];
+				if (!url) return;
+
+				// 1. Reveal the emulator container
+				document.getElementById("emu-container").style.display = "block";
+
+				const parts = url.name.split(".");
+				const ext = parts.pop().toLowerCase();
+				let core = "gba"; // default
+				if (ext === "nds") core = "nds";
+				if (ext === "gb") core = "gb";
+
+				const playerDiv = document.getElementById("emu-display");
+				playerDiv.innerHTML = ""; // clear previous
+
+				window.EJS_player = "#emu-display";
+				window.EJS_gameName = parts.shift();
+				window.EJS_gameUrl = url;
+				window.EJS_core = core;
+				window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+				window.EJS_startOnLoaded = true;
+
+				const script = document.createElement("script");
+				script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+				document.body.appendChild(script);
+			});
+		</script>
+
+		<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="thanks">
+			<div class="w3-content">
+				<h1><u>אודות</u></h1>
+
+				<p class="w3-xlarge">
+					<u>שחר ברנסון</u> - תכנות, תרגום, גרפיקה<br><br>
+					שגיא בלמש - עזרה טכנית<br>
+					ליאור כלפון (LIJI) - עזרה טכנית<br>
+					נגה שקד - עזרה טכנית ראשונית<br>
+					מ. ש. אלבוים - עברות שמות לפוקימון<br>
+				</p>
+
+				<!-- 			<div class="w3-right-align">
 				<p dir="LTR" class="w3-xlarge">
 					Visual Studio Code<br>
 					Notepad++<br>
@@ -546,8 +571,8 @@ window.addEventListener('load', function () {
 					git & GitHub<br>
 					wsl<br>
 				</p> -->
+			</div>
 		</div>
-	</div>
 	</div>
 
 	<div class="w3-row-padding w3-padding-64 w3-container section-divider" id="contact">
@@ -556,22 +581,21 @@ window.addEventListener('load', function () {
 			<h5 class="w3-padding-32">
 				שאלות? טענות? מענות?
 				צרו קשר!
-				מוזמנים לפנות <u><a
-					href="mailto:shachar700@gmail.com">לשחר</a></u> לכל שאלה או פניה.
+				מוזמנים לפנות <u><a href="mailto:shachar700@gmail.com">לשחר</a></u> לכל שאלה או פניה.
 				<br /><br />
 				מצאתם טעות? רוצים לתקן? ניתן לפתוח Issue או Pull Request בריפו ב-<a
-					href="https://github.com/shachar700/pokeemerald-fork/">GitHub</a>.
+					href="https://github.com/shachar700/pokeemerald-fork/tree/bareket">GitHub</a>.
 				<br /> בין אם זה בתרגום, בקוד או בגרפיקה.
 			</h5>
 		</div>
 	</div>
 
-	<div class="w3-row-padding w3-padding-64 w3-container" id="thanks">
+	<div class="w3-row-padding w3-padding-64 w3-container" id="changelog">
 		<div class="w3-content">
 			<!-- אודות title -->
-			<h2 id="changelogToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
-				יומן שינויים &#9662;
-			</h2>
+			<h1 id="changelogToggle" class="w3-right w3-hover-opacity" style="cursor: pointer; margin-top: 20px;">
+				יומן &#9662;
+			</h1>
 
 			<div class="w3-clear"></div>
 
@@ -581,7 +605,6 @@ window.addEventListener('load', function () {
 				<ul>
 					<li>גרסה ראשונית.</li>
 				</ul>
-				<br/>
 
 				<h5>1.0.1 - 5 בדצמבר 2025</h5>
 				<ul>
@@ -589,16 +612,18 @@ window.addEventListener('load', function () {
 					<li>קיצור תיאורים על מאמנים</li>
 					<li>תיקון כתיב</li>
 				</ul>
-				<br/>
 
 				<h5>1.0.2 - 12 במרץ 2026</h5>
 				<ul>
 					<li>תיקוני טקסט בדיאלוג</li>
 				</ul>
+
+				<h5>1.0.3 - 3 במאי 2026</h5>
+				<ul>
+					<li>תרגום טקסט קרבות באוהל קרב</li>
+					<li>תרגום טקסט בחדר איחוד</li>
+				</ul>
 			</div>
-			<br>
-			<h2>גלריה</h2>
-			<img src="collage.png" alt="GameBoy Advance">
 		</div>
 	</div>
 	<script>
@@ -624,7 +649,7 @@ window.addEventListener('load', function () {
 
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
-			const sections = ["mytop", "installation", "game", "thanks", "contact"];
+			const sections = ["mytop", "installation", "game", "thanks", "contact", "changelog"];
 
 			const navDesktop = {
 				mytop: document.getElementById("nav-top"),
@@ -632,6 +657,7 @@ window.addEventListener('load', function () {
 				game: document.getElementById("nav-game"),
 				thanks: document.getElementById("nav-thanks"),
 				contact: document.getElementById("nav-contact"),
+				changelog: document.getElementById("nav-changelog"),
 			};
 
 			const navMobile = {
@@ -639,6 +665,7 @@ window.addEventListener('load', function () {
 				game: document.getElementById("mnav-game"),
 				thanks: document.getElementById("mnav-thanks"),
 				contact: document.getElementById("mnav-contact"),
+				changelog: document.getElementById("mnav-changelog"),
 			};
 
 			function clearAll() {
@@ -665,77 +692,77 @@ window.addEventListener('load', function () {
 		});
 	</script>
 
-<script>
-    // --- Helper Function: Sets Header Image based on Mode ---
-    function updateHeaderImage(isDark) {
-        const header = document.querySelector("header");
-        
-        if (isDark) {
-            // Dark Mode: Always sky_night.jpg
-            header.style.backgroundImage = "url('sky_night.jpg')";
-        } else {
-            // Light Mode: Randomize between the original two
-            const images = ["sky_empty.png", "sky_dragons.jpeg"];
-            const randomImage = images[Math.floor(Math.random() * images.length)];
-            header.style.backgroundImage = `url('${randomImage}')`;
-        }
+	<script>
+		// --- Helper Function: Sets Header Image based on Mode ---
+		function updateHeaderImage(isDark) {
+			const header = document.querySelector("header");
 
-        // Apply shared styles
-        header.style.backgroundSize = "cover";
-        header.style.backgroundPosition = "center";
-        header.style.backgroundRepeat = "no-repeat";
-    }
+			if (isDark) {
+				// Dark Mode: Always sky_night.jpg
+				header.style.backgroundImage = "url('sky_night.jpg')";
+			} else {
+				// Light Mode: Randomize between the original two
+				const images = ["sky_empty.png", "sky_dragons.jpeg"];
+				const randomImage = images[Math.floor(Math.random() * images.length)];
+				header.style.backgroundImage = `url('${randomImage}')`;
+			}
 
-    // --- Toggle Function (Triggered by Button) ---
-    function toggleDarkMode() {
-        const body = document.body;
-        const icon = document.getElementById("darkModeIcon");
+			// Apply shared styles
+			header.style.backgroundSize = "cover";
+			header.style.backgroundPosition = "center";
+			header.style.backgroundRepeat = "no-repeat";
+		}
 
-        // Toggle the class
-        body.classList.toggle("dark-mode");
-        const isDark = body.classList.contains("dark-mode");
+		// --- Toggle Function (Triggered by Button) ---
+		function toggleDarkMode() {
+			const body = document.body;
+			const icon = document.getElementById("darkModeIcon");
 
-        // Update Icon and LocalStorage
-        if (isDark) {
-            icon.textContent = "☀️";
-            localStorage.setItem("theme", "dark");
-        } else {
-            icon.textContent = "🌙";
-            localStorage.setItem("theme", "light");
-        }
+			// Toggle the class
+			body.classList.toggle("dark-mode");
+			const isDark = body.classList.contains("dark-mode");
 
-        // Update the header image immediately
-        updateHeaderImage(isDark);
-    }
+			// Update Icon and LocalStorage
+			if (isDark) {
+				icon.textContent = "☀️";
+				localStorage.setItem("theme", "dark");
+			} else {
+				icon.textContent = "🌙";
+				localStorage.setItem("theme", "light");
+			}
 
-    // --- Initialization on Page Load ---
-    document.addEventListener("DOMContentLoaded", () => {
-        const savedTheme = localStorage.getItem("theme");
-        const icon = document.getElementById("darkModeIcon");
-        let isDark = false;
+			// Update the header image immediately
+			updateHeaderImage(isDark);
+		}
 
-        // 1. Determine if we are in dark mode
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark-mode");
-            if (icon) icon.textContent = "☀️";
-            isDark = true;
-        } else if (savedTheme === "light") {
-            document.body.classList.remove("dark-mode");
-            if (icon) icon.textContent = "🌙";
-            isDark = false;
-        } else {
-            // Check system preference if no save exists
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.body.classList.add("dark-mode");
-                if (icon) icon.textContent = "☀️";
-                isDark = true;
-            }
-        }
+		// --- Initialization on Page Load ---
+		document.addEventListener("DOMContentLoaded", () => {
+			const savedTheme = localStorage.getItem("theme");
+			const icon = document.getElementById("darkModeIcon");
+			let isDark = false;
 
-        // 2. Set the correct image based on the determined mode
-        updateHeaderImage(isDark);
-    });
-</script>
+			// 1. Determine if we are in dark mode
+			if (savedTheme === "dark") {
+				document.body.classList.add("dark-mode");
+				if (icon) icon.textContent = "☀️";
+				isDark = true;
+			} else if (savedTheme === "light") {
+				document.body.classList.remove("dark-mode");
+				if (icon) icon.textContent = "🌙";
+				isDark = false;
+			} else {
+				// Check system preference if no save exists
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.body.classList.add("dark-mode");
+					if (icon) icon.textContent = "☀️";
+					isDark = true;
+				}
+			}
+
+			// 2. Set the correct image based on the determined mode
+			updateHeaderImage(isDark);
+		});
+	</script>
 </body>
 
 </html>
