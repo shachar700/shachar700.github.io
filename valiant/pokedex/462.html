@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magnezone - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Magnezone</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/magnezone/anim_front.png" alt="Magnezone front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Magnezone</p>
+      <p><strong>National Dex #:</strong> 462</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Magnet Area</p>
+    <p><strong>Types:</strong> <span class="type-badge type-electric">Electric</span> <span class="type-badge type-steel">Steel</span></p>
+    <p><strong>Abilities:</strong> Magnet Pull, Sturdy, Analytic</p>
+    <p><strong>Growth Rate:</strong> Medium Fast</p>
+    <p><strong>Egg Groups:</strong> Mineral</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 70</li>
+        <li>Base Attack: 70</li>
+        <li>Base Defense: 115</li>
+        <li>Base Speed: 60</li>
+        <li>Base Sp. Attack: 130</li>
+        <li>Base Sp. Defense: 90</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>As it zooms through the sky, this
+Pokémon seems to be receiving signals
+of unknown origin, while transmitting its
+own signals of unknown purpose.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Electric Terrain</li>
+        <li>Lv. 1 — Mirror Coat</li>
+        <li>Lv. 1 — Magnetic Flux</li>
+        <li>Lv. 1 — Tri Attack</li>
+        <li>Lv. 1 — Tackle</li>
+        <li>Lv. 1 — Thunder Wave</li>
+        <li>Lv. 1 — Thunder Shock</li>
+        <li>Lv. 1 — Supersonic</li>
+        <li>Lv. 12 — Electro Ball</li>
+        <li>Lv. 16 — Gyro Ball</li>
+        <li>Lv. 20 — Spark</li>
+        <li>Lv. 24 — Screech</li>
+        <li>Lv. 28 — Magnet Rise</li>
+        <li>Lv. 34 — Flash Cannon</li>
+        <li>Lv. 40 — Discharge</li>
+        <li>Lv. 46 — Metal Sound</li>
+        <li>Lv. 52 — Light Screen</li>
+        <li>Lv. 58 — Lock On</li>
+        <li>Lv. 64 — Zap Cannon</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Flash</li>
+        <li>Frustration</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Light Screen</li>
+        <li>Protect</li>
+        <li>Rain Dance</li>
+        <li>Reflect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Shock Wave</li>
+        <li>Sunny Day</li>
+        <li>Thunder</li>
+        <li>Thunderbolt</li>
+        <li>Toxic</li>
+        <li>Body Slam</li>
+        <li>Double Edge</li>
+        <li>Endure</li>
+        <li>Explosion</li>
+        <li>Mimic</li>
+        <li>Psych Up</li>
+        <li>Rollout</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+        <li>Swift</li>
+        <li>Thunder Wave</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

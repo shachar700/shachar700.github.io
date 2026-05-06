@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shedinja - Valiant Dex
+</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Shedinja</h1>
+<section class="card pokemon-hero-card">
+  <div class="pokemon-hero">
+    <img src="../assets/game/graphics/pokemon/shedinja/anim_front.png" alt="Shedinja front sprite" class="pokemon-hero-sprite">
+    <div>
+      <p class="muted">Shedinja</p>
+      <p><strong>National Dex #:</strong> 292</p>
+    </div>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Profile</h2>
+    <p><strong>Category:</strong> Shed</p>
+    <p><strong>Types:</strong> <span class="type-badge type-bug">Bug</span> <span class="type-badge type-ghost">Ghost</span></p>
+    <p><strong>Abilities:</strong> Wonder Guard</p>
+    <p><strong>Growth Rate:</strong> Erratic</p>
+    <p><strong>Egg Groups:</strong> Mineral</p>
+  </section>
+  <section class="card">
+    <h2>Base Stats</h2>
+    <ul>
+        <li>Base HP: 1</li>
+        <li>Base Attack: 90</li>
+        <li>Base Defense: 45</li>
+        <li>Base Speed: 40</li>
+        <li>Base Sp. Attack: 30</li>
+        <li>Base Sp. Defense: 30</li>
+    </ul>
+  </section>
+</div>
+<section class="card species-section">
+  <h2>Description</h2>
+  <p>A peculiar Pokémon that floats in air even
+though its wings remain completely still.
+The inside of its body is hollow and
+utterly dark.</p>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Evolutions</h2>
+    <ul>
+        <li>No evolutions parsed.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Forms</h2>
+    <ul>
+        <li>No alternate forms.</li>
+    </ul>
+  </div>
+</section>
+<section class="grid two species-section">
+  <div class="card">
+    <h2>Level-Up Learnset</h2>
+    <ul>
+        <li>Lv. 1 — Shadow Claw</li>
+        <li>Lv. 1 — Grudge</li>
+        <li>Lv. 1 — Mud Slap</li>
+        <li>Lv. 1 — Metal Claw</li>
+        <li>Lv. 1 — Dig</li>
+        <li>Lv. 1 — Scratch</li>
+        <li>Lv. 1 — Sand Attack</li>
+        <li>Lv. 1 — Harden</li>
+        <li>Lv. 1 — False Swipe</li>
+        <li>Lv. 15 — Confuse Ray</li>
+        <li>Lv. 23 — Absorb</li>
+        <li>Lv. 29 — Shadow Sneak</li>
+        <li>Lv. 36 — Fury Swipes</li>
+        <li>Lv. 43 — Mind Reader</li>
+        <li>Lv. 50 — Shadow Ball</li>
+        <li>Lv. 57 — Spite</li>
+        <li>Lv. 64 — Phantom Force</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Teachable Moves</h2>
+    <ul>
+        <li>Aerial Ace</li>
+        <li>Cut</li>
+        <li>Dig</li>
+        <li>Double Team</li>
+        <li>Facade</li>
+        <li>Flash</li>
+        <li>Frustration</li>
+        <li>Giga Drain</li>
+        <li>Hidden Power</li>
+        <li>Hyper Beam</li>
+        <li>Protect</li>
+        <li>Rest</li>
+        <li>Return</li>
+        <li>Sandstorm</li>
+        <li>Secret Power</li>
+        <li>Shadow Ball</li>
+        <li>Solar Beam</li>
+        <li>Sunny Day</li>
+        <li>Thief</li>
+        <li>Toxic</li>
+        <li>Double Edge</li>
+        <li>Dream Eater</li>
+        <li>Endure</li>
+        <li>Fury Cutter</li>
+        <li>Mimic</li>
+        <li>Mud Slap</li>
+        <li>Sleep Talk</li>
+        <li>Snore</li>
+        <li>Substitute</li>
+        <li>Swagger</li>
+    </ul>
+  </div>
+</section>
+<section class="card species-section">
+  <h2>Egg Moves</h2>
+  <p>Endure, Feint Attack, Gust, Silver Wind, Bug Buzz, Night Slash, Bug Bite, Final Gambit</p>
+</section>
+
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

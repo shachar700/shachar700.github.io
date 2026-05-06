@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ice - Valiant Dex</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1><span class="type-badge type-ice">Ice</span></h1>
+<div class="grid two">
+  <section class="card">
+    <h2>Species</h2>
+    <ul>
+        <li>Sandshrew</li>
+        <li>Sandslash</li>
+        <li>Vulpix</li>
+        <li>Ninetales</li>
+        <li>Dewgong</li>
+        <li>Cloyster</li>
+        <li>Mr. Mime</li>
+        <li>Mr. Rime</li>
+        <li>Smoochum</li>
+        <li>Jynx</li>
+        <li>Lapras</li>
+        <li>Lapras</li>
+        <li>Glaceon</li>
+        <li>Articuno</li>
+        <li>Sneasel</li>
+        <li>Weavile</li>
+        <li>Swinub</li>
+        <li>Piloswine</li>
+        <li>Mamoswine</li>
+        <li>Delibird</li>
+        <li>Castform</li>
+        <li>Snorunt</li>
+        <li>Glalie</li>
+        <li>Glalie</li>
+        <li>Froslass</li>
+        <li>Spheal</li>
+        <li>Sealeo</li>
+        <li>Walrein</li>
+        <li>Regice</li>
+        <li>Snover</li>
+        <li>Abomasnow</li>
+        <li>Abomasnow</li>
+        <li>Rotom</li>
+        <li>Arceus</li>
+        <li>Darumaka</li>
+        <li>Darmanitan</li>
+        <li>Darmanitan</li>
+        <li>Vanillite</li>
+        <li>Vanillish</li>
+        <li>Vanilluxe</li>
+        <li>Cubchoo</li>
+        <li>Beartic</li>
+        <li>Cryogonal</li>
+        <li>Kyurem</li>
+        <li>Kyurem</li>
+        <li>Kyurem</li>
+        <li>Amaura</li>
+        <li>Aurorus</li>
+        <li>Bergmite</li>
+        <li>Avalugg</li>
+        <li>Avalugg</li>
+        <li>Crabominable</li>
+        <li>Silvally</li>
+        <li>Snom</li>
+        <li>Frosmoth</li>
+        <li>Eiscue</li>
+        <li>Eiscue</li>
+        <li>Arctozolt</li>
+        <li>Arctovish</li>
+        <li>Glastrier</li>
+        <li>Calyrex</li>
+        <li>Cetoddle</li>
+        <li>Cetitan</li>
+        <li>Iron Bundle</li>
+        <li>Frigibax</li>
+        <li>Arctibax</li>
+        <li>Baxcalibur</li>
+        <li>Chien-Pao</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Moves</h2>
+    <ul>
+        <li>Ice Punch</li>
+        <li>Mist</li>
+        <li>Ice Beam</li>
+        <li>Blizzard</li>
+        <li>Aurora Beam</li>
+        <li>Haze</li>
+        <li>Powder Snow</li>
+        <li>Icy Wind</li>
+        <li>Hail</li>
+        <li>Ice Ball</li>
+        <li>Sheer Cold</li>
+        <li>Icicle Spear</li>
+        <li>Avalanche</li>
+        <li>Ice Shard</li>
+        <li>Ice Fang</li>
+        <li>Frost Breath</li>
+        <li>Glaciate</li>
+        <li>Freeze Shock</li>
+        <li>Ice Burn</li>
+        <li>Icicle Crash</li>
+        <li>Freeze-Dry</li>
+        <li>Ice Hammer</li>
+        <li>Aurora Veil</li>
+        <li>Freezy Frost</li>
+        <li>Triple Axel</li>
+        <li>Glacial Lance</li>
+        <li>Mountain Gale</li>
+        <li>Ice Spinner</li>
+        <li>Chilly Reception</li>
+        <li>Snowscape</li>
+        <li>Subzero Slammer</li>
+        <li>Max Hailstorm</li>
+        <li>G-Max Resonance</li>
+    </ul>
+  </section>
+</div>
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>

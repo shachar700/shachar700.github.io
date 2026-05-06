@@ -1,0 +1,2493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex - Valiant Dex</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Valiant Dex</a>
+      <nav>
+        <a href="../pokedex/index.html">Pokédex</a>
+        <a href="../moves/index.html">Moves</a>
+        <a href="../abilities/index.html">Abilities</a>
+        <a href="../encounters/index.html">Encounters</a>
+        <a href="../itemdex/index.html">Itemdex</a>
+        <a href="../trainerdex/index.html">Trainers</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<h1>Pokédex</h1>
+<div class="filter-bar">
+  <label class="filter-label" for="pokedex-search">Search Pokémon</label>
+  <input id="pokedex-search" class="filter-input" type="search" placeholder="Filter by name, type, ability, or dex number" data-filter-input data-filter-target="#pokedex-table tbody tr" data-filter-empty="#pokedex-empty">
+</div>
+<table id="pokedex-table">
+  <thead><tr><th>National Dex #</th><th>Sprite</th><th>Name</th><th>Types</th><th>Abilities</th></tr></thead>
+  <tbody><tr data-search-text="1 Bulbasaur Grass Poison Overgrow Chlorophyll">
+      <td>1</td>
+      <td><img src="../assets/game/graphics/pokemon/bulbasaur/anim_front.png" alt="Bulbasaur front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="1.html">Bulbasaur</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Overgrow, Chlorophyll</td>
+    </tr><tr data-search-text="2 Ivysaur Grass Poison Overgrow Chlorophyll">
+      <td>2</td>
+      <td><img src="../assets/game/graphics/pokemon/ivysaur/anim_front.png" alt="Ivysaur front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="2.html">Ivysaur</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Overgrow, Chlorophyll</td>
+    </tr><tr data-search-text="3 Venusaur Grass Poison Overgrow Chlorophyll">
+      <td>3</td>
+      <td><img src="../assets/game/graphics/pokemon/venusaur/anim_front.png" alt="Venusaur front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="3.html">Venusaur</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Overgrow, Chlorophyll</td>
+    </tr><tr data-search-text="4 Charmander Fire Blaze Solar Power">
+      <td>4</td>
+      <td><img src="../assets/game/graphics/pokemon/charmander/anim_front.png" alt="Charmander front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="4.html">Charmander</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Blaze, Solar Power</td>
+    </tr><tr data-search-text="5 Charmeleon Fire Blaze Solar Power">
+      <td>5</td>
+      <td><img src="../assets/game/graphics/pokemon/charmeleon/anim_front.png" alt="Charmeleon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="5.html">Charmeleon</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Blaze, Solar Power</td>
+    </tr><tr data-search-text="6 Charizard Fire Flying Blaze Solar Power">
+      <td>6</td>
+      <td><img src="../assets/game/graphics/pokemon/charizard/anim_front.png" alt="Charizard front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="6.html">Charizard</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Blaze, Solar Power</td>
+    </tr><tr data-search-text="7 Squirtle Water Torrent Rain Dish">
+      <td>7</td>
+      <td><img src="../assets/game/graphics/pokemon/squirtle/anim_front.png" alt="Squirtle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="7.html">Squirtle</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Rain Dish</td>
+    </tr><tr data-search-text="8 Wartortle Water Torrent Rain Dish">
+      <td>8</td>
+      <td><img src="../assets/game/graphics/pokemon/wartortle/anim_front.png" alt="Wartortle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="8.html">Wartortle</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Rain Dish</td>
+    </tr><tr data-search-text="9 Blastoise Water Torrent Rain Dish">
+      <td>9</td>
+      <td><img src="../assets/game/graphics/pokemon/blastoise/anim_front.png" alt="Blastoise front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="9.html">Blastoise</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Rain Dish</td>
+    </tr><tr data-search-text="10 Caterpie Bug Shield Dust Run Away">
+      <td>10</td>
+      <td><img src="../assets/game/graphics/pokemon/caterpie/anim_front.png" alt="Caterpie front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="10.html">Caterpie</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Shield Dust, Run Away</td>
+    </tr><tr data-search-text="11 Metapod Bug Shed Skin">
+      <td>11</td>
+      <td><img src="../assets/game/graphics/pokemon/metapod/anim_front.png" alt="Metapod front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="11.html">Metapod</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Shed Skin</td>
+    </tr><tr data-search-text="12 Butterfree Bug Flying Compound Eyes Tinted Lens">
+      <td>12</td>
+      <td><img src="../assets/game/graphics/pokemon/butterfree/anim_front.png" alt="Butterfree front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="12.html">Butterfree</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Compound Eyes, Tinted Lens</td>
+    </tr><tr data-search-text="13 Weedle Bug Poison Shield Dust Run Away">
+      <td>13</td>
+      <td><img src="../assets/game/graphics/pokemon/weedle/anim_front.png" alt="Weedle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="13.html">Weedle</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Shield Dust, Run Away</td>
+    </tr><tr data-search-text="14 Kakuna Bug Poison Shed Skin">
+      <td>14</td>
+      <td><img src="../assets/game/graphics/pokemon/kakuna/anim_front.png" alt="Kakuna front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="14.html">Kakuna</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Shed Skin</td>
+    </tr><tr data-search-text="15 Beedrill Bug Poison Swarm Sniper">
+      <td>15</td>
+      <td><img src="../assets/game/graphics/pokemon/beedrill/anim_front.png" alt="Beedrill front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="15.html">Beedrill</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Swarm, Sniper</td>
+    </tr><tr data-search-text="16 Pidgey Normal Flying Keen Eye Tangled Feet Big Pecks">
+      <td>16</td>
+      <td><img src="../assets/game/graphics/pokemon/pidgey/anim_front.png" alt="Pidgey front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="16.html">Pidgey</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Tangled Feet, Big Pecks</td>
+    </tr><tr data-search-text="17 Pidgeotto Normal Flying Keen Eye Tangled Feet Big Pecks">
+      <td>17</td>
+      <td><img src="../assets/game/graphics/pokemon/pidgeotto/anim_front.png" alt="Pidgeotto front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="17.html">Pidgeotto</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Tangled Feet, Big Pecks</td>
+    </tr><tr data-search-text="18 Pidgeot Normal Flying Keen Eye Tangled Feet Big Pecks">
+      <td>18</td>
+      <td><img src="../assets/game/graphics/pokemon/pidgeot/anim_front.png" alt="Pidgeot front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="18.html">Pidgeot</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Tangled Feet, Big Pecks</td>
+    </tr><tr data-search-text="19 Rattata Normal Run Away Guts Hustle">
+      <td>19</td>
+      <td><img src="../assets/game/graphics/pokemon/rattata/anim_front.png" alt="Rattata front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="19.html">Rattata</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Run Away, Guts, Hustle</td>
+    </tr><tr data-search-text="20 Raticate Normal Run Away Guts Hustle">
+      <td>20</td>
+      <td><img src="../assets/game/graphics/pokemon/raticate/anim_front.png" alt="Raticate front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="20.html">Raticate</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Run Away, Guts, Hustle</td>
+    </tr><tr data-search-text="21 Spearow Normal Flying Keen Eye Sniper">
+      <td>21</td>
+      <td><img src="../assets/game/graphics/pokemon/spearow/anim_front.png" alt="Spearow front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="21.html">Spearow</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Sniper</td>
+    </tr><tr data-search-text="22 Fearow Normal Flying Keen Eye Sniper">
+      <td>22</td>
+      <td><img src="../assets/game/graphics/pokemon/fearow/anim_front.png" alt="Fearow front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="22.html">Fearow</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Sniper</td>
+    </tr><tr data-search-text="23 Ekans Poison Intimidate Shed Skin Unnerve">
+      <td>23</td>
+      <td><img src="../assets/game/graphics/pokemon/ekans/anim_front.png" alt="Ekans front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="23.html">Ekans</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Intimidate, Shed Skin, Unnerve</td>
+    </tr><tr data-search-text="24 Arbok Poison Intimidate Shed Skin Unnerve">
+      <td>24</td>
+      <td><img src="../assets/game/graphics/pokemon/arbok/anim_front.png" alt="Arbok front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="24.html">Arbok</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Intimidate, Shed Skin, Unnerve</td>
+    </tr><tr data-search-text="25 Pikachu Electric Static Lightning Rod">
+      <td>25</td>
+      <td><img src="../assets/game/graphics/pokemon/pikachu/anim_front.png" alt="Pikachu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="25.html">Pikachu</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Lightning Rod</td>
+    </tr><tr data-search-text="26 Raichu Electric Static Lightning Rod">
+      <td>26</td>
+      <td><img src="../assets/game/graphics/pokemon/raichu/anim_front.png" alt="Raichu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="26.html">Raichu</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Lightning Rod</td>
+    </tr><tr data-search-text="27 Sandshrew Ground Sand Veil Sand Rush">
+      <td>27</td>
+      <td><img src="../assets/game/graphics/pokemon/sandshrew/anim_front.png" alt="Sandshrew front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="27.html">Sandshrew</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Sand Veil, Sand Rush</td>
+    </tr><tr data-search-text="28 Sandslash Ground Sand Veil Sand Rush">
+      <td>28</td>
+      <td><img src="../assets/game/graphics/pokemon/sandslash/anim_front.png" alt="Sandslash front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="28.html">Sandslash</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Sand Veil, Sand Rush</td>
+    </tr><tr data-search-text="29 Nidoran♀ Poison Poison Point Rivalry Hustle">
+      <td>29</td>
+      <td><img src="../assets/game/graphics/pokemon/nidoran_f/anim_front.png" alt="Nidoran♀ front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="29.html">Nidoran♀</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Poison Point, Rivalry, Hustle</td>
+    </tr><tr data-search-text="30 Nidorina Poison Poison Point Rivalry Hustle">
+      <td>30</td>
+      <td><img src="../assets/game/graphics/pokemon/nidorina/anim_front.png" alt="Nidorina front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="30.html">Nidorina</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Poison Point, Rivalry, Hustle</td>
+    </tr><tr data-search-text="31 Nidoqueen Poison Ground Poison Point Rivalry Sheer Force">
+      <td>31</td>
+      <td><img src="../assets/game/graphics/pokemon/nidoqueen/anim_front.png" alt="Nidoqueen front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="31.html">Nidoqueen</a></td>
+      <td><span class="type-badge type-poison">Poison</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Poison Point, Rivalry, Sheer Force</td>
+    </tr><tr data-search-text="32 Nidoran♂ Poison Poison Point Rivalry Hustle">
+      <td>32</td>
+      <td><img src="../assets/game/graphics/pokemon/nidoran_m/anim_front.png" alt="Nidoran♂ front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="32.html">Nidoran♂</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Poison Point, Rivalry, Hustle</td>
+    </tr><tr data-search-text="33 Nidorino Poison Poison Point Rivalry Hustle">
+      <td>33</td>
+      <td><img src="../assets/game/graphics/pokemon/nidorino/anim_front.png" alt="Nidorino front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="33.html">Nidorino</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Poison Point, Rivalry, Hustle</td>
+    </tr><tr data-search-text="34 Nidoking Poison Ground Poison Point Rivalry Sheer Force">
+      <td>34</td>
+      <td><img src="../assets/game/graphics/pokemon/nidoking/anim_front.png" alt="Nidoking front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="34.html">Nidoking</a></td>
+      <td><span class="type-badge type-poison">Poison</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Poison Point, Rivalry, Sheer Force</td>
+    </tr><tr data-search-text="35 Clefairy Fairy Cute Charm Magic Guard Friend Guard">
+      <td>35</td>
+      <td><img src="../assets/game/graphics/pokemon/clefairy/anim_front.png" alt="Clefairy front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="35.html">Clefairy</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span></td>
+      <td>Cute Charm, Magic Guard, Friend Guard</td>
+    </tr><tr data-search-text="36 Clefable Fairy Cute Charm Magic Guard Unaware">
+      <td>36</td>
+      <td><img src="../assets/game/graphics/pokemon/clefable/anim_front.png" alt="Clefable front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="36.html">Clefable</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span></td>
+      <td>Cute Charm, Magic Guard, Unaware</td>
+    </tr><tr data-search-text="37 Vulpix Fire Flash Fire Drought">
+      <td>37</td>
+      <td><img src="../assets/game/graphics/pokemon/vulpix/anim_front.png" alt="Vulpix front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="37.html">Vulpix</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Flash Fire, Drought</td>
+    </tr><tr data-search-text="38 Ninetales Fire Flash Fire Drought">
+      <td>38</td>
+      <td><img src="../assets/game/graphics/pokemon/ninetales/anim_front.png" alt="Ninetales front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="38.html">Ninetales</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Flash Fire, Drought</td>
+    </tr><tr data-search-text="39 Jigglypuff Normal Fairy Cute Charm Competitive Friend Guard">
+      <td>39</td>
+      <td><img src="../assets/game/graphics/pokemon/jigglypuff/anim_front.png" alt="Jigglypuff front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="39.html">Jigglypuff</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Cute Charm, Competitive, Friend Guard</td>
+    </tr><tr data-search-text="40 Wigglytuff Normal Fairy Cute Charm Competitive Frisk">
+      <td>40</td>
+      <td><img src="../assets/game/graphics/pokemon/wigglytuff/anim_front.png" alt="Wigglytuff front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="40.html">Wigglytuff</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Cute Charm, Competitive, Frisk</td>
+    </tr><tr data-search-text="41 Zubat Poison Flying Inner Focus Infiltrator">
+      <td>41</td>
+      <td><img src="../assets/game/graphics/pokemon/zubat/anim_front.png" alt="Zubat front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="41.html">Zubat</a></td>
+      <td><span class="type-badge type-poison">Poison</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Inner Focus, Infiltrator</td>
+    </tr><tr data-search-text="42 Golbat Poison Flying Inner Focus Infiltrator">
+      <td>42</td>
+      <td><img src="../assets/game/graphics/pokemon/golbat/anim_front.png" alt="Golbat front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="42.html">Golbat</a></td>
+      <td><span class="type-badge type-poison">Poison</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Inner Focus, Infiltrator</td>
+    </tr><tr data-search-text="43 Oddish Grass Poison Chlorophyll Run Away">
+      <td>43</td>
+      <td><img src="../assets/game/graphics/pokemon/oddish/anim_front.png" alt="Oddish front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="43.html">Oddish</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Chlorophyll, Run Away</td>
+    </tr><tr data-search-text="44 Gloom Grass Poison Chlorophyll Stench">
+      <td>44</td>
+      <td><img src="../assets/game/graphics/pokemon/gloom/anim_front.png" alt="Gloom front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="44.html">Gloom</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Chlorophyll, Stench</td>
+    </tr><tr data-search-text="45 Vileplume Grass Poison Chlorophyll Effect Spore">
+      <td>45</td>
+      <td><img src="../assets/game/graphics/pokemon/vileplume/anim_front.png" alt="Vileplume front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="45.html">Vileplume</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Chlorophyll, Effect Spore</td>
+    </tr><tr data-search-text="46 Paras Bug Grass Effect Spore Dry Skin Damp">
+      <td>46</td>
+      <td><img src="../assets/game/graphics/pokemon/paras/anim_front.png" alt="Paras front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="46.html">Paras</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Effect Spore, Dry Skin, Damp</td>
+    </tr><tr data-search-text="47 Parasect Bug Grass Effect Spore Dry Skin Damp">
+      <td>47</td>
+      <td><img src="../assets/game/graphics/pokemon/parasect/anim_front.png" alt="Parasect front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="47.html">Parasect</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Effect Spore, Dry Skin, Damp</td>
+    </tr><tr data-search-text="48 Venonat Bug Poison Compound Eyes Tinted Lens Run Away">
+      <td>48</td>
+      <td><img src="../assets/game/graphics/pokemon/venonat/anim_front.png" alt="Venonat front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="48.html">Venonat</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Compound Eyes, Tinted Lens, Run Away</td>
+    </tr><tr data-search-text="49 Venomoth Bug Poison Shield Dust Tinted Lens Wonder Skin">
+      <td>49</td>
+      <td><img src="../assets/game/graphics/pokemon/venomoth/anim_front.png" alt="Venomoth front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="49.html">Venomoth</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Shield Dust, Tinted Lens, Wonder Skin</td>
+    </tr><tr data-search-text="50 Diglett Ground Sand Veil Arena Trap Sand Force">
+      <td>50</td>
+      <td><img src="../assets/game/graphics/pokemon/diglett/anim_front.png" alt="Diglett front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="50.html">Diglett</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Sand Veil, Arena Trap, Sand Force</td>
+    </tr><tr data-search-text="51 Dugtrio Ground Sand Veil Arena Trap Sand Force">
+      <td>51</td>
+      <td><img src="../assets/game/graphics/pokemon/dugtrio/anim_front.png" alt="Dugtrio front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="51.html">Dugtrio</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Sand Veil, Arena Trap, Sand Force</td>
+    </tr><tr data-search-text="52 Meowth Normal Pickup Technician Unnerve">
+      <td>52</td>
+      <td><img src="../assets/game/graphics/pokemon/meowth/anim_front.png" alt="Meowth front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="52.html">Meowth</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Pickup, Technician, Unnerve</td>
+    </tr><tr data-search-text="53 Persian Normal Limber Technician Unnerve">
+      <td>53</td>
+      <td><img src="../assets/game/graphics/pokemon/persian/anim_front.png" alt="Persian front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="53.html">Persian</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Limber, Technician, Unnerve</td>
+    </tr><tr data-search-text="54 Psyduck Water Damp Cloud Nine Swift Swim">
+      <td>54</td>
+      <td><img src="../assets/game/graphics/pokemon/psyduck/anim_front.png" alt="Psyduck front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="54.html">Psyduck</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Damp, Cloud Nine, Swift Swim</td>
+    </tr><tr data-search-text="55 Golduck Water Damp Cloud Nine Swift Swim">
+      <td>55</td>
+      <td><img src="../assets/game/graphics/pokemon/golduck/anim_front.png" alt="Golduck front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="55.html">Golduck</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Damp, Cloud Nine, Swift Swim</td>
+    </tr><tr data-search-text="56 Mankey Fighting Vital Spirit Anger Point Defiant">
+      <td>56</td>
+      <td><img src="../assets/game/graphics/pokemon/mankey/anim_front.png" alt="Mankey front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="56.html">Mankey</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Vital Spirit, Anger Point, Defiant</td>
+    </tr><tr data-search-text="57 Primeape Fighting Vital Spirit Anger Point Defiant">
+      <td>57</td>
+      <td><img src="../assets/game/graphics/pokemon/primeape/anim_front.png" alt="Primeape front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="57.html">Primeape</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Vital Spirit, Anger Point, Defiant</td>
+    </tr><tr data-search-text="58 Growlithe Fire Intimidate Flash Fire Justified">
+      <td>58</td>
+      <td><img src="../assets/game/graphics/pokemon/growlithe/anim_front.png" alt="Growlithe front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="58.html">Growlithe</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Intimidate, Flash Fire, Justified</td>
+    </tr><tr data-search-text="59 Arcanine Fire Intimidate Flash Fire Justified">
+      <td>59</td>
+      <td><img src="../assets/game/graphics/pokemon/arcanine/anim_front.png" alt="Arcanine front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="59.html">Arcanine</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Intimidate, Flash Fire, Justified</td>
+    </tr><tr data-search-text="60 Poliwag Water Water Absorb Damp Swift Swim">
+      <td>60</td>
+      <td><img src="../assets/game/graphics/pokemon/poliwag/anim_front.png" alt="Poliwag front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="60.html">Poliwag</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Water Absorb, Damp, Swift Swim</td>
+    </tr><tr data-search-text="61 Poliwhirl Water Water Absorb Damp Swift Swim">
+      <td>61</td>
+      <td><img src="../assets/game/graphics/pokemon/poliwhirl/anim_front.png" alt="Poliwhirl front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="61.html">Poliwhirl</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Water Absorb, Damp, Swift Swim</td>
+    </tr><tr data-search-text="62 Poliwrath Water Fighting Water Absorb Damp Swift Swim">
+      <td>62</td>
+      <td><img src="../assets/game/graphics/pokemon/poliwrath/anim_front.png" alt="Poliwrath front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="62.html">Poliwrath</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-fighting">Fighting</span></td>
+      <td>Water Absorb, Damp, Swift Swim</td>
+    </tr><tr data-search-text="63 Abra Psychic Synchronize Inner Focus Magic Guard">
+      <td>63</td>
+      <td><img src="../assets/game/graphics/pokemon/abra/anim_front.png" alt="Abra front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="63.html">Abra</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Synchronize, Inner Focus, Magic Guard</td>
+    </tr><tr data-search-text="64 Kadabra Psychic Synchronize Inner Focus Magic Guard">
+      <td>64</td>
+      <td><img src="../assets/game/graphics/pokemon/kadabra/anim_front.png" alt="Kadabra front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="64.html">Kadabra</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Synchronize, Inner Focus, Magic Guard</td>
+    </tr><tr data-search-text="65 Alakazam Psychic Synchronize Inner Focus Magic Guard">
+      <td>65</td>
+      <td><img src="../assets/game/graphics/pokemon/alakazam/anim_front.png" alt="Alakazam front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="65.html">Alakazam</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Synchronize, Inner Focus, Magic Guard</td>
+    </tr><tr data-search-text="66 Machop Fighting Guts No Guard Steadfast">
+      <td>66</td>
+      <td><img src="../assets/game/graphics/pokemon/machop/anim_front.png" alt="Machop front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="66.html">Machop</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Guts, No Guard, Steadfast</td>
+    </tr><tr data-search-text="67 Machoke Fighting Guts No Guard Steadfast">
+      <td>67</td>
+      <td><img src="../assets/game/graphics/pokemon/machoke/anim_front.png" alt="Machoke front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="67.html">Machoke</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Guts, No Guard, Steadfast</td>
+    </tr><tr data-search-text="68 Machamp Fighting Guts No Guard Steadfast">
+      <td>68</td>
+      <td><img src="../assets/game/graphics/pokemon/machamp/anim_front.png" alt="Machamp front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="68.html">Machamp</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Guts, No Guard, Steadfast</td>
+    </tr><tr data-search-text="69 Bellsprout Grass Poison Chlorophyll Gluttony">
+      <td>69</td>
+      <td><img src="../assets/game/graphics/pokemon/bellsprout/anim_front.png" alt="Bellsprout front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="69.html">Bellsprout</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Chlorophyll, Gluttony</td>
+    </tr><tr data-search-text="70 Weepinbell Grass Poison Chlorophyll Gluttony">
+      <td>70</td>
+      <td><img src="../assets/game/graphics/pokemon/weepinbell/anim_front.png" alt="Weepinbell front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="70.html">Weepinbell</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Chlorophyll, Gluttony</td>
+    </tr><tr data-search-text="71 Victreebel Grass Poison Chlorophyll Gluttony">
+      <td>71</td>
+      <td><img src="../assets/game/graphics/pokemon/victreebel/anim_front.png" alt="Victreebel front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="71.html">Victreebel</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Chlorophyll, Gluttony</td>
+    </tr><tr data-search-text="72 Tentacool Water Poison Clear Body Liquid Ooze Rain Dish">
+      <td>72</td>
+      <td><img src="../assets/game/graphics/pokemon/tentacool/anim_front.png" alt="Tentacool front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="72.html">Tentacool</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Clear Body, Liquid Ooze, Rain Dish</td>
+    </tr><tr data-search-text="73 Tentacruel Water Poison Clear Body Liquid Ooze Rain Dish">
+      <td>73</td>
+      <td><img src="../assets/game/graphics/pokemon/tentacruel/anim_front.png" alt="Tentacruel front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="73.html">Tentacruel</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Clear Body, Liquid Ooze, Rain Dish</td>
+    </tr><tr data-search-text="74 Geodude Rock Ground Rock Head Sturdy Sand Veil">
+      <td>74</td>
+      <td><img src="../assets/game/graphics/pokemon/geodude/anim_front.png" alt="Geodude front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="74.html">Geodude</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Sturdy, Sand Veil</td>
+    </tr><tr data-search-text="75 Graveler Rock Ground Rock Head Sturdy Sand Veil">
+      <td>75</td>
+      <td><img src="../assets/game/graphics/pokemon/graveler/anim_front.png" alt="Graveler front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="75.html">Graveler</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Sturdy, Sand Veil</td>
+    </tr><tr data-search-text="76 Golem Rock Ground Rock Head Sturdy Sand Veil">
+      <td>76</td>
+      <td><img src="../assets/game/graphics/pokemon/golem/anim_front.png" alt="Golem front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="76.html">Golem</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Sturdy, Sand Veil</td>
+    </tr><tr data-search-text="77 Ponyta Fire Run Away Flash Fire Flame Body">
+      <td>77</td>
+      <td><img src="../assets/game/graphics/pokemon/ponyta/anim_front.png" alt="Ponyta front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="77.html">Ponyta</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Run Away, Flash Fire, Flame Body</td>
+    </tr><tr data-search-text="78 Rapidash Fire Run Away Flash Fire Flame Body">
+      <td>78</td>
+      <td><img src="../assets/game/graphics/pokemon/rapidash/anim_front.png" alt="Rapidash front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="78.html">Rapidash</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Run Away, Flash Fire, Flame Body</td>
+    </tr><tr data-search-text="79 Slowpoke Water Psychic Oblivious Own Tempo Regenerator">
+      <td>79</td>
+      <td><img src="../assets/game/graphics/pokemon/slowpoke/anim_front.png" alt="Slowpoke front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="79.html">Slowpoke</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Oblivious, Own Tempo, Regenerator</td>
+    </tr><tr data-search-text="80 Slowbro Water Psychic Oblivious Own Tempo Regenerator">
+      <td>80</td>
+      <td><img src="../assets/game/graphics/pokemon/slowbro/anim_front.png" alt="Slowbro front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="80.html">Slowbro</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Oblivious, Own Tempo, Regenerator</td>
+    </tr><tr data-search-text="81 Magnemite Electric Steel Magnet Pull Sturdy Analytic">
+      <td>81</td>
+      <td><img src="../assets/game/graphics/pokemon/magnemite/anim_front.png" alt="Magnemite front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="81.html">Magnemite</a></td>
+      <td><span class="type-badge type-electric">Electric</span> <span class="type-badge type-steel">Steel</span></td>
+      <td>Magnet Pull, Sturdy, Analytic</td>
+    </tr><tr data-search-text="82 Magneton Electric Steel Magnet Pull Sturdy Analytic">
+      <td>82</td>
+      <td><img src="../assets/game/graphics/pokemon/magneton/anim_front.png" alt="Magneton front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="82.html">Magneton</a></td>
+      <td><span class="type-badge type-electric">Electric</span> <span class="type-badge type-steel">Steel</span></td>
+      <td>Magnet Pull, Sturdy, Analytic</td>
+    </tr><tr data-search-text="83 Farfetch&#39;d Normal Flying Keen Eye Inner Focus Defiant">
+      <td>83</td>
+      <td><img src="../assets/game/graphics/pokemon/farfetchd/anim_front.png" alt="Farfetch&#39;d front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="83.html">Farfetch&#39;d</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Inner Focus, Defiant</td>
+    </tr><tr data-search-text="84 Doduo Normal Flying Run Away Early Bird Tangled Feet">
+      <td>84</td>
+      <td><img src="../assets/game/graphics/pokemon/doduo/anim_front.png" alt="Doduo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="84.html">Doduo</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Run Away, Early Bird, Tangled Feet</td>
+    </tr><tr data-search-text="85 Dodrio Normal Flying Run Away Early Bird Tangled Feet">
+      <td>85</td>
+      <td><img src="../assets/game/graphics/pokemon/dodrio/anim_front.png" alt="Dodrio front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="85.html">Dodrio</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Run Away, Early Bird, Tangled Feet</td>
+    </tr><tr data-search-text="86 Seel Water Thick Fat Hydration Ice Body">
+      <td>86</td>
+      <td><img src="../assets/game/graphics/pokemon/seel/anim_front.png" alt="Seel front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="86.html">Seel</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Thick Fat, Hydration, Ice Body</td>
+    </tr><tr data-search-text="87 Dewgong Water Ice Thick Fat Hydration Ice Body">
+      <td>87</td>
+      <td><img src="../assets/game/graphics/pokemon/dewgong/anim_front.png" alt="Dewgong front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="87.html">Dewgong</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ice">Ice</span></td>
+      <td>Thick Fat, Hydration, Ice Body</td>
+    </tr><tr data-search-text="88 Grimer Poison Stench Sticky Hold Poison Touch">
+      <td>88</td>
+      <td><img src="../assets/game/graphics/pokemon/grimer/anim_front.png" alt="Grimer front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="88.html">Grimer</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Stench, Sticky Hold, Poison Touch</td>
+    </tr><tr data-search-text="89 Muk Poison Stench Sticky Hold Poison Touch">
+      <td>89</td>
+      <td><img src="../assets/game/graphics/pokemon/muk/anim_front.png" alt="Muk front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="89.html">Muk</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Stench, Sticky Hold, Poison Touch</td>
+    </tr><tr data-search-text="90 Shellder Water Shell Armor Skill Link Overcoat">
+      <td>90</td>
+      <td><img src="../assets/game/graphics/pokemon/shellder/anim_front.png" alt="Shellder front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="90.html">Shellder</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Shell Armor, Skill Link, Overcoat</td>
+    </tr><tr data-search-text="91 Cloyster Water Ice Shell Armor Skill Link Overcoat">
+      <td>91</td>
+      <td><img src="../assets/game/graphics/pokemon/cloyster/anim_front.png" alt="Cloyster front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="91.html">Cloyster</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ice">Ice</span></td>
+      <td>Shell Armor, Skill Link, Overcoat</td>
+    </tr><tr data-search-text="92 Gastly Ghost Poison Levitate">
+      <td>92</td>
+      <td><img src="../assets/game/graphics/pokemon/gastly/anim_front.png" alt="Gastly front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="92.html">Gastly</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="93 Haunter Ghost Poison Levitate">
+      <td>93</td>
+      <td><img src="../assets/game/graphics/pokemon/haunter/anim_front.png" alt="Haunter front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="93.html">Haunter</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="94 Gengar Ghost Poison Cursed Body">
+      <td>94</td>
+      <td><img src="../assets/game/graphics/pokemon/gengar/anim_front.png" alt="Gengar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="94.html">Gengar</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Cursed Body</td>
+    </tr><tr data-search-text="95 Onix Rock Ground Rock Head Sturdy Weak Armor">
+      <td>95</td>
+      <td><img src="../assets/game/graphics/pokemon/onix/anim_front.png" alt="Onix front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="95.html">Onix</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Sturdy, Weak Armor</td>
+    </tr><tr data-search-text="96 Drowzee Psychic Insomnia Forewarn Inner Focus">
+      <td>96</td>
+      <td><img src="../assets/game/graphics/pokemon/drowzee/anim_front.png" alt="Drowzee front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="96.html">Drowzee</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Insomnia, Forewarn, Inner Focus</td>
+    </tr><tr data-search-text="97 Hypno Psychic Insomnia Forewarn Inner Focus">
+      <td>97</td>
+      <td><img src="../assets/game/graphics/pokemon/hypno/anim_front.png" alt="Hypno front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="97.html">Hypno</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Insomnia, Forewarn, Inner Focus</td>
+    </tr><tr data-search-text="98 Krabby Water Hyper Cutter Shell Armor Sheer Force">
+      <td>98</td>
+      <td><img src="../assets/game/graphics/pokemon/krabby/anim_front.png" alt="Krabby front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="98.html">Krabby</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Hyper Cutter, Shell Armor, Sheer Force</td>
+    </tr><tr data-search-text="99 Kingler Water Hyper Cutter Shell Armor Sheer Force">
+      <td>99</td>
+      <td><img src="../assets/game/graphics/pokemon/kingler/anim_front.png" alt="Kingler front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="99.html">Kingler</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Hyper Cutter, Shell Armor, Sheer Force</td>
+    </tr><tr data-search-text="100 Voltorb Electric Soundproof Static Aftermath">
+      <td>100</td>
+      <td><img src="../assets/game/graphics/pokemon/voltorb/anim_front.png" alt="Voltorb front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="100.html">Voltorb</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Soundproof, Static, Aftermath</td>
+    </tr><tr data-search-text="101 Electrode Electric Soundproof Static Aftermath">
+      <td>101</td>
+      <td><img src="../assets/game/graphics/pokemon/electrode/anim_front.png" alt="Electrode front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="101.html">Electrode</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Soundproof, Static, Aftermath</td>
+    </tr><tr data-search-text="102 Exeggcute Grass Psychic Chlorophyll Harvest">
+      <td>102</td>
+      <td><img src="../assets/game/graphics/pokemon/exeggcute/anim_front.png" alt="Exeggcute front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="102.html">Exeggcute</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Chlorophyll, Harvest</td>
+    </tr><tr data-search-text="103 Exeggutor Grass Psychic Chlorophyll Harvest">
+      <td>103</td>
+      <td><img src="../assets/game/graphics/pokemon/exeggutor/anim_front.png" alt="Exeggutor front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="103.html">Exeggutor</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Chlorophyll, Harvest</td>
+    </tr><tr data-search-text="104 Cubone Ground Rock Head Lightning Rod Battle Armor">
+      <td>104</td>
+      <td><img src="../assets/game/graphics/pokemon/cubone/anim_front.png" alt="Cubone front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="104.html">Cubone</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Lightning Rod, Battle Armor</td>
+    </tr><tr data-search-text="105 Marowak Ground Rock Head Lightning Rod Battle Armor">
+      <td>105</td>
+      <td><img src="../assets/game/graphics/pokemon/marowak/anim_front.png" alt="Marowak front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="105.html">Marowak</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Lightning Rod, Battle Armor</td>
+    </tr><tr data-search-text="106 Hitmonlee Fighting Limber Reckless Unburden">
+      <td>106</td>
+      <td><img src="../assets/game/graphics/pokemon/hitmonlee/anim_front.png" alt="Hitmonlee front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="106.html">Hitmonlee</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Limber, Reckless, Unburden</td>
+    </tr><tr data-search-text="107 Hitmonchan Fighting Keen Eye Iron Fist Inner Focus">
+      <td>107</td>
+      <td><img src="../assets/game/graphics/pokemon/hitmonchan/anim_front.png" alt="Hitmonchan front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="107.html">Hitmonchan</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Keen Eye, Iron Fist, Inner Focus</td>
+    </tr><tr data-search-text="108 Lickitung Normal Own Tempo Oblivious Cloud Nine">
+      <td>108</td>
+      <td><img src="../assets/game/graphics/pokemon/lickitung/anim_front.png" alt="Lickitung front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="108.html">Lickitung</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Own Tempo, Oblivious, Cloud Nine</td>
+    </tr><tr data-search-text="109 Koffing Poison Levitate Neutralizing Gas Stench">
+      <td>109</td>
+      <td><img src="../assets/game/graphics/pokemon/koffing/anim_front.png" alt="Koffing front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="109.html">Koffing</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Levitate, Neutralizing Gas, Stench</td>
+    </tr><tr data-search-text="110 Weezing Poison Levitate Neutralizing Gas Stench">
+      <td>110</td>
+      <td><img src="../assets/game/graphics/pokemon/weezing/anim_front.png" alt="Weezing front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="110.html">Weezing</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Levitate, Neutralizing Gas, Stench</td>
+    </tr><tr data-search-text="111 Rhyhorn Ground Rock Lightning Rod Rock Head Reckless">
+      <td>111</td>
+      <td><img src="../assets/game/graphics/pokemon/rhyhorn/anim_front.png" alt="Rhyhorn front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="111.html">Rhyhorn</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Lightning Rod, Rock Head, Reckless</td>
+    </tr><tr data-search-text="112 Rhydon Ground Rock Lightning Rod Rock Head Reckless">
+      <td>112</td>
+      <td><img src="../assets/game/graphics/pokemon/rhydon/anim_front.png" alt="Rhydon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="112.html">Rhydon</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Lightning Rod, Rock Head, Reckless</td>
+    </tr><tr data-search-text="113 Chansey Normal Natural Cure Serene Grace Healer">
+      <td>113</td>
+      <td><img src="../assets/game/graphics/pokemon/chansey/anim_front.png" alt="Chansey front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="113.html">Chansey</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Natural Cure, Serene Grace, Healer</td>
+    </tr><tr data-search-text="114 Tangela Grass Chlorophyll Leaf Guard Regenerator">
+      <td>114</td>
+      <td><img src="../assets/game/graphics/pokemon/tangela/anim_front.png" alt="Tangela front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="114.html">Tangela</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Chlorophyll, Leaf Guard, Regenerator</td>
+    </tr><tr data-search-text="115 Kangaskhan Normal Early Bird Scrappy Inner Focus">
+      <td>115</td>
+      <td><img src="../assets/game/graphics/pokemon/kangaskhan/anim_front.png" alt="Kangaskhan front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="115.html">Kangaskhan</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Early Bird, Scrappy, Inner Focus</td>
+    </tr><tr data-search-text="116 Horsea Water Swift Swim Sniper Damp">
+      <td>116</td>
+      <td><img src="../assets/game/graphics/pokemon/horsea/anim_front.png" alt="Horsea front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="116.html">Horsea</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Sniper, Damp</td>
+    </tr><tr data-search-text="117 Seadra Water Poison Point Sniper Damp">
+      <td>117</td>
+      <td><img src="../assets/game/graphics/pokemon/seadra/anim_front.png" alt="Seadra front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="117.html">Seadra</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Poison Point, Sniper, Damp</td>
+    </tr><tr data-search-text="118 Goldeen Water Swift Swim Water Veil Lightning Rod">
+      <td>118</td>
+      <td><img src="../assets/game/graphics/pokemon/goldeen/anim_front.png" alt="Goldeen front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="118.html">Goldeen</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Water Veil, Lightning Rod</td>
+    </tr><tr data-search-text="119 Seaking Water Swift Swim Water Veil Lightning Rod">
+      <td>119</td>
+      <td><img src="../assets/game/graphics/pokemon/seaking/anim_front.png" alt="Seaking front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="119.html">Seaking</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Water Veil, Lightning Rod</td>
+    </tr><tr data-search-text="120 Staryu Water Illuminate Natural Cure Analytic">
+      <td>120</td>
+      <td><img src="../assets/game/graphics/pokemon/staryu/anim_front.png" alt="Staryu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="120.html">Staryu</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Illuminate, Natural Cure, Analytic</td>
+    </tr><tr data-search-text="121 Starmie Water Psychic Illuminate Natural Cure Analytic">
+      <td>121</td>
+      <td><img src="../assets/game/graphics/pokemon/starmie/anim_front.png" alt="Starmie front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="121.html">Starmie</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Illuminate, Natural Cure, Analytic</td>
+    </tr><tr data-search-text="122 Mr. Mime Psychic Fairy Soundproof Filter Technician">
+      <td>122</td>
+      <td><img src="../assets/game/graphics/pokemon/mr_mime/anim_front.png" alt="Mr. Mime front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="122.html">Mr. Mime</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Soundproof, Filter, Technician</td>
+    </tr><tr data-search-text="123 Scyther Bug Flying Swarm Technician Steadfast">
+      <td>123</td>
+      <td><img src="../assets/game/graphics/pokemon/scyther/anim_front.png" alt="Scyther front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="123.html">Scyther</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Swarm, Technician, Steadfast</td>
+    </tr><tr data-search-text="124 Jynx Ice Psychic Oblivious Forewarn Dry Skin">
+      <td>124</td>
+      <td><img src="../assets/game/graphics/pokemon/jynx/anim_front.png" alt="Jynx front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="124.html">Jynx</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Oblivious, Forewarn, Dry Skin</td>
+    </tr><tr data-search-text="125 Electabuzz Electric Static Vital Spirit">
+      <td>125</td>
+      <td><img src="../assets/game/graphics/pokemon/electabuzz/anim_front.png" alt="Electabuzz front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="125.html">Electabuzz</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Vital Spirit</td>
+    </tr><tr data-search-text="126 Magmar Fire Flame Body Vital Spirit">
+      <td>126</td>
+      <td><img src="../assets/game/graphics/pokemon/magmar/anim_front.png" alt="Magmar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="126.html">Magmar</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Flame Body, Vital Spirit</td>
+    </tr><tr data-search-text="127 Pinsir Bug Hyper Cutter Mold Breaker Moxie">
+      <td>127</td>
+      <td><img src="../assets/game/graphics/pokemon/pinsir/anim_front.png" alt="Pinsir front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="127.html">Pinsir</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Hyper Cutter, Mold Breaker, Moxie</td>
+    </tr><tr data-search-text="128 Tauros Normal Intimidate Anger Point Sheer Force">
+      <td>128</td>
+      <td><img src="../assets/game/graphics/pokemon/tauros/anim_front.png" alt="Tauros front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="128.html">Tauros</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Intimidate, Anger Point, Sheer Force</td>
+    </tr><tr data-search-text="129 Magikarp Water Swift Swim Rattled">
+      <td>129</td>
+      <td><img src="../assets/game/graphics/pokemon/magikarp/anim_front.png" alt="Magikarp front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="129.html">Magikarp</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Rattled</td>
+    </tr><tr data-search-text="130 Gyarados Water Flying Intimidate Moxie">
+      <td>130</td>
+      <td><img src="../assets/game/graphics/pokemon/gyarados/anim_front.png" alt="Gyarados front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="130.html">Gyarados</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Intimidate, Moxie</td>
+    </tr><tr data-search-text="131 Lapras Water Ice Water Absorb Shell Armor Hydration">
+      <td>131</td>
+      <td><img src="../assets/game/graphics/pokemon/lapras/anim_front.png" alt="Lapras front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="131.html">Lapras</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ice">Ice</span></td>
+      <td>Water Absorb, Shell Armor, Hydration</td>
+    </tr><tr data-search-text="132 Ditto Normal Limber Imposter">
+      <td>132</td>
+      <td><img src="../assets/game/graphics/pokemon/ditto/anim_front.png" alt="Ditto front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="132.html">Ditto</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Limber, Imposter</td>
+    </tr><tr data-search-text="133 Eevee Normal Run Away Adaptability Anticipation">
+      <td>133</td>
+      <td><img src="../assets/game/graphics/pokemon/eevee/anim_front.png" alt="Eevee front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="133.html">Eevee</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Run Away, Adaptability, Anticipation</td>
+    </tr><tr data-search-text="134 Vaporeon Water Water Absorb Hydration">
+      <td>134</td>
+      <td><img src="../assets/game/graphics/pokemon/vaporeon/anim_front.png" alt="Vaporeon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="134.html">Vaporeon</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Water Absorb, Hydration</td>
+    </tr><tr data-search-text="135 Jolteon Electric Volt Absorb Quick Feet">
+      <td>135</td>
+      <td><img src="../assets/game/graphics/pokemon/jolteon/anim_front.png" alt="Jolteon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="135.html">Jolteon</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Volt Absorb, Quick Feet</td>
+    </tr><tr data-search-text="136 Flareon Fire Flash Fire Guts">
+      <td>136</td>
+      <td><img src="../assets/game/graphics/pokemon/flareon/anim_front.png" alt="Flareon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="136.html">Flareon</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Flash Fire, Guts</td>
+    </tr><tr data-search-text="137 Porygon Normal Trace Download Analytic">
+      <td>137</td>
+      <td><img src="../assets/game/graphics/pokemon/porygon/anim_front.png" alt="Porygon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="137.html">Porygon</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Trace, Download, Analytic</td>
+    </tr><tr data-search-text="138 Omanyte Rock Water Swift Swim Shell Armor Weak Armor">
+      <td>138</td>
+      <td><img src="../assets/game/graphics/pokemon/omanyte/anim_front.png" alt="Omanyte front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="138.html">Omanyte</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Shell Armor, Weak Armor</td>
+    </tr><tr data-search-text="139 Omastar Rock Water Swift Swim Shell Armor Weak Armor">
+      <td>139</td>
+      <td><img src="../assets/game/graphics/pokemon/omastar/anim_front.png" alt="Omastar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="139.html">Omastar</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Shell Armor, Weak Armor</td>
+    </tr><tr data-search-text="140 Kabuto Rock Water Swift Swim Battle Armor Weak Armor">
+      <td>140</td>
+      <td><img src="../assets/game/graphics/pokemon/kabuto/anim_front.png" alt="Kabuto front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="140.html">Kabuto</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Battle Armor, Weak Armor</td>
+    </tr><tr data-search-text="141 Kabutops Rock Water Swift Swim Battle Armor Weak Armor">
+      <td>141</td>
+      <td><img src="../assets/game/graphics/pokemon/kabutops/anim_front.png" alt="Kabutops front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="141.html">Kabutops</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Battle Armor, Weak Armor</td>
+    </tr><tr data-search-text="142 Aerodactyl Rock Flying Rock Head Pressure Unnerve">
+      <td>142</td>
+      <td><img src="../assets/game/graphics/pokemon/aerodactyl/anim_front.png" alt="Aerodactyl front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="142.html">Aerodactyl</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Rock Head, Pressure, Unnerve</td>
+    </tr><tr data-search-text="143 Snorlax Normal Immunity Thick Fat Gluttony">
+      <td>143</td>
+      <td><img src="../assets/game/graphics/pokemon/snorlax/anim_front.png" alt="Snorlax front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="143.html">Snorlax</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Immunity, Thick Fat, Gluttony</td>
+    </tr><tr data-search-text="144 Articuno Ice Flying Pressure Snow Cloak">
+      <td>144</td>
+      <td><img src="../assets/game/graphics/pokemon/articuno/anim_front.png" alt="Articuno front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="144.html">Articuno</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Pressure, Snow Cloak</td>
+    </tr><tr data-search-text="145 Zapdos Electric Flying Pressure Static">
+      <td>145</td>
+      <td><img src="../assets/game/graphics/pokemon/zapdos/anim_front.png" alt="Zapdos front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="145.html">Zapdos</a></td>
+      <td><span class="type-badge type-electric">Electric</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Pressure, Static</td>
+    </tr><tr data-search-text="146 Moltres Fire Flying Pressure Flame Body">
+      <td>146</td>
+      <td><img src="../assets/game/graphics/pokemon/moltres/anim_front.png" alt="Moltres front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="146.html">Moltres</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Pressure, Flame Body</td>
+    </tr><tr data-search-text="147 Dratini Dragon Shed Skin Marvel Scale">
+      <td>147</td>
+      <td><img src="../assets/game/graphics/pokemon/dratini/anim_front.png" alt="Dratini front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="147.html">Dratini</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span></td>
+      <td>Shed Skin, Marvel Scale</td>
+    </tr><tr data-search-text="148 Dragonair Dragon Shed Skin Marvel Scale">
+      <td>148</td>
+      <td><img src="../assets/game/graphics/pokemon/dragonair/anim_front.png" alt="Dragonair front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="148.html">Dragonair</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span></td>
+      <td>Shed Skin, Marvel Scale</td>
+    </tr><tr data-search-text="149 Dragonite Dragon Flying Inner Focus Multiscale">
+      <td>149</td>
+      <td><img src="../assets/game/graphics/pokemon/dragonite/anim_front.png" alt="Dragonite front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="149.html">Dragonite</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Inner Focus, Multiscale</td>
+    </tr><tr data-search-text="150 Mewtwo Psychic Pressure Unnerve">
+      <td>150</td>
+      <td><img src="../assets/game/graphics/pokemon/mewtwo/anim_front.png" alt="Mewtwo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="150.html">Mewtwo</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Pressure, Unnerve</td>
+    </tr><tr data-search-text="151 Mew Psychic Synchronize">
+      <td>151</td>
+      <td><img src="../assets/game/graphics/pokemon/mew/anim_front.png" alt="Mew front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="151.html">Mew</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Synchronize</td>
+    </tr><tr data-search-text="152 Chikorita Grass Overgrow Leaf Guard">
+      <td>152</td>
+      <td><img src="../assets/game/graphics/pokemon/chikorita/anim_front.png" alt="Chikorita front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="152.html">Chikorita</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Overgrow, Leaf Guard</td>
+    </tr><tr data-search-text="153 Bayleef Grass Overgrow Leaf Guard">
+      <td>153</td>
+      <td><img src="../assets/game/graphics/pokemon/bayleef/anim_front.png" alt="Bayleef front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="153.html">Bayleef</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Overgrow, Leaf Guard</td>
+    </tr><tr data-search-text="154 Meganium Grass Overgrow Leaf Guard">
+      <td>154</td>
+      <td><img src="../assets/game/graphics/pokemon/meganium/anim_front.png" alt="Meganium front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="154.html">Meganium</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Overgrow, Leaf Guard</td>
+    </tr><tr data-search-text="155 Cyndaquil Fire Blaze Flash Fire">
+      <td>155</td>
+      <td><img src="../assets/game/graphics/pokemon/cyndaquil/anim_front.png" alt="Cyndaquil front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="155.html">Cyndaquil</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Blaze, Flash Fire</td>
+    </tr><tr data-search-text="156 Quilava Fire Blaze Flash Fire">
+      <td>156</td>
+      <td><img src="../assets/game/graphics/pokemon/quilava/anim_front.png" alt="Quilava front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="156.html">Quilava</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Blaze, Flash Fire</td>
+    </tr><tr data-search-text="157 Typhlosion Fire Blaze Flash Fire">
+      <td>157</td>
+      <td><img src="../assets/game/graphics/pokemon/typhlosion/anim_front.png" alt="Typhlosion front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="157.html">Typhlosion</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Blaze, Flash Fire</td>
+    </tr><tr data-search-text="158 Totodile Water Torrent Sheer Force">
+      <td>158</td>
+      <td><img src="../assets/game/graphics/pokemon/totodile/anim_front.png" alt="Totodile front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="158.html">Totodile</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Sheer Force</td>
+    </tr><tr data-search-text="159 Croconaw Water Torrent Sheer Force">
+      <td>159</td>
+      <td><img src="../assets/game/graphics/pokemon/croconaw/anim_front.png" alt="Croconaw front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="159.html">Croconaw</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Sheer Force</td>
+    </tr><tr data-search-text="160 Feraligatr Water Torrent Sheer Force">
+      <td>160</td>
+      <td><img src="../assets/game/graphics/pokemon/feraligatr/anim_front.png" alt="Feraligatr front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="160.html">Feraligatr</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Sheer Force</td>
+    </tr><tr data-search-text="161 Sentret Normal Run Away Keen Eye Frisk">
+      <td>161</td>
+      <td><img src="../assets/game/graphics/pokemon/sentret/anim_front.png" alt="Sentret front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="161.html">Sentret</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Run Away, Keen Eye, Frisk</td>
+    </tr><tr data-search-text="162 Furret Normal Run Away Keen Eye Frisk">
+      <td>162</td>
+      <td><img src="../assets/game/graphics/pokemon/furret/anim_front.png" alt="Furret front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="162.html">Furret</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Run Away, Keen Eye, Frisk</td>
+    </tr><tr data-search-text="163 Hoothoot Normal Flying Insomnia Keen Eye Tinted Lens">
+      <td>163</td>
+      <td><img src="../assets/game/graphics/pokemon/hoothoot/anim_front.png" alt="Hoothoot front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="163.html">Hoothoot</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Insomnia, Keen Eye, Tinted Lens</td>
+    </tr><tr data-search-text="164 Noctowl Normal Flying Insomnia Keen Eye Tinted Lens">
+      <td>164</td>
+      <td><img src="../assets/game/graphics/pokemon/noctowl/anim_front.png" alt="Noctowl front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="164.html">Noctowl</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Insomnia, Keen Eye, Tinted Lens</td>
+    </tr><tr data-search-text="165 Ledyba Bug Flying Swarm Early Bird Rattled">
+      <td>165</td>
+      <td><img src="../assets/game/graphics/pokemon/ledyba/anim_front.png" alt="Ledyba front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="165.html">Ledyba</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Swarm, Early Bird, Rattled</td>
+    </tr><tr data-search-text="166 Ledian Bug Flying Swarm Early Bird Iron Fist">
+      <td>166</td>
+      <td><img src="../assets/game/graphics/pokemon/ledian/anim_front.png" alt="Ledian front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="166.html">Ledian</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Swarm, Early Bird, Iron Fist</td>
+    </tr><tr data-search-text="167 Spinarak Bug Poison Swarm Insomnia Sniper">
+      <td>167</td>
+      <td><img src="../assets/game/graphics/pokemon/spinarak/anim_front.png" alt="Spinarak front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="167.html">Spinarak</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Swarm, Insomnia, Sniper</td>
+    </tr><tr data-search-text="168 Ariados Bug Poison Swarm Insomnia Sniper">
+      <td>168</td>
+      <td><img src="../assets/game/graphics/pokemon/ariados/anim_front.png" alt="Ariados front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="168.html">Ariados</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Swarm, Insomnia, Sniper</td>
+    </tr><tr data-search-text="169 Crobat Poison Flying Inner Focus Infiltrator">
+      <td>169</td>
+      <td><img src="../assets/game/graphics/pokemon/crobat/anim_front.png" alt="Crobat front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="169.html">Crobat</a></td>
+      <td><span class="type-badge type-poison">Poison</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Inner Focus, Infiltrator</td>
+    </tr><tr data-search-text="170 Chinchou Water Electric Volt Absorb Illuminate Water Absorb">
+      <td>170</td>
+      <td><img src="../assets/game/graphics/pokemon/chinchou/anim_front.png" alt="Chinchou front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="170.html">Chinchou</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-electric">Electric</span></td>
+      <td>Volt Absorb, Illuminate, Water Absorb</td>
+    </tr><tr data-search-text="171 Lanturn Water Electric Volt Absorb Illuminate Water Absorb">
+      <td>171</td>
+      <td><img src="../assets/game/graphics/pokemon/lanturn/anim_front.png" alt="Lanturn front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="171.html">Lanturn</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-electric">Electric</span></td>
+      <td>Volt Absorb, Illuminate, Water Absorb</td>
+    </tr><tr data-search-text="172 Pichu Electric Static Lightning Rod">
+      <td>172</td>
+      <td><img src="../assets/game/graphics/pokemon/pichu/anim_front.png" alt="Pichu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="172.html">Pichu</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Lightning Rod</td>
+    </tr><tr data-search-text="173 Cleffa Fairy Cute Charm Magic Guard Friend Guard">
+      <td>173</td>
+      <td><img src="../assets/game/graphics/pokemon/cleffa/anim_front.png" alt="Cleffa front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="173.html">Cleffa</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span></td>
+      <td>Cute Charm, Magic Guard, Friend Guard</td>
+    </tr><tr data-search-text="174 Igglybuff Normal Fairy Cute Charm Competitive Friend Guard">
+      <td>174</td>
+      <td><img src="../assets/game/graphics/pokemon/igglybuff/anim_front.png" alt="Igglybuff front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="174.html">Igglybuff</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Cute Charm, Competitive, Friend Guard</td>
+    </tr><tr data-search-text="175 Togepi Fairy Hustle Serene Grace Super Luck">
+      <td>175</td>
+      <td><img src="../assets/game/graphics/pokemon/togepi/anim_front.png" alt="Togepi front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="175.html">Togepi</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span></td>
+      <td>Hustle, Serene Grace, Super Luck</td>
+    </tr><tr data-search-text="176 Togetic Fairy Flying Hustle Serene Grace Super Luck">
+      <td>176</td>
+      <td><img src="../assets/game/graphics/pokemon/togetic/anim_front.png" alt="Togetic front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="176.html">Togetic</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Hustle, Serene Grace, Super Luck</td>
+    </tr><tr data-search-text="177 Natu Psychic Flying Synchronize Early Bird Magic Bounce">
+      <td>177</td>
+      <td><img src="../assets/game/graphics/pokemon/natu/anim_front.png" alt="Natu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="177.html">Natu</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Synchronize, Early Bird, Magic Bounce</td>
+    </tr><tr data-search-text="178 Xatu Psychic Flying Synchronize Early Bird Magic Bounce">
+      <td>178</td>
+      <td><img src="../assets/game/graphics/pokemon/xatu/anim_front.png" alt="Xatu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="178.html">Xatu</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Synchronize, Early Bird, Magic Bounce</td>
+    </tr><tr data-search-text="179 Mareep Electric Static Plus">
+      <td>179</td>
+      <td><img src="../assets/game/graphics/pokemon/mareep/anim_front.png" alt="Mareep front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="179.html">Mareep</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Plus</td>
+    </tr><tr data-search-text="180 Flaaffy Electric Static Plus">
+      <td>180</td>
+      <td><img src="../assets/game/graphics/pokemon/flaaffy/anim_front.png" alt="Flaaffy front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="180.html">Flaaffy</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Plus</td>
+    </tr><tr data-search-text="181 Ampharos Electric Static Plus">
+      <td>181</td>
+      <td><img src="../assets/game/graphics/pokemon/ampharos/anim_front.png" alt="Ampharos front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="181.html">Ampharos</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Plus</td>
+    </tr><tr data-search-text="182 Bellossom Grass Chlorophyll Healer">
+      <td>182</td>
+      <td><img src="../assets/game/graphics/pokemon/bellossom/anim_front.png" alt="Bellossom front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="182.html">Bellossom</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Chlorophyll, Healer</td>
+    </tr><tr data-search-text="183 Marill Water Fairy Thick Fat Huge Power Sap Sipper">
+      <td>183</td>
+      <td><img src="../assets/game/graphics/pokemon/marill/anim_front.png" alt="Marill front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="183.html">Marill</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Thick Fat, Huge Power, Sap Sipper</td>
+    </tr><tr data-search-text="184 Azumarill Water Fairy Thick Fat Huge Power Sap Sipper">
+      <td>184</td>
+      <td><img src="../assets/game/graphics/pokemon/azumarill/anim_front.png" alt="Azumarill front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="184.html">Azumarill</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Thick Fat, Huge Power, Sap Sipper</td>
+    </tr><tr data-search-text="185 Sudowoodo Rock Sturdy Rock Head Rattled">
+      <td>185</td>
+      <td><img src="../assets/game/graphics/pokemon/sudowoodo/anim_front.png" alt="Sudowoodo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="185.html">Sudowoodo</a></td>
+      <td><span class="type-badge type-rock">Rock</span></td>
+      <td>Sturdy, Rock Head, Rattled</td>
+    </tr><tr data-search-text="186 Politoed Water Water Absorb Damp Drizzle">
+      <td>186</td>
+      <td><img src="../assets/game/graphics/pokemon/politoed/anim_front.png" alt="Politoed front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="186.html">Politoed</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Water Absorb, Damp, Drizzle</td>
+    </tr><tr data-search-text="187 Hoppip Grass Flying Chlorophyll Leaf Guard Infiltrator">
+      <td>187</td>
+      <td><img src="../assets/game/graphics/pokemon/hoppip/anim_front.png" alt="Hoppip front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="187.html">Hoppip</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Chlorophyll, Leaf Guard, Infiltrator</td>
+    </tr><tr data-search-text="188 Skiploom Grass Flying Chlorophyll Leaf Guard Infiltrator">
+      <td>188</td>
+      <td><img src="../assets/game/graphics/pokemon/skiploom/anim_front.png" alt="Skiploom front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="188.html">Skiploom</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Chlorophyll, Leaf Guard, Infiltrator</td>
+    </tr><tr data-search-text="189 Jumpluff Grass Flying Chlorophyll Leaf Guard Infiltrator">
+      <td>189</td>
+      <td><img src="../assets/game/graphics/pokemon/jumpluff/anim_front.png" alt="Jumpluff front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="189.html">Jumpluff</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Chlorophyll, Leaf Guard, Infiltrator</td>
+    </tr><tr data-search-text="190 Aipom Normal Run Away Pickup Skill Link">
+      <td>190</td>
+      <td><img src="../assets/game/graphics/pokemon/aipom/anim_front.png" alt="Aipom front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="190.html">Aipom</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Run Away, Pickup, Skill Link</td>
+    </tr><tr data-search-text="191 Sunkern Grass Chlorophyll Solar Power Early Bird">
+      <td>191</td>
+      <td><img src="../assets/game/graphics/pokemon/sunkern/anim_front.png" alt="Sunkern front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="191.html">Sunkern</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Chlorophyll, Solar Power, Early Bird</td>
+    </tr><tr data-search-text="192 Sunflora Grass Chlorophyll Solar Power Early Bird">
+      <td>192</td>
+      <td><img src="../assets/game/graphics/pokemon/sunflora/anim_front.png" alt="Sunflora front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="192.html">Sunflora</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Chlorophyll, Solar Power, Early Bird</td>
+    </tr><tr data-search-text="193 Yanma Bug Flying Speed Boost Compound Eyes Frisk">
+      <td>193</td>
+      <td><img src="../assets/game/graphics/pokemon/yanma/anim_front.png" alt="Yanma front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="193.html">Yanma</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Speed Boost, Compound Eyes, Frisk</td>
+    </tr><tr data-search-text="194 Wooper Water Ground Damp Water Absorb Unaware">
+      <td>194</td>
+      <td><img src="../assets/game/graphics/pokemon/wooper/anim_front.png" alt="Wooper front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="194.html">Wooper</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Damp, Water Absorb, Unaware</td>
+    </tr><tr data-search-text="195 Quagsire Water Ground Damp Water Absorb Unaware">
+      <td>195</td>
+      <td><img src="../assets/game/graphics/pokemon/quagsire/anim_front.png" alt="Quagsire front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="195.html">Quagsire</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Damp, Water Absorb, Unaware</td>
+    </tr><tr data-search-text="196 Espeon Psychic Synchronize Magic Bounce">
+      <td>196</td>
+      <td><img src="../assets/game/graphics/pokemon/espeon/anim_front.png" alt="Espeon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="196.html">Espeon</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Synchronize, Magic Bounce</td>
+    </tr><tr data-search-text="197 Umbreon Dark Synchronize Inner Focus">
+      <td>197</td>
+      <td><img src="../assets/game/graphics/pokemon/umbreon/anim_front.png" alt="Umbreon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="197.html">Umbreon</a></td>
+      <td><span class="type-badge type-dark">Dark</span></td>
+      <td>Synchronize, Inner Focus</td>
+    </tr><tr data-search-text="198 Murkrow Dark Flying Insomnia Super Luck Prankster">
+      <td>198</td>
+      <td><img src="../assets/game/graphics/pokemon/murkrow/anim_front.png" alt="Murkrow front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="198.html">Murkrow</a></td>
+      <td><span class="type-badge type-dark">Dark</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Insomnia, Super Luck, Prankster</td>
+    </tr><tr data-search-text="199 Slowking Water Psychic Oblivious Own Tempo Regenerator">
+      <td>199</td>
+      <td><img src="../assets/game/graphics/pokemon/slowking/anim_front.png" alt="Slowking front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="199.html">Slowking</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Oblivious, Own Tempo, Regenerator</td>
+    </tr><tr data-search-text="200 Misdreavus Ghost Levitate">
+      <td>200</td>
+      <td><img src="../assets/game/graphics/pokemon/misdreavus/anim_front.png" alt="Misdreavus front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="200.html">Misdreavus</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="201 Unown Psychic Levitate">
+      <td>201</td>
+      <td><img src="../assets/game/graphics/pokemon/unown/front.png" alt="Unown front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="201.html">Unown</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="202 Wobbuffet Psychic Shadow Tag Telepathy">
+      <td>202</td>
+      <td><img src="../assets/game/graphics/pokemon/wobbuffet/anim_front.png" alt="Wobbuffet front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="202.html">Wobbuffet</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Shadow Tag, Telepathy</td>
+    </tr><tr data-search-text="203 Girafarig Normal Psychic Inner Focus Early Bird Sap Sipper">
+      <td>203</td>
+      <td><img src="../assets/game/graphics/pokemon/girafarig/anim_front.png" alt="Girafarig front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="203.html">Girafarig</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Inner Focus, Early Bird, Sap Sipper</td>
+    </tr><tr data-search-text="204 Pineco Bug Sturdy Overcoat">
+      <td>204</td>
+      <td><img src="../assets/game/graphics/pokemon/pineco/anim_front.png" alt="Pineco front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="204.html">Pineco</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Sturdy, Overcoat</td>
+    </tr><tr data-search-text="205 Forretress Bug Steel Sturdy Overcoat">
+      <td>205</td>
+      <td><img src="../assets/game/graphics/pokemon/forretress/anim_front.png" alt="Forretress front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="205.html">Forretress</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-steel">Steel</span></td>
+      <td>Sturdy, Overcoat</td>
+    </tr><tr data-search-text="206 Dunsparce Normal Serene Grace Run Away Rattled">
+      <td>206</td>
+      <td><img src="../assets/game/graphics/pokemon/dunsparce/anim_front.png" alt="Dunsparce front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="206.html">Dunsparce</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Serene Grace, Run Away, Rattled</td>
+    </tr><tr data-search-text="207 Gligar Ground Flying Hyper Cutter Sand Veil Immunity">
+      <td>207</td>
+      <td><img src="../assets/game/graphics/pokemon/gligar/anim_front.png" alt="Gligar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="207.html">Gligar</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Hyper Cutter, Sand Veil, Immunity</td>
+    </tr><tr data-search-text="208 Steelix Steel Ground Rock Head Sturdy Sheer Force">
+      <td>208</td>
+      <td><img src="../assets/game/graphics/pokemon/steelix/anim_front.png" alt="Steelix front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="208.html">Steelix</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Rock Head, Sturdy, Sheer Force</td>
+    </tr><tr data-search-text="209 Snubbull Fairy Intimidate Run Away Rattled">
+      <td>209</td>
+      <td><img src="../assets/game/graphics/pokemon/snubbull/anim_front.png" alt="Snubbull front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="209.html">Snubbull</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span></td>
+      <td>Intimidate, Run Away, Rattled</td>
+    </tr><tr data-search-text="210 Granbull Fairy Intimidate Quick Feet Rattled">
+      <td>210</td>
+      <td><img src="../assets/game/graphics/pokemon/granbull/anim_front.png" alt="Granbull front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="210.html">Granbull</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span></td>
+      <td>Intimidate, Quick Feet, Rattled</td>
+    </tr><tr data-search-text="211 Qwilfish Water Poison Poison Point Swift Swim Intimidate">
+      <td>211</td>
+      <td><img src="../assets/game/graphics/pokemon/qwilfish/anim_front.png" alt="Qwilfish front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="211.html">Qwilfish</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Poison Point, Swift Swim, Intimidate</td>
+    </tr><tr data-search-text="212 Scizor Bug Steel Swarm Technician Light Metal">
+      <td>212</td>
+      <td><img src="../assets/game/graphics/pokemon/scizor/anim_front.png" alt="Scizor front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="212.html">Scizor</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-steel">Steel</span></td>
+      <td>Swarm, Technician, Light Metal</td>
+    </tr><tr data-search-text="213 Shuckle Bug Rock Sturdy Gluttony Contrary">
+      <td>213</td>
+      <td><img src="../assets/game/graphics/pokemon/shuckle/anim_front.png" alt="Shuckle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="213.html">Shuckle</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Sturdy, Gluttony, Contrary</td>
+    </tr><tr data-search-text="214 Heracross Bug Fighting Swarm Guts Moxie">
+      <td>214</td>
+      <td><img src="../assets/game/graphics/pokemon/heracross/anim_front.png" alt="Heracross front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="214.html">Heracross</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-fighting">Fighting</span></td>
+      <td>Swarm, Guts, Moxie</td>
+    </tr><tr data-search-text="215 Sneasel Dark Ice Inner Focus Keen Eye Pickpocket">
+      <td>215</td>
+      <td><img src="../assets/game/graphics/pokemon/sneasel/anim_front.png" alt="Sneasel front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="215.html">Sneasel</a></td>
+      <td><span class="type-badge type-dark">Dark</span> <span class="type-badge type-ice">Ice</span></td>
+      <td>Inner Focus, Keen Eye, Pickpocket</td>
+    </tr><tr data-search-text="216 Teddiursa Normal Pickup Quick Feet Honey Gather">
+      <td>216</td>
+      <td><img src="../assets/game/graphics/pokemon/teddiursa/anim_front.png" alt="Teddiursa front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="216.html">Teddiursa</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Pickup, Quick Feet, Honey Gather</td>
+    </tr><tr data-search-text="217 Ursaring Normal Guts Quick Feet Unnerve">
+      <td>217</td>
+      <td><img src="../assets/game/graphics/pokemon/ursaring/anim_front.png" alt="Ursaring front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="217.html">Ursaring</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Guts, Quick Feet, Unnerve</td>
+    </tr><tr data-search-text="218 Slugma Fire Magma Armor Flame Body Weak Armor">
+      <td>218</td>
+      <td><img src="../assets/game/graphics/pokemon/slugma/anim_front.png" alt="Slugma front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="218.html">Slugma</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Magma Armor, Flame Body, Weak Armor</td>
+    </tr><tr data-search-text="219 Magcargo Fire Rock Magma Armor Flame Body Weak Armor">
+      <td>219</td>
+      <td><img src="../assets/game/graphics/pokemon/magcargo/anim_front.png" alt="Magcargo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="219.html">Magcargo</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Magma Armor, Flame Body, Weak Armor</td>
+    </tr><tr data-search-text="220 Swinub Ice Ground Oblivious Snow Cloak Thick Fat">
+      <td>220</td>
+      <td><img src="../assets/game/graphics/pokemon/swinub/anim_front.png" alt="Swinub front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="220.html">Swinub</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Oblivious, Snow Cloak, Thick Fat</td>
+    </tr><tr data-search-text="221 Piloswine Ice Ground Oblivious Snow Cloak Thick Fat">
+      <td>221</td>
+      <td><img src="../assets/game/graphics/pokemon/piloswine/anim_front.png" alt="Piloswine front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="221.html">Piloswine</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Oblivious, Snow Cloak, Thick Fat</td>
+    </tr><tr data-search-text="222 Corsola Water Rock Hustle Natural Cure Regenerator">
+      <td>222</td>
+      <td><img src="../assets/game/graphics/pokemon/corsola/anim_front.png" alt="Corsola front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="222.html">Corsola</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Hustle, Natural Cure, Regenerator</td>
+    </tr><tr data-search-text="223 Remoraid Water Hustle Sniper Moody">
+      <td>223</td>
+      <td><img src="../assets/game/graphics/pokemon/remoraid/anim_front.png" alt="Remoraid front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="223.html">Remoraid</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Hustle, Sniper, Moody</td>
+    </tr><tr data-search-text="224 Octillery Water Suction Cups Sniper Moody">
+      <td>224</td>
+      <td><img src="../assets/game/graphics/pokemon/octillery/anim_front.png" alt="Octillery front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="224.html">Octillery</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Suction Cups, Sniper, Moody</td>
+    </tr><tr data-search-text="225 Delibird Ice Flying Vital Spirit Hustle Insomnia">
+      <td>225</td>
+      <td><img src="../assets/game/graphics/pokemon/delibird/anim_front.png" alt="Delibird front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="225.html">Delibird</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Vital Spirit, Hustle, Insomnia</td>
+    </tr><tr data-search-text="226 Mantine Water Flying Swift Swim Water Absorb Water Veil">
+      <td>226</td>
+      <td><img src="../assets/game/graphics/pokemon/mantine/anim_front.png" alt="Mantine front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="226.html">Mantine</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Swift Swim, Water Absorb, Water Veil</td>
+    </tr><tr data-search-text="227 Skarmory Steel Flying Keen Eye Sturdy Weak Armor">
+      <td>227</td>
+      <td><img src="../assets/game/graphics/pokemon/skarmory/anim_front.png" alt="Skarmory front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="227.html">Skarmory</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Sturdy, Weak Armor</td>
+    </tr><tr data-search-text="228 Houndour Dark Fire Early Bird Flash Fire Unnerve">
+      <td>228</td>
+      <td><img src="../assets/game/graphics/pokemon/houndour/anim_front.png" alt="Houndour front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="228.html">Houndour</a></td>
+      <td><span class="type-badge type-dark">Dark</span> <span class="type-badge type-fire">Fire</span></td>
+      <td>Early Bird, Flash Fire, Unnerve</td>
+    </tr><tr data-search-text="229 Houndoom Dark Fire Early Bird Flash Fire Unnerve">
+      <td>229</td>
+      <td><img src="../assets/game/graphics/pokemon/houndoom/anim_front.png" alt="Houndoom front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="229.html">Houndoom</a></td>
+      <td><span class="type-badge type-dark">Dark</span> <span class="type-badge type-fire">Fire</span></td>
+      <td>Early Bird, Flash Fire, Unnerve</td>
+    </tr><tr data-search-text="230 Kingdra Water Dragon Swift Swim Sniper Damp">
+      <td>230</td>
+      <td><img src="../assets/game/graphics/pokemon/kingdra/anim_front.png" alt="Kingdra front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="230.html">Kingdra</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-dragon">Dragon</span></td>
+      <td>Swift Swim, Sniper, Damp</td>
+    </tr><tr data-search-text="231 Phanpy Ground Pickup Sand Veil">
+      <td>231</td>
+      <td><img src="../assets/game/graphics/pokemon/phanpy/anim_front.png" alt="Phanpy front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="231.html">Phanpy</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Pickup, Sand Veil</td>
+    </tr><tr data-search-text="232 Donphan Ground Sturdy Sand Veil">
+      <td>232</td>
+      <td><img src="../assets/game/graphics/pokemon/donphan/anim_front.png" alt="Donphan front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="232.html">Donphan</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Sturdy, Sand Veil</td>
+    </tr><tr data-search-text="233 Porygon2 Normal Trace Download Analytic">
+      <td>233</td>
+      <td><img src="../assets/game/graphics/pokemon/porygon/anim_front.png" alt="Porygon2 front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="233.html">Porygon2</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Trace, Download, Analytic</td>
+    </tr><tr data-search-text="234 Stantler Normal Intimidate Frisk Sap Sipper">
+      <td>234</td>
+      <td><img src="../assets/game/graphics/pokemon/stantler/anim_front.png" alt="Stantler front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="234.html">Stantler</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Intimidate, Frisk, Sap Sipper</td>
+    </tr><tr data-search-text="235 Smeargle Normal Own Tempo Technician Moody">
+      <td>235</td>
+      <td><img src="../assets/game/graphics/pokemon/smeargle/anim_front.png" alt="Smeargle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="235.html">Smeargle</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Own Tempo, Technician, Moody</td>
+    </tr><tr data-search-text="236 Tyrogue Fighting Guts Steadfast Vital Spirit">
+      <td>236</td>
+      <td><img src="../assets/game/graphics/pokemon/tyrogue/anim_front.png" alt="Tyrogue front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="236.html">Tyrogue</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Guts, Steadfast, Vital Spirit</td>
+    </tr><tr data-search-text="237 Hitmontop Fighting Intimidate Technician Steadfast">
+      <td>237</td>
+      <td><img src="../assets/game/graphics/pokemon/hitmontop/anim_front.png" alt="Hitmontop front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="237.html">Hitmontop</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Intimidate, Technician, Steadfast</td>
+    </tr><tr data-search-text="238 Smoochum Ice Psychic Oblivious Forewarn Hydration">
+      <td>238</td>
+      <td><img src="../assets/game/graphics/pokemon/smoochum/anim_front.png" alt="Smoochum front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="238.html">Smoochum</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Oblivious, Forewarn, Hydration</td>
+    </tr><tr data-search-text="239 Elekid Electric Static Vital Spirit">
+      <td>239</td>
+      <td><img src="../assets/game/graphics/pokemon/elekid/anim_front.png" alt="Elekid front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="239.html">Elekid</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Vital Spirit</td>
+    </tr><tr data-search-text="240 Magby Fire Flame Body Vital Spirit">
+      <td>240</td>
+      <td><img src="../assets/game/graphics/pokemon/magby/anim_front.png" alt="Magby front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="240.html">Magby</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Flame Body, Vital Spirit</td>
+    </tr><tr data-search-text="241 Miltank Normal Thick Fat Scrappy Sap Sipper">
+      <td>241</td>
+      <td><img src="../assets/game/graphics/pokemon/miltank/anim_front.png" alt="Miltank front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="241.html">Miltank</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Thick Fat, Scrappy, Sap Sipper</td>
+    </tr><tr data-search-text="242 Blissey Normal Natural Cure Serene Grace Healer">
+      <td>242</td>
+      <td><img src="../assets/game/graphics/pokemon/blissey/anim_front.png" alt="Blissey front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="242.html">Blissey</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Natural Cure, Serene Grace, Healer</td>
+    </tr><tr data-search-text="243 Raikou Electric Pressure Inner Focus">
+      <td>243</td>
+      <td><img src="../assets/game/graphics/pokemon/raikou/anim_front.png" alt="Raikou front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="243.html">Raikou</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Pressure, Inner Focus</td>
+    </tr><tr data-search-text="244 Entei Fire Pressure Inner Focus">
+      <td>244</td>
+      <td><img src="../assets/game/graphics/pokemon/entei/anim_front.png" alt="Entei front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="244.html">Entei</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Pressure, Inner Focus</td>
+    </tr><tr data-search-text="245 Suicune Water Pressure Inner Focus">
+      <td>245</td>
+      <td><img src="../assets/game/graphics/pokemon/suicune/anim_front.png" alt="Suicune front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="245.html">Suicune</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Pressure, Inner Focus</td>
+    </tr><tr data-search-text="246 Larvitar Rock Ground Guts Sand Veil">
+      <td>246</td>
+      <td><img src="../assets/game/graphics/pokemon/larvitar/anim_front.png" alt="Larvitar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="246.html">Larvitar</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Guts, Sand Veil</td>
+    </tr><tr data-search-text="247 Pupitar Rock Ground Shed Skin">
+      <td>247</td>
+      <td><img src="../assets/game/graphics/pokemon/pupitar/anim_front.png" alt="Pupitar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="247.html">Pupitar</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Shed Skin</td>
+    </tr><tr data-search-text="248 Tyranitar Rock Dark Sand Stream Unnerve">
+      <td>248</td>
+      <td><img src="../assets/game/graphics/pokemon/tyranitar/anim_front.png" alt="Tyranitar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="248.html">Tyranitar</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Sand Stream, Unnerve</td>
+    </tr><tr data-search-text="249 Lugia Psychic Flying Pressure Multiscale">
+      <td>249</td>
+      <td><img src="../assets/game/graphics/pokemon/lugia/anim_front.png" alt="Lugia front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="249.html">Lugia</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Pressure, Multiscale</td>
+    </tr><tr data-search-text="250 Ho-Oh Fire Flying Pressure Regenerator">
+      <td>250</td>
+      <td><img src="../assets/game/graphics/pokemon/ho_oh/anim_front.png" alt="Ho-Oh front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="250.html">Ho-Oh</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Pressure, Regenerator</td>
+    </tr><tr data-search-text="251 Celebi Psychic Grass Natural Cure">
+      <td>251</td>
+      <td><img src="../assets/game/graphics/pokemon/celebi/anim_front.png" alt="Celebi front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="251.html">Celebi</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Natural Cure</td>
+    </tr><tr data-search-text="252 Treecko Grass Overgrow Unburden">
+      <td>252</td>
+      <td><img src="../assets/game/graphics/pokemon/treecko/anim_front.png" alt="Treecko front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="252.html">Treecko</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Overgrow, Unburden</td>
+    </tr><tr data-search-text="253 Grovyle Grass Overgrow Unburden">
+      <td>253</td>
+      <td><img src="../assets/game/graphics/pokemon/grovyle/anim_front.png" alt="Grovyle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="253.html">Grovyle</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Overgrow, Unburden</td>
+    </tr><tr data-search-text="254 Sceptile Grass Overgrow Unburden">
+      <td>254</td>
+      <td><img src="../assets/game/graphics/pokemon/sceptile/anim_front.png" alt="Sceptile front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="254.html">Sceptile</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Overgrow, Unburden</td>
+    </tr><tr data-search-text="255 Torchic Fire Blaze Speed Boost">
+      <td>255</td>
+      <td><img src="../assets/game/graphics/pokemon/torchic/anim_front.png" alt="Torchic front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="255.html">Torchic</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Blaze, Speed Boost</td>
+    </tr><tr data-search-text="256 Combusken Fire Fighting Blaze Speed Boost">
+      <td>256</td>
+      <td><img src="../assets/game/graphics/pokemon/combusken/anim_front.png" alt="Combusken front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="256.html">Combusken</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-fighting">Fighting</span></td>
+      <td>Blaze, Speed Boost</td>
+    </tr><tr data-search-text="257 Blaziken Fire Fighting Blaze Speed Boost">
+      <td>257</td>
+      <td><img src="../assets/game/graphics/pokemon/blaziken/anim_front.png" alt="Blaziken front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="257.html">Blaziken</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-fighting">Fighting</span></td>
+      <td>Blaze, Speed Boost</td>
+    </tr><tr data-search-text="258 Mudkip Water Torrent Damp">
+      <td>258</td>
+      <td><img src="../assets/game/graphics/pokemon/mudkip/anim_front.png" alt="Mudkip front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="258.html">Mudkip</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Torrent, Damp</td>
+    </tr><tr data-search-text="259 Marshtomp Water Ground Torrent Damp">
+      <td>259</td>
+      <td><img src="../assets/game/graphics/pokemon/marshtomp/anim_front.png" alt="Marshtomp front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="259.html">Marshtomp</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Torrent, Damp</td>
+    </tr><tr data-search-text="260 Swampert Water Ground Torrent Damp">
+      <td>260</td>
+      <td><img src="../assets/game/graphics/pokemon/swampert/anim_front.png" alt="Swampert front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="260.html">Swampert</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Torrent, Damp</td>
+    </tr><tr data-search-text="261 Poochyena Dark Run Away Quick Feet Rattled">
+      <td>261</td>
+      <td><img src="../assets/game/graphics/pokemon/poochyena/anim_front.png" alt="Poochyena front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="261.html">Poochyena</a></td>
+      <td><span class="type-badge type-dark">Dark</span></td>
+      <td>Run Away, Quick Feet, Rattled</td>
+    </tr><tr data-search-text="262 Mightyena Dark Intimidate Quick Feet Moxie">
+      <td>262</td>
+      <td><img src="../assets/game/graphics/pokemon/mightyena/anim_front.png" alt="Mightyena front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="262.html">Mightyena</a></td>
+      <td><span class="type-badge type-dark">Dark</span></td>
+      <td>Intimidate, Quick Feet, Moxie</td>
+    </tr><tr data-search-text="263 Zigzagoon Normal Pickup Gluttony Quick Feet">
+      <td>263</td>
+      <td><img src="../assets/game/graphics/pokemon/zigzagoon/anim_front.png" alt="Zigzagoon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="263.html">Zigzagoon</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Pickup, Gluttony, Quick Feet</td>
+    </tr><tr data-search-text="264 Linoone Normal Pickup Gluttony Quick Feet">
+      <td>264</td>
+      <td><img src="../assets/game/graphics/pokemon/linoone/anim_front.png" alt="Linoone front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="264.html">Linoone</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Pickup, Gluttony, Quick Feet</td>
+    </tr><tr data-search-text="265 Wurmple Bug Shield Dust Run Away">
+      <td>265</td>
+      <td><img src="../assets/game/graphics/pokemon/wurmple/anim_front.png" alt="Wurmple front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="265.html">Wurmple</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Shield Dust, Run Away</td>
+    </tr><tr data-search-text="266 Silcoon Bug Shed Skin">
+      <td>266</td>
+      <td><img src="../assets/game/graphics/pokemon/silcoon/anim_front.png" alt="Silcoon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="266.html">Silcoon</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Shed Skin</td>
+    </tr><tr data-search-text="267 Beautifly Bug Flying Swarm Rivalry">
+      <td>267</td>
+      <td><img src="../assets/game/graphics/pokemon/beautifly/anim_front.png" alt="Beautifly front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="267.html">Beautifly</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Swarm, Rivalry</td>
+    </tr><tr data-search-text="268 Cascoon Bug Shed Skin">
+      <td>268</td>
+      <td><img src="../assets/game/graphics/pokemon/cascoon/anim_front.png" alt="Cascoon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="268.html">Cascoon</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Shed Skin</td>
+    </tr><tr data-search-text="269 Dustox Bug Poison Shield Dust Compound Eyes">
+      <td>269</td>
+      <td><img src="../assets/game/graphics/pokemon/dustox/anim_front.png" alt="Dustox front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="269.html">Dustox</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Shield Dust, Compound Eyes</td>
+    </tr><tr data-search-text="270 Lotad Water Grass Swift Swim Rain Dish Own Tempo">
+      <td>270</td>
+      <td><img src="../assets/game/graphics/pokemon/lotad/anim_front.png" alt="Lotad front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="270.html">Lotad</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Swift Swim, Rain Dish, Own Tempo</td>
+    </tr><tr data-search-text="271 Lombre Water Grass Swift Swim Rain Dish Own Tempo">
+      <td>271</td>
+      <td><img src="../assets/game/graphics/pokemon/lombre/anim_front.png" alt="Lombre front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="271.html">Lombre</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Swift Swim, Rain Dish, Own Tempo</td>
+    </tr><tr data-search-text="272 Ludicolo Water Grass Swift Swim Rain Dish Own Tempo">
+      <td>272</td>
+      <td><img src="../assets/game/graphics/pokemon/ludicolo/anim_front.png" alt="Ludicolo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="272.html">Ludicolo</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Swift Swim, Rain Dish, Own Tempo</td>
+    </tr><tr data-search-text="273 Seedot Grass Chlorophyll Early Bird Pickpocket">
+      <td>273</td>
+      <td><img src="../assets/game/graphics/pokemon/seedot/anim_front.png" alt="Seedot front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="273.html">Seedot</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Chlorophyll, Early Bird, Pickpocket</td>
+    </tr><tr data-search-text="274 Nuzleaf Grass Dark Chlorophyll Early Bird Pickpocket">
+      <td>274</td>
+      <td><img src="../assets/game/graphics/pokemon/nuzleaf/anim_front.png" alt="Nuzleaf front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="274.html">Nuzleaf</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Chlorophyll, Early Bird, Pickpocket</td>
+    </tr><tr data-search-text="275 Shiftry Grass Dark Chlorophyll Wind Rider Pickpocket">
+      <td>275</td>
+      <td><img src="../assets/game/graphics/pokemon/shiftry/anim_front.png" alt="Shiftry front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="275.html">Shiftry</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Chlorophyll, Wind Rider, Pickpocket</td>
+    </tr><tr data-search-text="276 Taillow Normal Flying Guts Scrappy">
+      <td>276</td>
+      <td><img src="../assets/game/graphics/pokemon/taillow/anim_front.png" alt="Taillow front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="276.html">Taillow</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Guts, Scrappy</td>
+    </tr><tr data-search-text="277 Swellow Normal Flying Guts Scrappy">
+      <td>277</td>
+      <td><img src="../assets/game/graphics/pokemon/swellow/anim_front.png" alt="Swellow front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="277.html">Swellow</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Guts, Scrappy</td>
+    </tr><tr data-search-text="278 Wingull Water Flying Keen Eye Hydration Rain Dish">
+      <td>278</td>
+      <td><img src="../assets/game/graphics/pokemon/wingull/anim_front.png" alt="Wingull front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="278.html">Wingull</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Hydration, Rain Dish</td>
+    </tr><tr data-search-text="279 Pelipper Water Flying Keen Eye Drizzle Rain Dish">
+      <td>279</td>
+      <td><img src="../assets/game/graphics/pokemon/pelipper/anim_front.png" alt="Pelipper front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="279.html">Pelipper</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Keen Eye, Drizzle, Rain Dish</td>
+    </tr><tr data-search-text="280 Ralts Psychic Fairy Synchronize Trace Telepathy">
+      <td>280</td>
+      <td><img src="../assets/game/graphics/pokemon/ralts/anim_front.png" alt="Ralts front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="280.html">Ralts</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Synchronize, Trace, Telepathy</td>
+    </tr><tr data-search-text="281 Kirlia Psychic Fairy Synchronize Trace Telepathy">
+      <td>281</td>
+      <td><img src="../assets/game/graphics/pokemon/kirlia/anim_front.png" alt="Kirlia front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="281.html">Kirlia</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Synchronize, Trace, Telepathy</td>
+    </tr><tr data-search-text="282 Gardevoir Psychic Fairy Synchronize Trace Telepathy">
+      <td>282</td>
+      <td><img src="../assets/game/graphics/pokemon/gardevoir/anim_front.png" alt="Gardevoir front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="282.html">Gardevoir</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Synchronize, Trace, Telepathy</td>
+    </tr><tr data-search-text="283 Surskit Bug Water Swift Swim Rain Dish">
+      <td>283</td>
+      <td><img src="../assets/game/graphics/pokemon/surskit/anim_front.png" alt="Surskit front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="283.html">Surskit</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Rain Dish</td>
+    </tr><tr data-search-text="284 Masquerain Bug Flying Intimidate Unnerve">
+      <td>284</td>
+      <td><img src="../assets/game/graphics/pokemon/masquerain/anim_front.png" alt="Masquerain front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="284.html">Masquerain</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Intimidate, Unnerve</td>
+    </tr><tr data-search-text="285 Shroomish Grass Effect Spore Poison Heal Quick Feet">
+      <td>285</td>
+      <td><img src="../assets/game/graphics/pokemon/shroomish/anim_front.png" alt="Shroomish front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="285.html">Shroomish</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Effect Spore, Poison Heal, Quick Feet</td>
+    </tr><tr data-search-text="286 Breloom Grass Fighting Effect Spore Poison Heal Technician">
+      <td>286</td>
+      <td><img src="../assets/game/graphics/pokemon/breloom/anim_front.png" alt="Breloom front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="286.html">Breloom</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-fighting">Fighting</span></td>
+      <td>Effect Spore, Poison Heal, Technician</td>
+    </tr><tr data-search-text="287 Slakoth Normal Truant">
+      <td>287</td>
+      <td><img src="../assets/game/graphics/pokemon/slakoth/anim_front.png" alt="Slakoth front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="287.html">Slakoth</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Truant</td>
+    </tr><tr data-search-text="288 Vigoroth Normal Vital Spirit">
+      <td>288</td>
+      <td><img src="../assets/game/graphics/pokemon/vigoroth/anim_front.png" alt="Vigoroth front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="288.html">Vigoroth</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Vital Spirit</td>
+    </tr><tr data-search-text="289 Slaking Normal Truant">
+      <td>289</td>
+      <td><img src="../assets/game/graphics/pokemon/slaking/anim_front.png" alt="Slaking front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="289.html">Slaking</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Truant</td>
+    </tr><tr data-search-text="290 Nincada Bug Ground Compound Eyes Run Away">
+      <td>290</td>
+      <td><img src="../assets/game/graphics/pokemon/nincada/anim_front.png" alt="Nincada front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="290.html">Nincada</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Compound Eyes, Run Away</td>
+    </tr><tr data-search-text="291 Ninjask Bug Flying Speed Boost Infiltrator">
+      <td>291</td>
+      <td><img src="../assets/game/graphics/pokemon/ninjask/anim_front.png" alt="Ninjask front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="291.html">Ninjask</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Speed Boost, Infiltrator</td>
+    </tr><tr data-search-text="292 Shedinja Bug Ghost Wonder Guard">
+      <td>292</td>
+      <td><img src="../assets/game/graphics/pokemon/shedinja/anim_front.png" alt="Shedinja front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="292.html">Shedinja</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-ghost">Ghost</span></td>
+      <td>Wonder Guard</td>
+    </tr><tr data-search-text="293 Whismur Normal Soundproof Rattled">
+      <td>293</td>
+      <td><img src="../assets/game/graphics/pokemon/whismur/anim_front.png" alt="Whismur front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="293.html">Whismur</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Soundproof, Rattled</td>
+    </tr><tr data-search-text="294 Loudred Normal Soundproof Scrappy">
+      <td>294</td>
+      <td><img src="../assets/game/graphics/pokemon/loudred/anim_front.png" alt="Loudred front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="294.html">Loudred</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Soundproof, Scrappy</td>
+    </tr><tr data-search-text="295 Exploud Normal Soundproof Scrappy">
+      <td>295</td>
+      <td><img src="../assets/game/graphics/pokemon/exploud/anim_front.png" alt="Exploud front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="295.html">Exploud</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Soundproof, Scrappy</td>
+    </tr><tr data-search-text="296 Makuhita Fighting Thick Fat Guts Sheer Force">
+      <td>296</td>
+      <td><img src="../assets/game/graphics/pokemon/makuhita/anim_front.png" alt="Makuhita front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="296.html">Makuhita</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Thick Fat, Guts, Sheer Force</td>
+    </tr><tr data-search-text="297 Hariyama Fighting Thick Fat Guts Sheer Force">
+      <td>297</td>
+      <td><img src="../assets/game/graphics/pokemon/hariyama/anim_front.png" alt="Hariyama front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="297.html">Hariyama</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span></td>
+      <td>Thick Fat, Guts, Sheer Force</td>
+    </tr><tr data-search-text="298 Azurill Normal Fairy Thick Fat Huge Power Sap Sipper">
+      <td>298</td>
+      <td><img src="../assets/game/graphics/pokemon/azurill/anim_front.png" alt="Azurill front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="298.html">Azurill</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Thick Fat, Huge Power, Sap Sipper</td>
+    </tr><tr data-search-text="299 Nosepass Rock Sturdy Magnet Pull Sand Force">
+      <td>299</td>
+      <td><img src="../assets/game/graphics/pokemon/nosepass/anim_front.png" alt="Nosepass front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="299.html">Nosepass</a></td>
+      <td><span class="type-badge type-rock">Rock</span></td>
+      <td>Sturdy, Magnet Pull, Sand Force</td>
+    </tr><tr data-search-text="300 Skitty Normal Cute Charm Normalize Wonder Skin">
+      <td>300</td>
+      <td><img src="../assets/game/graphics/pokemon/skitty/anim_front.png" alt="Skitty front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="300.html">Skitty</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Cute Charm, Normalize, Wonder Skin</td>
+    </tr><tr data-search-text="301 Delcatty Normal Cute Charm Normalize Wonder Skin">
+      <td>301</td>
+      <td><img src="../assets/game/graphics/pokemon/delcatty/anim_front.png" alt="Delcatty front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="301.html">Delcatty</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Cute Charm, Normalize, Wonder Skin</td>
+    </tr><tr data-search-text="302 Sableye Dark Ghost Keen Eye Stall Prankster">
+      <td>302</td>
+      <td><img src="../assets/game/graphics/pokemon/sableye/anim_front.png" alt="Sableye front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="302.html">Sableye</a></td>
+      <td><span class="type-badge type-dark">Dark</span> <span class="type-badge type-ghost">Ghost</span></td>
+      <td>Keen Eye, Stall, Prankster</td>
+    </tr><tr data-search-text="303 Mawile Steel Fairy Hyper Cutter Intimidate Sheer Force">
+      <td>303</td>
+      <td><img src="../assets/game/graphics/pokemon/mawile/anim_front.png" alt="Mawile front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="303.html">Mawile</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-fairy">Fairy</span></td>
+      <td>Hyper Cutter, Intimidate, Sheer Force</td>
+    </tr><tr data-search-text="304 Aron Steel Rock Sturdy Rock Head Heavy Metal">
+      <td>304</td>
+      <td><img src="../assets/game/graphics/pokemon/aron/anim_front.png" alt="Aron front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="304.html">Aron</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Sturdy, Rock Head, Heavy Metal</td>
+    </tr><tr data-search-text="305 Lairon Steel Rock Sturdy Rock Head Heavy Metal">
+      <td>305</td>
+      <td><img src="../assets/game/graphics/pokemon/lairon/anim_front.png" alt="Lairon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="305.html">Lairon</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Sturdy, Rock Head, Heavy Metal</td>
+    </tr><tr data-search-text="306 Aggron Steel Rock Sturdy Rock Head Heavy Metal">
+      <td>306</td>
+      <td><img src="../assets/game/graphics/pokemon/aggron/anim_front.png" alt="Aggron front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="306.html">Aggron</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Sturdy, Rock Head, Heavy Metal</td>
+    </tr><tr data-search-text="307 Meditite Fighting Psychic Pure Power Telepathy">
+      <td>307</td>
+      <td><img src="../assets/game/graphics/pokemon/meditite/anim_front.png" alt="Meditite front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="307.html">Meditite</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Pure Power, Telepathy</td>
+    </tr><tr data-search-text="308 Medicham Fighting Psychic Pure Power Telepathy">
+      <td>308</td>
+      <td><img src="../assets/game/graphics/pokemon/medicham/anim_front.png" alt="Medicham front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="308.html">Medicham</a></td>
+      <td><span class="type-badge type-fighting">Fighting</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Pure Power, Telepathy</td>
+    </tr><tr data-search-text="309 Electrike Electric Static Lightning Rod Minus">
+      <td>309</td>
+      <td><img src="../assets/game/graphics/pokemon/electrike/anim_front.png" alt="Electrike front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="309.html">Electrike</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Lightning Rod, Minus</td>
+    </tr><tr data-search-text="310 Manectric Electric Static Lightning Rod Minus">
+      <td>310</td>
+      <td><img src="../assets/game/graphics/pokemon/manectric/anim_front.png" alt="Manectric front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="310.html">Manectric</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Static, Lightning Rod, Minus</td>
+    </tr><tr data-search-text="311 Plusle Electric Plus Lightning Rod">
+      <td>311</td>
+      <td><img src="../assets/game/graphics/pokemon/plusle/anim_front.png" alt="Plusle front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="311.html">Plusle</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Plus, Lightning Rod</td>
+    </tr><tr data-search-text="312 Minun Electric Minus Volt Absorb">
+      <td>312</td>
+      <td><img src="../assets/game/graphics/pokemon/minun/anim_front.png" alt="Minun front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="312.html">Minun</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Minus, Volt Absorb</td>
+    </tr><tr data-search-text="313 Volbeat Bug Illuminate Swarm Prankster">
+      <td>313</td>
+      <td><img src="../assets/game/graphics/pokemon/volbeat/anim_front.png" alt="Volbeat front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="313.html">Volbeat</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Illuminate, Swarm, Prankster</td>
+    </tr><tr data-search-text="314 Illumise Bug Oblivious Tinted Lens Prankster">
+      <td>314</td>
+      <td><img src="../assets/game/graphics/pokemon/illumise/anim_front.png" alt="Illumise front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="314.html">Illumise</a></td>
+      <td><span class="type-badge type-bug">Bug</span></td>
+      <td>Oblivious, Tinted Lens, Prankster</td>
+    </tr><tr data-search-text="315 Roselia Grass Poison Natural Cure Poison Point Leaf Guard">
+      <td>315</td>
+      <td><img src="../assets/game/graphics/pokemon/roselia/anim_front.png" alt="Roselia front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="315.html">Roselia</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Natural Cure, Poison Point, Leaf Guard</td>
+    </tr><tr data-search-text="316 Gulpin Poison Liquid Ooze Sticky Hold Gluttony">
+      <td>316</td>
+      <td><img src="../assets/game/graphics/pokemon/gulpin/anim_front.png" alt="Gulpin front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="316.html">Gulpin</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Liquid Ooze, Sticky Hold, Gluttony</td>
+    </tr><tr data-search-text="317 Swalot Poison Liquid Ooze Sticky Hold Gluttony">
+      <td>317</td>
+      <td><img src="../assets/game/graphics/pokemon/swalot/anim_front.png" alt="Swalot front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="317.html">Swalot</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Liquid Ooze, Sticky Hold, Gluttony</td>
+    </tr><tr data-search-text="318 Carvanha Water Dark Rough Skin Speed Boost">
+      <td>318</td>
+      <td><img src="../assets/game/graphics/pokemon/carvanha/anim_front.png" alt="Carvanha front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="318.html">Carvanha</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Rough Skin, Speed Boost</td>
+    </tr><tr data-search-text="319 Sharpedo Water Dark Rough Skin Speed Boost">
+      <td>319</td>
+      <td><img src="../assets/game/graphics/pokemon/sharpedo/anim_front.png" alt="Sharpedo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="319.html">Sharpedo</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Rough Skin, Speed Boost</td>
+    </tr><tr data-search-text="320 Wailmer Water Water Veil Oblivious Pressure">
+      <td>320</td>
+      <td><img src="../assets/game/graphics/pokemon/wailmer/anim_front.png" alt="Wailmer front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="320.html">Wailmer</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Water Veil, Oblivious, Pressure</td>
+    </tr><tr data-search-text="321 Wailord Water Water Veil Oblivious Pressure">
+      <td>321</td>
+      <td><img src="../assets/game/graphics/pokemon/wailord/anim_front.png" alt="Wailord front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="321.html">Wailord</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Water Veil, Oblivious, Pressure</td>
+    </tr><tr data-search-text="322 Numel Fire Ground Oblivious Simple Own Tempo">
+      <td>322</td>
+      <td><img src="../assets/game/graphics/pokemon/numel/anim_front.png" alt="Numel front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="322.html">Numel</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Oblivious, Simple, Own Tempo</td>
+    </tr><tr data-search-text="323 Camerupt Fire Ground Magma Armor Solid Rock Anger Point">
+      <td>323</td>
+      <td><img src="../assets/game/graphics/pokemon/camerupt/anim_front.png" alt="Camerupt front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="323.html">Camerupt</a></td>
+      <td><span class="type-badge type-fire">Fire</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Magma Armor, Solid Rock, Anger Point</td>
+    </tr><tr data-search-text="324 Torkoal Fire White Smoke Drought Shell Armor">
+      <td>324</td>
+      <td><img src="../assets/game/graphics/pokemon/torkoal/anim_front.png" alt="Torkoal front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="324.html">Torkoal</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>White Smoke, Drought, Shell Armor</td>
+    </tr><tr data-search-text="325 Spoink Psychic Thick Fat Own Tempo Gluttony">
+      <td>325</td>
+      <td><img src="../assets/game/graphics/pokemon/spoink/anim_front.png" alt="Spoink front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="325.html">Spoink</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Thick Fat, Own Tempo, Gluttony</td>
+    </tr><tr data-search-text="326 Grumpig Psychic Thick Fat Own Tempo Gluttony">
+      <td>326</td>
+      <td><img src="../assets/game/graphics/pokemon/grumpig/anim_front.png" alt="Grumpig front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="326.html">Grumpig</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Thick Fat, Own Tempo, Gluttony</td>
+    </tr><tr data-search-text="327 Spinda Normal Own Tempo Tangled Feet Contrary">
+      <td>327</td>
+      <td><img src="../assets/game/graphics/pokemon/spinda/anim_front.png" alt="Spinda front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="327.html">Spinda</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Own Tempo, Tangled Feet, Contrary</td>
+    </tr><tr data-search-text="328 Trapinch Ground Hyper Cutter Arena Trap Sheer Force">
+      <td>328</td>
+      <td><img src="../assets/game/graphics/pokemon/trapinch/anim_front.png" alt="Trapinch front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="328.html">Trapinch</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Hyper Cutter, Arena Trap, Sheer Force</td>
+    </tr><tr data-search-text="329 Vibrava Ground Dragon Levitate">
+      <td>329</td>
+      <td><img src="../assets/game/graphics/pokemon/vibrava/anim_front.png" alt="Vibrava front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="329.html">Vibrava</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-dragon">Dragon</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="330 Flygon Ground Dragon Levitate">
+      <td>330</td>
+      <td><img src="../assets/game/graphics/pokemon/flygon/anim_front.png" alt="Flygon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="330.html">Flygon</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-dragon">Dragon</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="331 Cacnea Grass Sand Veil Water Absorb">
+      <td>331</td>
+      <td><img src="../assets/game/graphics/pokemon/cacnea/anim_front.png" alt="Cacnea front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="331.html">Cacnea</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Sand Veil, Water Absorb</td>
+    </tr><tr data-search-text="332 Cacturne Grass Dark Sand Veil Water Absorb">
+      <td>332</td>
+      <td><img src="../assets/game/graphics/pokemon/cacturne/anim_front.png" alt="Cacturne front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="332.html">Cacturne</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Sand Veil, Water Absorb</td>
+    </tr><tr data-search-text="333 Swablu Normal Flying Natural Cure Cloud Nine">
+      <td>333</td>
+      <td><img src="../assets/game/graphics/pokemon/swablu/anim_front.png" alt="Swablu front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="333.html">Swablu</a></td>
+      <td><span class="type-badge type-normal">Normal</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Natural Cure, Cloud Nine</td>
+    </tr><tr data-search-text="334 Altaria Dragon Flying Natural Cure Cloud Nine">
+      <td>334</td>
+      <td><img src="../assets/game/graphics/pokemon/altaria/anim_front.png" alt="Altaria front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="334.html">Altaria</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Natural Cure, Cloud Nine</td>
+    </tr><tr data-search-text="335 Zangoose Normal Immunity Toxic Boost">
+      <td>335</td>
+      <td><img src="../assets/game/graphics/pokemon/zangoose/anim_front.png" alt="Zangoose front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="335.html">Zangoose</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Immunity, Toxic Boost</td>
+    </tr><tr data-search-text="336 Seviper Poison Shed Skin Infiltrator">
+      <td>336</td>
+      <td><img src="../assets/game/graphics/pokemon/seviper/anim_front.png" alt="Seviper front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="336.html">Seviper</a></td>
+      <td><span class="type-badge type-poison">Poison</span></td>
+      <td>Shed Skin, Infiltrator</td>
+    </tr><tr data-search-text="337 Lunatone Rock Psychic Levitate">
+      <td>337</td>
+      <td><img src="../assets/game/graphics/pokemon/lunatone/anim_front.png" alt="Lunatone front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="337.html">Lunatone</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="338 Solrock Rock Psychic Levitate">
+      <td>338</td>
+      <td><img src="../assets/game/graphics/pokemon/solrock/anim_front.png" alt="Solrock front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="338.html">Solrock</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="339 Barboach Water Ground Oblivious Anticipation Hydration">
+      <td>339</td>
+      <td><img src="../assets/game/graphics/pokemon/barboach/anim_front.png" alt="Barboach front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="339.html">Barboach</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Oblivious, Anticipation, Hydration</td>
+    </tr><tr data-search-text="340 Whiscash Water Ground Oblivious Anticipation Hydration">
+      <td>340</td>
+      <td><img src="../assets/game/graphics/pokemon/whiscash/anim_front.png" alt="Whiscash front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="340.html">Whiscash</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Oblivious, Anticipation, Hydration</td>
+    </tr><tr data-search-text="341 Corphish Water Hyper Cutter Shell Armor Adaptability">
+      <td>341</td>
+      <td><img src="../assets/game/graphics/pokemon/corphish/anim_front.png" alt="Corphish front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="341.html">Corphish</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Hyper Cutter, Shell Armor, Adaptability</td>
+    </tr><tr data-search-text="342 Crawdaunt Water Dark Hyper Cutter Shell Armor Adaptability">
+      <td>342</td>
+      <td><img src="../assets/game/graphics/pokemon/crawdaunt/anim_front.png" alt="Crawdaunt front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="342.html">Crawdaunt</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-dark">Dark</span></td>
+      <td>Hyper Cutter, Shell Armor, Adaptability</td>
+    </tr><tr data-search-text="343 Baltoy Ground Psychic Levitate">
+      <td>343</td>
+      <td><img src="../assets/game/graphics/pokemon/baltoy/anim_front.png" alt="Baltoy front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="343.html">Baltoy</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="344 Claydol Ground Psychic Levitate">
+      <td>344</td>
+      <td><img src="../assets/game/graphics/pokemon/claydol/anim_front.png" alt="Claydol front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="344.html">Claydol</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="345 Lileep Rock Grass Suction Cups Storm Drain">
+      <td>345</td>
+      <td><img src="../assets/game/graphics/pokemon/lileep/anim_front.png" alt="Lileep front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="345.html">Lileep</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Suction Cups, Storm Drain</td>
+    </tr><tr data-search-text="346 Cradily Rock Grass Suction Cups Storm Drain">
+      <td>346</td>
+      <td><img src="../assets/game/graphics/pokemon/cradily/anim_front.png" alt="Cradily front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="346.html">Cradily</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-grass">Grass</span></td>
+      <td>Suction Cups, Storm Drain</td>
+    </tr><tr data-search-text="347 Anorith Rock Bug Battle Armor Swift Swim">
+      <td>347</td>
+      <td><img src="../assets/game/graphics/pokemon/anorith/anim_front.png" alt="Anorith front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="347.html">Anorith</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-bug">Bug</span></td>
+      <td>Battle Armor, Swift Swim</td>
+    </tr><tr data-search-text="348 Armaldo Rock Bug Battle Armor Swift Swim">
+      <td>348</td>
+      <td><img src="../assets/game/graphics/pokemon/armaldo/anim_front.png" alt="Armaldo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="348.html">Armaldo</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-bug">Bug</span></td>
+      <td>Battle Armor, Swift Swim</td>
+    </tr><tr data-search-text="349 Feebas Water Swift Swim Oblivious Adaptability">
+      <td>349</td>
+      <td><img src="../assets/game/graphics/pokemon/feebas/anim_front.png" alt="Feebas front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="349.html">Feebas</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Oblivious, Adaptability</td>
+    </tr><tr data-search-text="350 Milotic Water Marvel Scale Competitive Cute Charm">
+      <td>350</td>
+      <td><img src="../assets/game/graphics/pokemon/milotic/anim_front.png" alt="Milotic front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="350.html">Milotic</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Marvel Scale, Competitive, Cute Charm</td>
+    </tr><tr data-search-text="351 Castform Normal Forecast">
+      <td>351</td>
+      <td><img src="../assets/game/graphics/pokemon/castform/anim_front.png" alt="Castform front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="351.html">Castform</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Forecast</td>
+    </tr><tr data-search-text="352 Kecleon Normal Color Change Protean">
+      <td>352</td>
+      <td><img src="../assets/game/graphics/pokemon/kecleon/anim_front.png" alt="Kecleon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="352.html">Kecleon</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Color Change, Protean</td>
+    </tr><tr data-search-text="353 Shuppet Ghost Insomnia Frisk Cursed Body">
+      <td>353</td>
+      <td><img src="../assets/game/graphics/pokemon/shuppet/anim_front.png" alt="Shuppet front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="353.html">Shuppet</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span></td>
+      <td>Insomnia, Frisk, Cursed Body</td>
+    </tr><tr data-search-text="354 Banette Ghost Insomnia Frisk Cursed Body">
+      <td>354</td>
+      <td><img src="../assets/game/graphics/pokemon/banette/anim_front.png" alt="Banette front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="354.html">Banette</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span></td>
+      <td>Insomnia, Frisk, Cursed Body</td>
+    </tr><tr data-search-text="355 Duskull Ghost Levitate Frisk">
+      <td>355</td>
+      <td><img src="../assets/game/graphics/pokemon/duskull/anim_front.png" alt="Duskull front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="355.html">Duskull</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span></td>
+      <td>Levitate, Frisk</td>
+    </tr><tr data-search-text="356 Dusclops Ghost Pressure Frisk">
+      <td>356</td>
+      <td><img src="../assets/game/graphics/pokemon/dusclops/anim_front.png" alt="Dusclops front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="356.html">Dusclops</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span></td>
+      <td>Pressure, Frisk</td>
+    </tr><tr data-search-text="357 Tropius Grass Flying Chlorophyll Solar Power Harvest">
+      <td>357</td>
+      <td><img src="../assets/game/graphics/pokemon/tropius/anim_front.png" alt="Tropius front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="357.html">Tropius</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Chlorophyll, Solar Power, Harvest</td>
+    </tr><tr data-search-text="358 Chimecho Psychic Levitate">
+      <td>358</td>
+      <td><img src="../assets/game/graphics/pokemon/chimecho/anim_front.png" alt="Chimecho front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="358.html">Chimecho</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="359 Absol Dark Pressure Super Luck Justified">
+      <td>359</td>
+      <td><img src="../assets/game/graphics/pokemon/absol/anim_front.png" alt="Absol front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="359.html">Absol</a></td>
+      <td><span class="type-badge type-dark">Dark</span></td>
+      <td>Pressure, Super Luck, Justified</td>
+    </tr><tr data-search-text="360 Wynaut Psychic Shadow Tag Telepathy">
+      <td>360</td>
+      <td><img src="../assets/game/graphics/pokemon/wynaut/anim_front.png" alt="Wynaut front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="360.html">Wynaut</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Shadow Tag, Telepathy</td>
+    </tr><tr data-search-text="361 Snorunt Ice Inner Focus Ice Body Moody">
+      <td>361</td>
+      <td><img src="../assets/game/graphics/pokemon/snorunt/anim_front.png" alt="Snorunt front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="361.html">Snorunt</a></td>
+      <td><span class="type-badge type-ice">Ice</span></td>
+      <td>Inner Focus, Ice Body, Moody</td>
+    </tr><tr data-search-text="362 Glalie Ice Inner Focus Ice Body Moody">
+      <td>362</td>
+      <td><img src="../assets/game/graphics/pokemon/glalie/anim_front.png" alt="Glalie front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="362.html">Glalie</a></td>
+      <td><span class="type-badge type-ice">Ice</span></td>
+      <td>Inner Focus, Ice Body, Moody</td>
+    </tr><tr data-search-text="363 Spheal Ice Water Thick Fat Ice Body Oblivious">
+      <td>363</td>
+      <td><img src="../assets/game/graphics/pokemon/spheal/anim_front.png" alt="Spheal front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="363.html">Spheal</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-water">Water</span></td>
+      <td>Thick Fat, Ice Body, Oblivious</td>
+    </tr><tr data-search-text="364 Sealeo Ice Water Thick Fat Ice Body Oblivious">
+      <td>364</td>
+      <td><img src="../assets/game/graphics/pokemon/sealeo/anim_front.png" alt="Sealeo front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="364.html">Sealeo</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-water">Water</span></td>
+      <td>Thick Fat, Ice Body, Oblivious</td>
+    </tr><tr data-search-text="365 Walrein Ice Water Thick Fat Ice Body Oblivious">
+      <td>365</td>
+      <td><img src="../assets/game/graphics/pokemon/walrein/anim_front.png" alt="Walrein front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="365.html">Walrein</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-water">Water</span></td>
+      <td>Thick Fat, Ice Body, Oblivious</td>
+    </tr><tr data-search-text="366 Clamperl Water Shell Armor Rattled">
+      <td>366</td>
+      <td><img src="../assets/game/graphics/pokemon/clamperl/anim_front.png" alt="Clamperl front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="366.html">Clamperl</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Shell Armor, Rattled</td>
+    </tr><tr data-search-text="367 Huntail Water Swift Swim Water Veil">
+      <td>367</td>
+      <td><img src="../assets/game/graphics/pokemon/huntail/anim_front.png" alt="Huntail front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="367.html">Huntail</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Water Veil</td>
+    </tr><tr data-search-text="368 Gorebyss Water Swift Swim Hydration">
+      <td>368</td>
+      <td><img src="../assets/game/graphics/pokemon/gorebyss/anim_front.png" alt="Gorebyss front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="368.html">Gorebyss</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Hydration</td>
+    </tr><tr data-search-text="369 Relicanth Water Rock Swift Swim Rock Head Sturdy">
+      <td>369</td>
+      <td><img src="../assets/game/graphics/pokemon/relicanth/anim_front.png" alt="Relicanth front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="369.html">Relicanth</a></td>
+      <td><span class="type-badge type-water">Water</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Swift Swim, Rock Head, Sturdy</td>
+    </tr><tr data-search-text="370 Luvdisc Water Swift Swim Hydration">
+      <td>370</td>
+      <td><img src="../assets/game/graphics/pokemon/luvdisc/anim_front.png" alt="Luvdisc front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="370.html">Luvdisc</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Swift Swim, Hydration</td>
+    </tr><tr data-search-text="371 Bagon Dragon Rock Head Sheer Force">
+      <td>371</td>
+      <td><img src="../assets/game/graphics/pokemon/bagon/anim_front.png" alt="Bagon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="371.html">Bagon</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span></td>
+      <td>Rock Head, Sheer Force</td>
+    </tr><tr data-search-text="372 Shelgon Dragon Rock Head Overcoat">
+      <td>372</td>
+      <td><img src="../assets/game/graphics/pokemon/shelgon/anim_front.png" alt="Shelgon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="372.html">Shelgon</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span></td>
+      <td>Rock Head, Overcoat</td>
+    </tr><tr data-search-text="373 Salamence Dragon Flying Intimidate Moxie">
+      <td>373</td>
+      <td><img src="../assets/game/graphics/pokemon/salamence/anim_front.png" alt="Salamence front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="373.html">Salamence</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Intimidate, Moxie</td>
+    </tr><tr data-search-text="374 Beldum Steel Psychic Clear Body Light Metal">
+      <td>374</td>
+      <td><img src="../assets/game/graphics/pokemon/beldum/anim_front.png" alt="Beldum front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="374.html">Beldum</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Clear Body, Light Metal</td>
+    </tr><tr data-search-text="375 Metang Steel Psychic Clear Body Light Metal">
+      <td>375</td>
+      <td><img src="../assets/game/graphics/pokemon/metang/anim_front.png" alt="Metang front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="375.html">Metang</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Clear Body, Light Metal</td>
+    </tr><tr data-search-text="376 Metagross Steel Psychic Clear Body Light Metal">
+      <td>376</td>
+      <td><img src="../assets/game/graphics/pokemon/metagross/anim_front.png" alt="Metagross front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="376.html">Metagross</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Clear Body, Light Metal</td>
+    </tr><tr data-search-text="377 Regirock Rock Clear Body Sturdy">
+      <td>377</td>
+      <td><img src="../assets/game/graphics/pokemon/regirock/anim_front.png" alt="Regirock front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="377.html">Regirock</a></td>
+      <td><span class="type-badge type-rock">Rock</span></td>
+      <td>Clear Body, Sturdy</td>
+    </tr><tr data-search-text="378 Regice Ice Clear Body Ice Body">
+      <td>378</td>
+      <td><img src="../assets/game/graphics/pokemon/regice/anim_front.png" alt="Regice front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="378.html">Regice</a></td>
+      <td><span class="type-badge type-ice">Ice</span></td>
+      <td>Clear Body, Ice Body</td>
+    </tr><tr data-search-text="379 Registeel Steel Clear Body Light Metal">
+      <td>379</td>
+      <td><img src="../assets/game/graphics/pokemon/registeel/anim_front.png" alt="Registeel front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="379.html">Registeel</a></td>
+      <td><span class="type-badge type-steel">Steel</span></td>
+      <td>Clear Body, Light Metal</td>
+    </tr><tr data-search-text="380 Latias Dragon Psychic Levitate">
+      <td>380</td>
+      <td><img src="../assets/game/graphics/pokemon/latias/anim_front.png" alt="Latias front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="380.html">Latias</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="381 Latios Dragon Psychic Levitate">
+      <td>381</td>
+      <td><img src="../assets/game/graphics/pokemon/latios/anim_front.png" alt="Latios front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="381.html">Latios</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Levitate</td>
+    </tr><tr data-search-text="382 Kyogre Water Drizzle">
+      <td>382</td>
+      <td><img src="../assets/game/graphics/pokemon/kyogre/anim_front.png" alt="Kyogre front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="382.html">Kyogre</a></td>
+      <td><span class="type-badge type-water">Water</span></td>
+      <td>Drizzle</td>
+    </tr><tr data-search-text="383 Groudon Ground Drought">
+      <td>383</td>
+      <td><img src="../assets/game/graphics/pokemon/groudon/anim_front.png" alt="Groudon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="383.html">Groudon</a></td>
+      <td><span class="type-badge type-ground">Ground</span></td>
+      <td>Drought</td>
+    </tr><tr data-search-text="384 Rayquaza Dragon Flying Air Lock">
+      <td>384</td>
+      <td><img src="../assets/game/graphics/pokemon/rayquaza/anim_front.png" alt="Rayquaza front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="384.html">Rayquaza</a></td>
+      <td><span class="type-badge type-dragon">Dragon</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Air Lock</td>
+    </tr><tr data-search-text="385 Jirachi Steel Psychic Serene Grace">
+      <td>385</td>
+      <td><img src="../assets/game/graphics/pokemon/jirachi/anim_front.png" alt="Jirachi front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="385.html">Jirachi</a></td>
+      <td><span class="type-badge type-steel">Steel</span> <span class="type-badge type-psychic">Psychic</span></td>
+      <td>Serene Grace</td>
+    </tr><tr data-search-text="386 Deoxys Psychic Pressure">
+      <td>386</td>
+      <td><img src="../assets/game/graphics/pokemon/deoxys/anim_front.png" alt="Deoxys front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="386.html">Deoxys</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span></td>
+      <td>Pressure</td>
+    </tr><tr data-search-text="407 Roserade Grass Poison Natural Cure Poison Point Technician">
+      <td>407</td>
+      <td><img src="../assets/game/graphics/pokemon/roserade/anim_front.png" alt="Roserade front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="407.html">Roserade</a></td>
+      <td><span class="type-badge type-grass">Grass</span> <span class="type-badge type-poison">Poison</span></td>
+      <td>Natural Cure, Poison Point, Technician</td>
+    </tr><tr data-search-text="462 Magnezone Electric Steel Magnet Pull Sturdy Analytic">
+      <td>462</td>
+      <td><img src="../assets/game/graphics/pokemon/magnezone/anim_front.png" alt="Magnezone front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="462.html">Magnezone</a></td>
+      <td><span class="type-badge type-electric">Electric</span> <span class="type-badge type-steel">Steel</span></td>
+      <td>Magnet Pull, Sturdy, Analytic</td>
+    </tr><tr data-search-text="463 Lickilicky Normal Own Tempo Oblivious Cloud Nine">
+      <td>463</td>
+      <td><img src="../assets/game/graphics/pokemon/lickilicky/anim_front.png" alt="Lickilicky front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="463.html">Lickilicky</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Own Tempo, Oblivious, Cloud Nine</td>
+    </tr><tr data-search-text="464 Rhyperior Ground Rock Lightning Rod Solid Rock Reckless">
+      <td>464</td>
+      <td><img src="../assets/game/graphics/pokemon/rhyperior/anim_front.png" alt="Rhyperior front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="464.html">Rhyperior</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-rock">Rock</span></td>
+      <td>Lightning Rod, Solid Rock, Reckless</td>
+    </tr><tr data-search-text="465 Tangrowth Grass Chlorophyll Leaf Guard Regenerator">
+      <td>465</td>
+      <td><img src="../assets/game/graphics/pokemon/tangrowth/anim_front.png" alt="Tangrowth front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="465.html">Tangrowth</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Chlorophyll, Leaf Guard, Regenerator</td>
+    </tr><tr data-search-text="466 Electivire Electric Motor Drive Vital Spirit">
+      <td>466</td>
+      <td><img src="../assets/game/graphics/pokemon/electivire/anim_front.png" alt="Electivire front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="466.html">Electivire</a></td>
+      <td><span class="type-badge type-electric">Electric</span></td>
+      <td>Motor Drive, Vital Spirit</td>
+    </tr><tr data-search-text="467 Magmortar Fire Flame Body Vital Spirit">
+      <td>467</td>
+      <td><img src="../assets/game/graphics/pokemon/magmortar/anim_front.png" alt="Magmortar front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="467.html">Magmortar</a></td>
+      <td><span class="type-badge type-fire">Fire</span></td>
+      <td>Flame Body, Vital Spirit</td>
+    </tr><tr data-search-text="468 Togekiss Fairy Flying Hustle Serene Grace Super Luck">
+      <td>468</td>
+      <td><img src="../assets/game/graphics/pokemon/togekiss/anim_front.png" alt="Togekiss front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="468.html">Togekiss</a></td>
+      <td><span class="type-badge type-fairy">Fairy</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Hustle, Serene Grace, Super Luck</td>
+    </tr><tr data-search-text="469 Yanmega Bug Flying Speed Boost Tinted Lens Frisk">
+      <td>469</td>
+      <td><img src="../assets/game/graphics/pokemon/yanmega/anim_front.png" alt="Yanmega front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="469.html">Yanmega</a></td>
+      <td><span class="type-badge type-bug">Bug</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Speed Boost, Tinted Lens, Frisk</td>
+    </tr><tr data-search-text="470 Leafeon Grass Leaf Guard Chlorophyll">
+      <td>470</td>
+      <td><img src="../assets/game/graphics/pokemon/leafeon/anim_front.png" alt="Leafeon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="470.html">Leafeon</a></td>
+      <td><span class="type-badge type-grass">Grass</span></td>
+      <td>Leaf Guard, Chlorophyll</td>
+    </tr><tr data-search-text="471 Glaceon Ice Snow Cloak Ice Body">
+      <td>471</td>
+      <td><img src="../assets/game/graphics/pokemon/glaceon/anim_front.png" alt="Glaceon front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="471.html">Glaceon</a></td>
+      <td><span class="type-badge type-ice">Ice</span></td>
+      <td>Snow Cloak, Ice Body</td>
+    </tr><tr data-search-text="472 Gliscor Ground Flying Hyper Cutter Sand Veil Poison Heal">
+      <td>472</td>
+      <td><img src="../assets/game/graphics/pokemon/gliscor/anim_front.png" alt="Gliscor front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="472.html">Gliscor</a></td>
+      <td><span class="type-badge type-ground">Ground</span> <span class="type-badge type-flying">Flying</span></td>
+      <td>Hyper Cutter, Sand Veil, Poison Heal</td>
+    </tr><tr data-search-text="473 Mamoswine Ice Ground Oblivious Snow Cloak Thick Fat">
+      <td>473</td>
+      <td><img src="../assets/game/graphics/pokemon/mamoswine/anim_front.png" alt="Mamoswine front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="473.html">Mamoswine</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-ground">Ground</span></td>
+      <td>Oblivious, Snow Cloak, Thick Fat</td>
+    </tr><tr data-search-text="474 Porygon-Z Normal Adaptability Download Analytic">
+      <td>474</td>
+      <td><img src="../assets/game/graphics/pokemon/porygon_z/anim_front.png" alt="Porygon-Z front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="474.html">Porygon-Z</a></td>
+      <td><span class="type-badge type-normal">Normal</span></td>
+      <td>Adaptability, Download, Analytic</td>
+    </tr><tr data-search-text="475 Gallade Psychic Fighting Steadfast Sharpness Justified">
+      <td>475</td>
+      <td><img src="../assets/game/graphics/pokemon/gallade/anim_front.png" alt="Gallade front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="475.html">Gallade</a></td>
+      <td><span class="type-badge type-psychic">Psychic</span> <span class="type-badge type-fighting">Fighting</span></td>
+      <td>Steadfast, Sharpness, Justified</td>
+    </tr><tr data-search-text="476 Probopass Rock Steel Sturdy Magnet Pull Sand Force">
+      <td>476</td>
+      <td><img src="../assets/game/graphics/pokemon/probopass/anim_front.png" alt="Probopass front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="476.html">Probopass</a></td>
+      <td><span class="type-badge type-rock">Rock</span> <span class="type-badge type-steel">Steel</span></td>
+      <td>Sturdy, Magnet Pull, Sand Force</td>
+    </tr><tr data-search-text="477 Dusknoir Ghost Pressure Frisk">
+      <td>477</td>
+      <td><img src="../assets/game/graphics/pokemon/dusknoir/anim_front.png" alt="Dusknoir front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="477.html">Dusknoir</a></td>
+      <td><span class="type-badge type-ghost">Ghost</span></td>
+      <td>Pressure, Frisk</td>
+    </tr><tr data-search-text="478 Froslass Ice Ghost Snow Cloak Cursed Body">
+      <td>478</td>
+      <td><img src="../assets/game/graphics/pokemon/froslass/anim_front.png" alt="Froslass front sprite" style="image-rendering:pixelated;max-width:64px;height:auto;"></td>
+      <td><a href="478.html">Froslass</a></td>
+      <td><span class="type-badge type-ice">Ice</span> <span class="type-badge type-ghost">Ghost</span></td>
+      <td>Snow Cloak, Cursed Body</td>
+    </tr></tbody>
+</table>
+<p id="pokedex-empty" class="filter-empty" style="display:none;">No Pokémon match that search.</p>
+  </main>
+  <script>
+    function obstagoonBindFilters() {
+      const inputs = document.querySelectorAll('[data-filter-input]');
+      inputs.forEach((input) => {
+        const selector = input.getAttribute('data-filter-target');
+        const emptyTextSelector = input.getAttribute('data-filter-empty');
+        const items = Array.from(document.querySelectorAll(selector || ''));
+        const emptyNode = emptyTextSelector ? document.querySelector(emptyTextSelector) : null;
+        const apply = () => {
+          const query = (input.value || '').trim().toLowerCase();
+          let visible = 0;
+          items.forEach((item) => {
+            const haystack = (item.getAttribute('data-search-text') || item.textContent || '').toLowerCase();
+            const match = !query || haystack.includes(query);
+            item.style.display = match ? '' : 'none';
+            if (match) visible += 1;
+          });
+          if (emptyNode) {
+            emptyNode.style.display = visible === 0 ? '' : 'none';
+          }
+        };
+        input.addEventListener('input', apply);
+        apply();
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', obstagoonBindFilters);
+    } else {
+      obstagoonBindFilters();
+    }
+  </script>
+</body>
+</body>
+</html>
+
