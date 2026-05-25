@@ -2,44 +2,44 @@
   "file": "./patches.zip",
   "patches": [
     {
-      "file": "Pokemon_Bareket_v1.0.5.ips",
-      "name": "Pokemon_Bareket_v1.0.5.ips",
+      "file": "Pokemon_Bareket_v1.0.6.ips",
+      "name": "Pokemon_Bareket_v1.0.6.ips",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.5.bps",
-      "name": "Pokemon_Bareket_v1.0.5.bps",
+      "file": "Pokemon_Bareket_v1.0.6.bps",
+      "name": "Pokemon_Bareket_v1.0.6.bps",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.5.ppf",
-      "name": "Pokemon_Bareket_v1.0.5.ppf",
+      "file": "Pokemon_Bareket_v1.0.6.ppf",
+      "name": "Pokemon_Bareket_v1.0.6.ppf",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.5.ups",
-      "name": "Pokemon_Bareket_v1.0.5.ups",
+      "file": "Pokemon_Bareket_v1.0.6.ups",
+      "name": "Pokemon_Bareket_v1.0.6.ups",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.5.aps",
-      "name": "Pokemon_Bareket_v1.0.5.aps",
+      "file": "Pokemon_Bareket_v1.0.6.aps",
+      "name": "Pokemon_Bareket_v1.0.6.aps",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.5.rup",
-      "name": "Pokemon_Bareket_v1.0.5.rup",
+      "file": "Pokemon_Bareket_v1.0.6.rup",
+      "name": "Pokemon_Bareket_v1.0.6.rup",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.5.ebp",
-      "name": "Pokemon_Bareket_v1.0.5.ebp",
+      "file": "Pokemon_Bareket_v1.0.6.ebp",
+      "name": "Pokemon_Bareket_v1.0.6.ebp",
       "description": "",
       "outputName": "Pokemon Bareket"
     }
