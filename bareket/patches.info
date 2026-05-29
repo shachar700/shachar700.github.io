@@ -2,32 +2,32 @@
   "file": "./patches.zip",
   "patches": [
     {
-      "file": "Pokemon_Bareket_v1.0.7.ips",
-      "name": "Pokemon_Bareket_v1.0.7.ips",
+      "file": "Pokemon_Bareket_v1.0.8.ips",
+      "name": "Pokemon_Bareket_v1.0.8.ips",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.7.bps",
-      "name": "Pokemon_Bareket_v1.0.7.bps",
+      "file": "Pokemon_Bareket_v1.0.8.bps",
+      "name": "Pokemon_Bareket_v1.0.8.bps",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.7.ppf",
-      "name": "Pokemon_Bareket_v1.0.7.ppf",
+      "file": "Pokemon_Bareket_v1.0.8.ppf",
+      "name": "Pokemon_Bareket_v1.0.8.ppf",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.7.ups",
-      "name": "Pokemon_Bareket_v1.0.7.ups",
+      "file": "Pokemon_Bareket_v1.0.8.ups",
+      "name": "Pokemon_Bareket_v1.0.8.ups",
       "description": "",
       "outputName": "Pokemon Bareket"
     },
     {
-      "file": "Pokemon_Bareket_v1.0.7.aps",
-      "name": "Pokemon_Bareket_v1.0.7.aps",
+      "file": "Pokemon_Bareket_v1.0.8.aps",
+      "name": "Pokemon_Bareket_v1.0.8.aps",
       "description": "",
       "outputName": "Pokemon Bareket"
     }
